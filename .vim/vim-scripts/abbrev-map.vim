@@ -1,3 +1,4 @@
+
 " My abbreviation at insert mode
 iabbrev q@  @qq.com
 iabbrev @@  215379951@qq.com

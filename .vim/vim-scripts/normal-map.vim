@@ -1,16 +1,26 @@
 
+" Because I want to use ; more quickly
+" So I disabled the ':' keyword
+nnoremap  : <nop>
+
 " More quick command mode: ';' to comman, and <cr> to repeat search in line
 nnoremap  ;  :
 nnoremap <cr> ;
+
 " Toggle  number line and  relative number line
 " 打开或者关闭相对行
 nnoremap  <leader>o   :set nu! rnu!<cr>
 
+" quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
-nnoremap  <leader>ep  :e ~/.vim/myBundle.vim<cr>
+nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
+nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
+nnoremap  <leader>ea  :e ~/.vim/vim-scripts/abbrev-map.vim<cr>
+nnoremap  <leader>et  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
+nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
 nnoremap  <leader>sv  :source $MYVIMRC<cr>
 
-" Quit the window 
+" Quit the window : the buffers underlying the window will be quited
 nnoremap  <leader>q  :q<cr>
 " Quit all windows
 nnoremap  <leader>r  :qa<cr>
@@ -38,7 +48,8 @@ nnoremap  _  kddp
 " g motion and operation on word
 " w:word, b:back, c:current character, e:end of word
 " 因为将当前字母更改为大写用的更多，所以将gc功能作为修改当前字母为大写
-" This is test Sentence
+" 并且讲gC设置为修改当前字母为大写.
+" This is the test Sentence
 nnoremap  gw  wgul
 nnoremap  gW  wgUl
 
@@ -49,7 +60,7 @@ nnoremap  ge  egul
 nnoremap  gE  egUl
 
 nnoremap  gc  gUl
-nnoremap  gC  gUl
+nnoremap  gC  gul
 
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
@@ -62,5 +73,13 @@ noremap   'b L
 noremap   'm M
 
 " <Fx> key map
-nnoremap  <f2>  :set nu! rnu!<cr>
+"nnoremap  <f2>  :set nu! rnu!<cr>
 nnoremap  <f3>  :set list!<cr>
+
+" <leader>f,b to  page down up
+nnoremap  <leader>f   5<c-e>
+nnoremap  <leader>b   5<c-y>
+
+" Toggle  hlsearch, search string in  "Register @/"
+" Because '/' stand for 'search', so <leader>/ to toggle hlsearch
+nnoremap  <leader>/   :set hlsearch!<cr>

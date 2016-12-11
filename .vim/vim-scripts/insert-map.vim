@@ -11,6 +11,10 @@ inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 
+" To line begin and line end at 'insert mode'
+inoremap  <c-^>   <esc><s-^>i
+inoremap  je   <esc>$a
+
 " Open new line in  'Insert Mode'
 inoremap <c-o> <esc>o
 inoremap jo <esc>o
@@ -22,3 +26,4 @@ inoremap jw <esc>:w<cr>a
 " Back word,注意: 因为是inoremap非递归映射<c-w>是vim底层的操作.
 inoremap <c-b>  <c-w>
 inoremap jb  <c-w>
+

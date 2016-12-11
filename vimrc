@@ -16,6 +16,9 @@ set nu
 " If need, set vbs=1 to show more information, vbs stand for verbose
 set vbs=0
 
+" search high light
+" set  hlsearch
+
 let mapleader=","
 
 
@@ -23,6 +26,7 @@ let mapleader=","
 source ~/.vim/vim-scripts/normal-map.vim
 source ~/.vim/vim-scripts/insert-map.vim
 source ~/.vim/vim-scripts/abbrev-map.vim
+source ~/.vim/vim-scripts/tmp-test.vim
 
 " in the end of vimrc, source myBundle.vim
 " because now, <leader> is ready, everything is OK, then to active plugin
