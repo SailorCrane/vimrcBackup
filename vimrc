@@ -1,5 +1,5 @@
 
-set fileencodings=utf-8,gbk,latin1
+set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 
 set expandtab
 set tabstop=4
@@ -32,3 +32,5 @@ source ~/.vim/vim-scripts/tmp-test.vim
 " because now, <leader> is ready, everything is OK, then to active plugin
 " manged by Bundle
 source ~/.vim/vim-scripts/myBundle.vim
+
+colorscheme slate

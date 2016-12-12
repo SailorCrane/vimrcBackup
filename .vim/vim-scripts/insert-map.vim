@@ -5,11 +5,20 @@
 inoremap  jk <esc>
 inoremap <esc> <nop>
 
-" left, right, up, down
+" <arrrow> set: left, right, up, down
 inoremap <c-h> <Left>
 inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
+
+
+inoremap  <C-d>  <esc>ddi
+inoremap  <C-w>  <esc>:w<cr>a
+inoremap  <C-y>  <esc>yyp
+inoremap  <C-b>  <c-w>
+inoremap  <C-o>  <esc>o
+" 插入模式下， 回车会 调整当前行到屏幕中心
+inoremap  <c-z>  <esc>zza
 
 " To line begin and line end at 'insert mode'
 inoremap  <c-^>   <esc><s-^>i

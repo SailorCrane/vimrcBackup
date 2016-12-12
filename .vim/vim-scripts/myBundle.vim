@@ -102,7 +102,7 @@ Bundle "Lokaltog/vim-powerline"
 "set guifont=Powerline\ Consolas\ Bold
 set laststatus=2
 set t_Co=256
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 set fillchars+=stl:\ ,stlnc:\
 
 " unicode symbols
@@ -127,7 +127,7 @@ Bundle "WolfgangMehner/c-support"
 Bundle "fholgado/minibufexpl.vim"
 let g:miniBufExplMapCTabSwitchBufs = 1
 
-"14:  qick fix
+"14:  quick fix
 Bundle "romainl/vim-qf"
 
 "15:  rainbow  parentheses
