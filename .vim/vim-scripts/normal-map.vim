@@ -94,4 +94,6 @@ nnoremap  <leader>/   :set hlsearch!<cr>
 nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
 
-" vbs quick set at command mode
+" map <c-a> to visual all content if file
+nnoremap  <c-a>  <esc>gg<s-v>G
+
