@@ -177,7 +177,7 @@ Bundle 'mbbill/undotree'
 nnoremap <F2>  :UndotreeToggle<cr>
 
 "18: https://github.com/kien/ctrlp.vim
-Bundle 'mhttps://github.com/kien/ctrlp.vim'
+Bundle 'https://github.com/kien/ctrlp.vim'
 
 "19: easy-motion
 Bundle 'https://github.com/easymotion/vim-easymotion'
