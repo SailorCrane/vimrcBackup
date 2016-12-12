@@ -12,6 +12,8 @@ nnoremap <cr> ;
 nnoremap  <leader>o   :set nu! rnu!<cr>
 
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
+" edit  ~/.bashrc
+nnoremap  <leader>eb  :e ~/.bashrc<cr>
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
 nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
 nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
@@ -83,3 +85,9 @@ nnoremap  <leader>b   5<c-y>
 " Toggle  hlsearch, search string in  "Register @/"
 " Because '/' stand for 'search', so <leader>/ to toggle hlsearch
 nnoremap  <leader>/   :set hlsearch!<cr>
+
+" seg line, then go to end of origin line
+" g_ go to end of no space character
+" i:insert a:append
+nnoremap <leader>si i<cr><esc><up>g_
+nnoremap <leader>sa a<cr><esc><up>g_

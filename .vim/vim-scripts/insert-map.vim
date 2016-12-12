@@ -14,7 +14,7 @@ inoremap <c-l> <Right>
 
 inoremap  <C-d>  <esc>ddi
 inoremap  <C-w>  <esc>:w<cr>a
-inoremap  <C-y>  <esc>yyp
+inoremap  <C-y>  <esc>yypkA
 inoremap  <C-b>  <c-w>
 inoremap  <C-o>  <esc>o
 " 插入模式下， 回车会 调整当前行到屏幕中心
