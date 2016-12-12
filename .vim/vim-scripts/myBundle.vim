@@ -197,4 +197,15 @@ Bundle 'https://github.com/SailorCrane/SearchComplete'
 "21 ShowMarks
 Bundle "ShowMarks"
 
+"22 vim-surround
+Bundle "tpope/vim-surround"
+" cs"'
+" ds"
+" ysiw"
+
+"23 repeat ,和surround同一个作者,主要用于 重复执行surround的操作
+"  ysiW": 给W添加"
+"  yss" : 给一行添加"
+Bundle "tpope/vim-repeat"
+
 filetype plugin indent on
