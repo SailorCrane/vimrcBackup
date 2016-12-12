@@ -22,8 +22,9 @@ set vbs=0
 let mapleader=","
 
 
-" My map of 'normal', 'insert', 'iabbrev'
+" My map of 'normal', 'insert', 'iabbrev', 'visual'
 source ~/.vim/vim-scripts/normal-map.vim
+source ~/.vim/vim-scripts/visual-map.vim
 source ~/.vim/vim-scripts/insert-map.vim
 source ~/.vim/vim-scripts/abbrev-map.vim
 source ~/.vim/vim-scripts/tmp-test.vim

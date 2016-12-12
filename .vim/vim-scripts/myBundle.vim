@@ -190,5 +190,9 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <Leader><leader>. <Plug>(easymotion-repeat)
 
-"nnoremap  <leader>z  :WMToggle<cr>  "定义打开关闭winmanager快捷键为F8
+
+"20 SearchComplete
+Bundle 'https://github.com/SailorCrane/SearchComplete'
+
+
 filetype plugin indent on

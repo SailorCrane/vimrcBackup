@@ -2,6 +2,7 @@
 " My abbreviation at insert mode
 iabbrev q@  @qq.com
 iabbrev @@  215379951@qq.com
+iabbrev jft just for test
 
 " Use map, not abbrev, because I want chd map more quick, not need <space> to
 " active it!

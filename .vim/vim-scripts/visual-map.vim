@@ -1,0 +1,3 @@
+
+vnoremap  ;  :
+vnoremap  : <nop>
