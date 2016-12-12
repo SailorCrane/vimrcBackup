@@ -14,6 +14,8 @@ nnoremap  <leader>o   :set nu! rnu!<cr>
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " edit  ~/.bashrc
 nnoremap  <leader>eb  :e ~/.bashrc<cr>
+nnoremap  <leader>em  :e ./makefile<cr>
+
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
 nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
 nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
@@ -91,3 +93,5 @@ nnoremap  <leader>/   :set hlsearch!<cr>
 " i:insert a:append
 nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
+
+" vbs quick set at command mode
