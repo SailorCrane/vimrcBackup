@@ -6,7 +6,7 @@ iabbrev jft just for test
 
 " Use map, not abbrev, because I want chd map more quick, not need <space> to
 " active it!
-" and, I also can use <c-v> to disable
+" and, I also can use <c-v> to disable this
 " But, I can't disable abbreviation by <c-v>
-inoremap chd #include <><esc>i
-
+inoremap chd< #include <><esc>i
+inoremap chd> #include ""<esc>i

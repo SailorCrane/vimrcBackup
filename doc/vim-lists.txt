@@ -1,0 +1,15 @@
+vim WebSite lists:
+1: awesome-vim
+2: casts vim
+3: spf13
+
+vim Book  lists:
+1: 笨方法学习vim-script
+2: learn vi and vim
+3: hacking vim
+
+vim Docs in local machine:
+1: [helps].txt in  'doc' directory
+2: vimrc_example 
+3: vimtutor
+
