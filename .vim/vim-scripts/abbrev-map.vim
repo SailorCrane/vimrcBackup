@@ -8,5 +8,5 @@ iabbrev jft just for test
 " active it!
 " and, I also can use <c-v> to disable
 " But, I can't disable abbreviation by <c-v>
-inoremap chd #include<>
+inoremap chd #include <><esc>i
 
