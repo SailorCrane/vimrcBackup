@@ -194,5 +194,7 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 "20 SearchComplete
 Bundle 'https://github.com/SailorCrane/SearchComplete'
 
+"21 ShowMarks
+Bundle "ShowMarks"
 
 filetype plugin indent on
