@@ -1,8 +1,10 @@
 # vimrcBackup
-# this is a vim backup dir
-# .vim/  dir has  vim-scripts, vim-scripts中有一些自己的脚本模块
-# 比如normal， insert， abbrev映射， 还有bundle插件管理脚本
-# vimrc souce这些脚本工作
+     <!--
+        -this is a vim backup dir.
+        -.vim/ 目录下有 ./vim/vim-scripts/目录, vim-scripts中有一些自己写的脚本模块.
+        -比如normal， insert， abbrev映射， 还有bundle插件管理脚本.
+        -vimrc通过souce这些脚本产生作用.
+        -->
 
 1: ln -s ./vimrc  ~/.vimrc
 2: ln -s ./vim    ~/.vim
@@ -13,7 +15,7 @@
        inoremap  <buffer>  <silent>  <C-j>  <C-G>u<C-R>=C_JumpCtrlJ()<CR>
     c: AutoPair中 :nmap  <c-h> 和<del>键功能相同，注释它
     d: ShowMarks 中键映射用的是map,但其实只能在normal模式下使用,修改为:nnoremap
-       如果不修改，因为自己的';'被映射为<nop>,会导致很糟糕的对于文件的修改
-           这些映射是<leader>mt, <leader>mh, 都是以<leader>m开头的
+       如果不修改，因为自己的';'被映射为<nop>,会导致很糟糕的对于文件的修改.
+           这些映射是<leader>mt, <leader>mh, 都是以<leader>m开头的. 所以可以用nmap <leader>m查找定义位置,并且有必要开启vbs=1功能
 
 
