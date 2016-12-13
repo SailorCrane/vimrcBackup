@@ -234,5 +234,7 @@ Bundle "MarcWeber/vim-addon-mw-utils.git"
 " snippets is  optional for snipmate
 Bundle  "honza/vim-snippets"
 
+"29 vimim
+Bundle 'vimim/vimim'
 
 filetype plugin indent on
