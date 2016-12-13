@@ -208,4 +208,13 @@ Bundle "tpope/vim-surround"
 "  yss" : 给一行添加"
 Bundle "tpope/vim-repeat"
 
+"24 Tagbar in vim-scripts's repo
+Bundle "Tagbar"
+
+"25 vim-fugitive
+"Bundle "vim-fugitive"
+
+"26 matchit
+Bundle "matchit.zip"
+
 filetype plugin indent on

@@ -2,6 +2,7 @@ vim WebSite lists:
 1: awesome-vim
 2: casts vim
 3: spf13
+4: wklken 的blog,是中国人写的
 
 vim Book  lists:
 1: 笨方法学习vim-script

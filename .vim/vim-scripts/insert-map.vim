@@ -21,10 +21,10 @@ inoremap  <C-o>  <esc>o
 " 插入模式下， <cr>
 " 调整当前行到屏幕中心,但是AutoPair已经使用<cr>分割配对符号,所以这里要重新选择映射按键
 " 因为<c-z>比较难敲击,所以选择<c-s>作为映射键
-inoremap  <c-a>  <esc>zza
+"inoremap  <c-a>  <esc>zza
 "inoremap  <c-j>  <esc>zza
 "inoremap  <c-cr>  <esc>zza
-"inoremap  <c-z>  <esc>zza
+inoremap  <c-z>  <esc>zza
 
 " To line begin and line end at 'insert mode'
 inoremap  <c-^>   <esc><s-^>i

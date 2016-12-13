@@ -10,3 +10,4 @@ fun! Set_verbose()
 endfun
 
 cnoremap  vbs<cr>  :call Set_verbose()<cr>
+cnoremap  BI<cr>   :BundleInstall<cr>
