@@ -217,4 +217,7 @@ Bundle "Tagbar"
 "26 matchit
 Bundle "matchit.zip"
 
+"27 EasyGrep
+Bundle "EasyGrep"
+
 filetype plugin indent on
