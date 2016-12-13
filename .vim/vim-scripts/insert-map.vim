@@ -12,7 +12,7 @@ inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 
 
-inoremap  <C-d>  <esc>ddi
+inoremap  <silent> <C-d>  <esc>ddi
 inoremap  <C-w>  <esc>:w<cr>a
 inoremap  <C-y>  <esc>yypkA
 inoremap  <C-b>  <c-w>

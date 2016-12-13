@@ -210,6 +210,9 @@ Bundle "tpope/vim-repeat"
 
 "24 Tagbar in vim-scripts's repo
 Bundle "Tagbar"
+nnoremap  <leader>tt  :TagbarToggle<cr>
+" 打开tagbar时,自动显示行号
+let g:tagbar_show_linenumbers=1
 
 "25 vim-fugitive
 "Bundle "vim-fugitive"
@@ -219,5 +222,17 @@ Bundle "matchit.zip"
 
 "27 EasyGrep
 Bundle "EasyGrep"
+
+
+"28 SnipMate
+Bundle "garbas/vim-snipmate"
+
+" the tow plugins below is necessary for snipmate
+Bundle "tomtom/tlib_vim.git"
+Bundle "MarcWeber/vim-addon-mw-utils.git"
+
+" snippets is  optional for snipmate
+Bundle  "honza/vim-snippets"
+
 
 filetype plugin indent on

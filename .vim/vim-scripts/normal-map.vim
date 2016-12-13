@@ -40,6 +40,7 @@ nnoremap  <leader>r  :qa<cr>
 nnoremap  <leader>e  :e!<cr>
 nnoremap  <leader>w  :w<cr>
 nnoremap  <leader>d  diw
+nnoremap  <leader>c  ciw
 
 " Buf next
 nnoremap  <leader>n  :bn<cr>
@@ -95,6 +96,10 @@ nnoremap  <leader>b   5<c-y>
 " Toggle  hlsearch, search string in  "Register @/"
 " Because '/' stand for 'search', so <leader>/ to toggle hlsearch
 nnoremap  <leader>/   :set hlsearch!<cr>
+
+" Toggle  search match case
+" 是否搜索大小写敏感
+nnoremap  <leader>i   :set ignorecase!<cr>
 
 " seg line, then go to end of origin line
 " g_ go to end of no space character
