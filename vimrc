@@ -38,4 +38,4 @@ source ~/.vim/vim-scripts/autocmd.vim
 " manged by Bundle
 source ~/.vim/vim-scripts/myBundle.vim
 
-colorscheme slate
+"colorscheme slate
