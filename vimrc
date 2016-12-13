@@ -31,6 +31,7 @@ source ~/.vim/vim-scripts/visual-map.vim
 
 source ~/.vim/vim-scripts/abbrev-map.vim
 source ~/.vim/vim-scripts/tmp-test.vim
+source ~/.vim/vim-scripts/autocmd.vim
 
 " in the end of vimrc, source myBundle.vim
 " because now, <leader> is ready, everything is OK, then to active plugin

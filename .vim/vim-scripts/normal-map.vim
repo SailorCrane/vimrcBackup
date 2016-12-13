@@ -1,10 +1,12 @@
 
 " Because I want to use ; more quickly
 " So I disabled the ':' keyword
-nnoremap  : <nop>
 
-" More quick command mode: ';' to comman, and <cr> to repeat search in line
+" 将';'映射到':',因为';'更容易敲击,但是':'功能用的更多
+" 因为<cr>默认功能,可以使用j代替,所以将<cr>映射到';',即'f'后,查看下一个.
+" 而在qf(QuickFix)文件类型中的<cr>,选择光标所在行的搜索结果,可以使用autocmd.vim中针对filetype项,设置自动命令,将<cr>重新映射回<cr>
 nnoremap  ;  :
+nnoremap  :  <nop>
 nnoremap <cr> ;
 
 " Toggle  number line and  relative number line
@@ -20,10 +22,15 @@ nnoremap  <leader>ev  :e $MYVIMRC<cr>
 nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
 nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
 nnoremap  <leader>ec  :e ~/.vim/vim-scripts/command-map.vim<cr>
+
 nnoremap  <leader>ea  :e ~/.vim/vim-scripts/abbrev-map.vim<cr>
 nnoremap  <leader>et  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
+
 nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
+nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 nnoremap  <leader>sv  :source $MYVIMRC<cr>
+
+
 
 " Quit the window : the buffers underlying the window will be quited
 nnoremap  <leader>q  :q<cr>
