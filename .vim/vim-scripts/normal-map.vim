@@ -18,6 +18,7 @@ nnoremap  <leader>o   :set nu! rnu!<cr>
 nnoremap  <leader>eb  :e ~/.bashrc<cr>
 nnoremap  <leader>em  :e ./makefile<cr>
 nnoremap  <leader>eg  :e ~/.gitconfig<cr>
+nnoremap  <leader>eA  :e ~/myAlias.sh<cr>
 
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
 nnoremap  <leader>eV  :e ~/.vim/vim-scripts/visual-map.vim<cr>
