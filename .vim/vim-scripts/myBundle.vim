@@ -90,7 +90,7 @@ Bundle 'mbbill/echofunc'
 
 "9: Conque-Shell
 Bundle  'oplatek/Conque-Shell'
-nmap   <C-n>  :ConqueTermVSplit bash<CR>
+nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
