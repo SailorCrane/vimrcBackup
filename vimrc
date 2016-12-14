@@ -1,4 +1,8 @@
 
+" Gui setting 
+set guifont=Monospace\ 16
+
+
 set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 
 set expandtab
