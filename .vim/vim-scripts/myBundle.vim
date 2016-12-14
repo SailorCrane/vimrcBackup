@@ -90,7 +90,7 @@ Bundle 'mbbill/echofunc'
 
 "9: Conque-Shell
 Bundle  'oplatek/Conque-Shell'
-nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
+nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
 
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
@@ -154,10 +154,10 @@ let g:rbpt_colorpairs = [
 "
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
- au VimEnter * RainbowParenthesesToggle
- au Syntax * RainbowParenthesesLoadRound
- au Syntax * RainbowParenthesesLoadSquare
- au Syntax * RainbowParenthesesLoadBraces
+ autocmd VimEnter * RainbowParenthesesToggle
+ autocmd Syntax * RainbowParenthesesLoadRound
+ autocmd Syntax * RainbowParenthesesLoadSquare
+ autocmd Syntax * RainbowParenthesesLoadBraces
 
 "16: jiangmiao/auto-pairs.git
 Bundle  'jiangmiao/auto-pairs.git'
@@ -226,15 +226,20 @@ Bundle "EasyGrep"
 
 "28 SnipMate
 Bundle "garbas/vim-snipmate"
-
 " the tow plugins below is necessary for snipmate
-Bundle "tomtom/tlib_vim.git"
-Bundle "MarcWeber/vim-addon-mw-utils.git"
-
+Bundle "tomtom/tlib_vim"
+Bundle "MarcWeber/vim-addon-mw-utils"
 " snippets is  optional for snipmate
 Bundle  "honza/vim-snippets"
 
+
 "29 vimim
 Bundle 'vimim/vimim'
+
+"30 Chiel92/vim-autoformat
+Bundle "Chiel92/vim-autoformat"
+
+" Yankring
+Bundle "YankRing.vim"
 
 filetype plugin indent on

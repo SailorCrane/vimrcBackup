@@ -20,6 +20,7 @@ nnoremap  <leader>em  :e ./makefile<cr>
 nnoremap  <leader>eg  :e ~/.gitconfig<cr>
 
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
+nnoremap  <leader>eV  :e ~/.vim/vim-scripts/visual-map.vim<cr>
 nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
 nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
 nnoremap  <leader>ec  :e ~/.vim/vim-scripts/command-map.vim<cr>

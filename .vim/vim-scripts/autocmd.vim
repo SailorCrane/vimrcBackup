@@ -3,6 +3,9 @@
 autocmd   FileType  qf  nnoremap <buffer>  <cr>  <cr>
 "autocmd   FileType  qf   echo "MyFix"
 
+" 打开帮助文档时，自动显示行号
+autocmd   FileType  help  set nu rnu
+
 
 " 为什么我的tagbar,autocmd设置打开行号不管用呢.虽然最后使用tagbar自带的g:tagbar_show_linenumbers=1,可以显示行号,但还是想明白自己的autocmd为什么针对tagbar
 " 不起作用呢
