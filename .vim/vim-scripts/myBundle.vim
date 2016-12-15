@@ -243,4 +243,7 @@ Bundle "Chiel92/vim-autoformat"
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
 "Bundle "YankRing.vim"
 
+"31 potion, my handwriting
+Bundle  "potion"
+
 filetype plugin indent on
