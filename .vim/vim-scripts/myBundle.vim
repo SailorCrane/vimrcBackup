@@ -239,7 +239,7 @@ Bundle  "honza/vim-snippets"
 "30 Chiel92/vim-autoformat
 Bundle "Chiel92/vim-autoformat"
 
-" Yankring
-Bundle "YankRing.vim"
+"31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
+"Bundle "YankRing.vim"
 
 filetype plugin indent on
