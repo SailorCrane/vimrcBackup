@@ -42,8 +42,15 @@ nnoremap  <leader>r  :qa<cr>
 " Refresh file, or restore file from file name
 nnoremap  <leader>e  :e!<cr>
 nnoremap  <leader>w  :w<cr>
-nnoremap  <leader>d  diw
+
+" 快速删除一个词：word 或者Word
+" 因为<leader>d被用来作为down翻页，所以这里将其disable,毕竟diw也就多了一个字母而已
+" 但是删除一个Word：长词，是一个非常好的特性
+"nnoremap  <leader>d  diw
+nnoremap  <leader>D  diW
+
 nnoremap  <leader>c  ciw
+nnoremap  <leader>C  ciW
 
 " Buf next
 nnoremap  <leader>n  :bn<cr>
@@ -93,8 +100,12 @@ noremap   'm M
 nnoremap  <f3>  :set list!<cr>
 
 " <leader>f,b to  page down up
-nnoremap  <leader>f   5<c-e>
-nnoremap  <leader>b   5<c-y>
+" u:up , d:down
+" 这里的up指翻页时，可以看到上方更多的字，同理down可以看到下方更多的字
+"nnoremap  <leader>b   5<c-y>
+"nnoremap  <leader>f   5<c-e>
+nnoremap  <leader>u   5<c-y>
+nnoremap  <leader>d   5<c-e>
 
 " Toggle  hlsearch, search string in  "Register @/"
 " Because '/' stand for 'search', so <leader>/ to toggle hlsearch
