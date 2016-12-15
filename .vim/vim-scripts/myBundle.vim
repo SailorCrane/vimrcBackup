@@ -1,3 +1,6 @@
+
+filetype off
+
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
@@ -247,3 +250,4 @@ Bundle "Chiel92/vim-autoformat"
 Bundle  "potion"
 
 filetype plugin indent on
+filetype on
