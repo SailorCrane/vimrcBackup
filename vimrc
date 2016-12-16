@@ -4,7 +4,7 @@
 " 我觉得Monospace很好看，还有注意字体号前面的空格，要使用转义字符
 set guifont=Monospace\ 16
 
-
+set showcmd
 
 set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 
