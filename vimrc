@@ -28,6 +28,7 @@ set vbs=0
 set noignorecase "大小写敏感
 set hlsearch     " 搜索结果高亮显示
 set incsearch    " 一遍输入,一遍已经开始搜索
+"set hlsearch incsearch
 
 let mapleader=","     "全局<leader>
 
