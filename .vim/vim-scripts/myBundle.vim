@@ -261,6 +261,20 @@ Bundle  "potion"
 " no vundle#end
 "call vundle#end()           " required with vundle#begin()
 
+"35 multiple-cursor
+Bundle "https://github.com/terryma/vim-multiple-cursors"
+
+"36 junegunn/vim-easy-align
+Bundle "junegunn/vim-easy-align"
+" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因
+vmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+
+if !exists('g:easy_align_delimiters')
+      let g:easy_align_delimiters = {}
+endif
+let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']  }
+
 " required
 filetype plugin indent on
 filetype on
