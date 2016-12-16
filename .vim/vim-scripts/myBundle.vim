@@ -1,3 +1,7 @@
+
+" required
+filetype off        
+
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
@@ -91,7 +95,8 @@ Bundle 'mbbill/echofunc'
 "9: Conque-Shell
 Bundle  'oplatek/Conque-Shell'
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
-nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
+"nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
+noremap  <leader>b  :ConqueTermVSplit bash<CR>
 
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
@@ -245,5 +250,10 @@ Bundle "Chiel92/vim-autoformat"
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
 
+"33 potion, my handwriting
+Bundle  "potion"
 
+" required
 filetype plugin indent on
+filetype on
+
