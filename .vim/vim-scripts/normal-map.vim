@@ -109,11 +109,10 @@ nnoremap  <leader>d   5<c-e>
 
 " Toggle  hlsearch, search string in  "Register @/"
 " Because '/' stand for 'search', so <leader>/ to toggle hlsearch
-nnoremap  <leader>/   :set hlsearch!<cr>
-
 " Toggle  search match case
 " 是否搜索大小写敏感
-nnoremap  <leader>i   :set ignorecase!<cr>
+nnoremap  <leader>/   :set hlsearch!  hlsearch?<cr>
+nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 
 " seg line, then go to end of origin line
 " g_ go to end of no space character
