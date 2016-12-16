@@ -275,6 +275,11 @@ if !exists('g:easy_align_delimiters')
 endif
 let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']  }
 
+"37 expand-region
+Bundle "https://github.com/terryma/vim-expand-region"
+vmap v <Plug>(expand_region_expand)
+vmap V <Plug>(expand_region_shrink)
+
 " required
 filetype plugin indent on
 filetype on
