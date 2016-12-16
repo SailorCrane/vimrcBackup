@@ -19,3 +19,11 @@ autocmd   BufNewFile,BufRead   make-*  set ft=make
 " 打开help文件时，也显示绝对行号和相对行号
 autocmd   FileType  help  setlocal nu
 autocmd   FileType  help  setlocal rnu
+
+" 打开undotree 插件时<f2>， 设置行号: undotree的文件类型为undotree
+autocmd   FileType  undotree setlocal nu
+autocmd   FileType  undotree setlocal rnu
+
+" undotree 插件下面的diff窗口类型为diff
+autocmd   FileType  diff setlocal nu
+autocmd   FileType  diff setlocal rnu

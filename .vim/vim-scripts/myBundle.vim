@@ -201,7 +201,7 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 Bundle 'https://github.com/SailorCrane/SearchComplete'
 
 "21 ShowMarks
-Bundle "ShowMarks"
+"Bundle "ShowMarks"
 
 "22 vim-surround
 Bundle "tpope/vim-surround"
