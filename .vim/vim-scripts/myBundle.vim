@@ -257,9 +257,8 @@ Bundle  "potion"
 Bundle "L9"
 
 
-
-
-call vundle#end()           " required"
+" no vundle#end
+"call vundle#end()           " required"
 
 " required
 filetype plugin indent on

@@ -87,8 +87,12 @@ nnoremap  gC  gul
 
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
-nnoremap  L  $
+nnoremap  <c-k>  gg
+nnoremap  <c-j>  G
+nnoremap  <c-h>  ^
+nnoremap  <c-l>  $
 nnoremap  H  ^
+nnoremap  L  $
 
 " "'" is used for mark, there to top, bottom, middle 
 noremap   't H
