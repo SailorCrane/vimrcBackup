@@ -103,8 +103,9 @@ nnoremap  <f3>  :set list!<cr>
 " u:up , d:down
 " 这里的up指翻页时，可以看到上方更多的字，同理down可以看到下方更多的字
 "nnoremap  <leader>b   5<c-y>
-"nnoremap  <leader>f   5<c-e>
+" 因为还是<leader>f比较好键入
 nnoremap  <leader>u   5<c-y>
+nnoremap  <leader>f   5<c-e>
 nnoremap  <leader>d   5<c-e>
 
 " Toggle  hlsearch, search string in  "Register @/"

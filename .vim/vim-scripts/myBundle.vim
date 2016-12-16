@@ -253,6 +253,14 @@ Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
 "33 potion, my handwriting
 Bundle  "potion"
 
+"34 L9: vim library, vim script util
+Bundle "L9"
+
+
+
+
+call vundle#end()           " required"
+
 " required
 filetype plugin indent on
 filetype on
