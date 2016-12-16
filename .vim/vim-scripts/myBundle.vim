@@ -1,5 +1,6 @@
 
-filetype off
+" required
+filetype off        
 
 set rtp+=~/.vim/bundle/vundle/
 
@@ -246,8 +247,21 @@ Bundle "Chiel92/vim-autoformat"
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
 "Bundle "YankRing.vim"
 
-"31 potion, my handwriting
+"32 color view
+Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
+
+"33 potion, my handwriting
 Bundle  "potion"
 
+"34 L9: vim library, vim script util.
+"暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
+"Bundle "L9"
+
+
+" no vundle#end
+"call vundle#end()           " required with vundle#begin()
+
+" required
 filetype plugin indent on
 filetype on
+

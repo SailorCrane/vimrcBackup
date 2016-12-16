@@ -87,8 +87,12 @@ nnoremap  gC  gul
 
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
-nnoremap  L  $
+nnoremap  <c-k>  gg
+nnoremap  <c-j>  G
+nnoremap  <c-h>  ^
+nnoremap  <c-l>  $
 nnoremap  H  ^
+nnoremap  L  $
 
 " "'" is used for mark, there to top, bottom, middle 
 noremap   't H
@@ -103,17 +107,17 @@ nnoremap  <f3>  :set list!<cr>
 " u:up , d:down
 " 这里的up指翻页时，可以看到上方更多的字，同理down可以看到下方更多的字
 "nnoremap  <leader>b   5<c-y>
-"nnoremap  <leader>f   5<c-e>
+" 因为还是<leader>f比较好键入
 nnoremap  <leader>u   5<c-y>
+nnoremap  <leader>f   5<c-e>
 nnoremap  <leader>d   5<c-e>
 
 " Toggle  hlsearch, search string in  "Register @/"
 " Because '/' stand for 'search', so <leader>/ to toggle hlsearch
-nnoremap  <leader>/   :set hlsearch!<cr>
-
 " Toggle  search match case
 " 是否搜索大小写敏感
-nnoremap  <leader>i   :set ignorecase!<cr>
+nnoremap  <leader>/   :set hlsearch!  hlsearch?<cr>
+nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 
 " seg line, then go to end of origin line
 " g_ go to end of no space character
