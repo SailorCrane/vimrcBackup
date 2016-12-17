@@ -40,3 +40,5 @@
 
     对了还有minibufexpl的全局变量: let g:miniBufExplForceSyntaxEnable = 1 也要设置,我就在我的myBundle.vim 中minibuf插件下面设置了这一句
 
+    最后:  nnoremap  <leader>d      :bd<cr>:syntax on<cr>
+
