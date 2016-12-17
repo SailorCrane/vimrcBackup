@@ -6,10 +6,12 @@
         -vimrc通过souce这些脚本产生作用.
         -->
 
-1: ln -s ./vimrc  ~/.vimrc
-2: ln -s ./vim    ~/.vim
-3: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
-4: 修改插件中的配置,或者快捷键冲突
+注意这里的软链接使用绝对路径，而不要使用相对路径.
+1: ln  -s  `pwd`/vimrc   ~/.vimrc
+2: ln  -s  `pwd`/gvimrc  ~/.gvimrv
+3: ln  -s  `pwd`/.vim    ~/.vim
+4: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
+5: 修改插件中的配置,或者快捷键冲突
     a: c-support 中的Template文件中的AUTHOR,Email, Company做配置
     b: 注释c-support中对于inoremap <C-j> 的映射
        注意:因为c-support中的代码自动折叠,所以使用zR递归展开所有vimL代码后,再搜索下面代码,并且注释即可.
