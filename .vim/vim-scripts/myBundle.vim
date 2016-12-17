@@ -132,6 +132,7 @@ Bundle "WolfgangMehner/c-support"
 "13:  mini buf explorer
 Bundle "fholgado/minibufexpl.vim"
 let g:miniBufExplMapCTabSwitchBufs = 1
+nnoremap  <leader>mb   :MBEToggle!<cr>
 
 "14:  quick fix
 Bundle "romainl/vim-qf"

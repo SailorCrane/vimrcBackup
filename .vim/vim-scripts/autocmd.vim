@@ -7,12 +7,12 @@ autocmd   FileType  qf  nnoremap <buffer>  <cr>  <cr>
 
 "2: help 
 " 打开帮助文档时，自动显示行号
-autocmd   FileType  help  set nu rnu
+autocmd   FileType  help  setlocal nu rnu
 
 
 "3: make file
 " 设置所有的"make-"打头的文件名的文件类型都为make,注意vim使用"make"表示makefile文件类型,而不是"makefile"
-autocmd   BufNewFile,BufRead   make-*  set ft=make
+autocmd   BufNewFile,BufRead   make-*  setlocal filetype=make
 
 
 "4-1: tagbar
@@ -49,11 +49,20 @@ autocmd   FileType  vundle  nnoremap  <buffer> <leader>p  <nop>
 
 "7: diff
 " undotree 插件下面的diff窗口类型为diff
-autocmd   FileType  diff setlocal nu
-autocmd   FileType  diff setlocal rnu
+autocmd   FileType  diff  setlocal nu
+autocmd   FileType  diff  setlocal rnu
 autocmd   FileType  diff  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  diff  nnoremap  <buffer> <leader>p  <nop>
 
 "8: minibufexpl  注意:映射一定要加上<buffer>,不然会影响全局映射
 autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>p  <nop>
+
+
+"9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
+autocmd   FileType  conque_term  nnoremap  <buffer>  <leader>n  <nop>
+autocmd   FileType  conque_term  nnoremap  <buffer>  <leader>p  <nop>
+autocmd   FileType  conque_term  nnoremap  <buffer>  q          :bd<cr>
+autocmd   FileType  conque_term  nnoremap  <buffer>  <leader>q  :bd<cr>
+autocmd   FileType  conque_term  setlocal   nocursorline
+
