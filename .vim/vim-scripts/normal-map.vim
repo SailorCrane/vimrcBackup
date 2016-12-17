@@ -81,7 +81,7 @@ nnoremap  <leader>n  :bn<cr>
 " Buf previous
 nnoremap  <leader>p  :bp<cr>
 " Buf delete: delete current buffer
-nnoremap <leader>d   :bd<cr>
+nnoremap <leader>d   :bd<cr>:syntax on<cr>
 
 
 "8 Window manager
