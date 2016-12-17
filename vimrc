@@ -23,6 +23,7 @@ set nu
 " If need, set vbs=1 to show more information, vbs stand for verbose
 set vbs=0
 
+" 执行命令时,在右下角显示未完成的命令
 set showcmd
 
 " 在normal-map.vim 有快速toggle ignorecase 和 hlsearch的映射
