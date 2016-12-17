@@ -15,7 +15,7 @@ autocmd   FileType  help  set nu rnu
 autocmd   BufNewFile,BufRead   make-*  set ft=make
 
 
-"4: tagbar
+"4-1: tagbar
 " 为什么我的tagbar,autocmd设置打开行号不管用呢.虽然最后使用tagbar自带的g:tagbar_show_linenumbers=1,可以显示行号,但还是想明白"自己的autocmd为什么针对tagbar
 " 不起作用呢
 autocmd   FileType  tagbar  setlocal  nu
@@ -23,6 +23,13 @@ autocmd   FileType  tagbar  setlocal  rnu
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>p  <nop>
 "autocmd   BufRead,BufNewFile,FileType  tagbar  :setlocal  rnu
+
+
+"4-2: taglist
+autocmd   FileType  taglist  setlocal  nu
+autocmd   FileType  taglist  setlocal  rnu
+autocmd   FileType  taglist  nnoremap  <buffer> <leader>n  <nop>
+autocmd   FileType  taglist  nnoremap  <buffer> <leader>p  <nop>
 
 
 "5: undotree
@@ -33,9 +40,20 @@ autocmd   FileType  undotree  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  undotree  nnoremap  <buffer> <leader>p  <nop>
 
 
+"6: vundle FileType
+autocmd   FileType  vundle setlocal nu
+autocmd   FileType  vundle setlocal rnu
+autocmd   FileType  vundle  nnoremap  <buffer> <leader>n  <nop>
+autocmd   FileType  vundle  nnoremap  <buffer> <leader>p  <nop>
+
+
 "7: diff
 " undotree 插件下面的diff窗口类型为diff
 autocmd   FileType  diff setlocal nu
 autocmd   FileType  diff setlocal rnu
 autocmd   FileType  diff  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  diff  nnoremap  <buffer> <leader>p  <nop>
+
+"8: minibufexpl  注意:映射一定要加上<buffer>,不然会影响全局映射
+autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>n  <nop>
+autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>p  <nop>

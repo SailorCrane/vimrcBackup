@@ -34,7 +34,7 @@ nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
 nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 
 " <leader>sv source .vimrc or .gvimrc
-if (has("gui_running"))
+if has("gui_running")
     nnoremap  <leader>sv  :source $MYVIMRC<cr>:source ~/.gvimrc<cr>
 else
     nnoremap  <leader>sv  :source $MYVIMRC<cr>
