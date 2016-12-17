@@ -17,7 +17,8 @@ nnoremap  <leader>o   :set nu! rnu!<cr>
 " edit  ~/.bashrc
 nnoremap  <leader>eb  :e ~/.bashrc<cr>
 nnoremap  <leader>em  :e ./makefile<cr>
-nnoremap  <leader>eg  :e ~/.gitconfig<cr>
+nnoremap  <leader>eg  :e ~/.gvimrc<cr>
+nnoremap  <leader>eG  :e ~/.gitconfig<cr>
 nnoremap  <leader>eA  :e ~/myAlias.sh<cr>
 
 nnoremap  <leader>ev  :e $MYVIMRC<cr>
@@ -31,7 +32,13 @@ nnoremap  <leader>et  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
 
 nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
 nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
-nnoremap  <leader>sv  :source $MYVIMRC<cr>
+
+" <leader>sv source .vimrc or .gvimrc
+if (has("gui_running"))
+    nnoremap  <leader>sv  :source $MYVIMRC<cr>:source ~/.gvimrc<cr>
+else
+    nnoremap  <leader>sv  :source $MYVIMRC<cr>
+endif
 
 
 
