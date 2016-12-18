@@ -51,10 +51,11 @@ set incsearch     " 一遍输入,一遍已经开始搜索
 
 
 "11  <leader> , note: global setting
-let mapleader=","     "全局<leader>
+let mapleader=","       "
+let g:mapleader=","     " global <leader>
 
 
-"12   module scripts
+"12 module scripts
 " My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
 source ~/.vim/vim-scripts/normal-map.vim
 source ~/.vim/vim-scripts/insert-map.vim
@@ -72,5 +73,18 @@ source ~/.vim/vim-scripts/autocmd.vim
 source ~/.vim/vim-scripts/myBundle.vim
 
 
-"13  vim colorscheme, gvim colorscheme in ~/.gvimrc
+"13 autoread,文件被外部程序改变,gvim 和 vim自动重新加载,不发出提示
+set autoread
+
+
+"14 scrolloff
+set  scrolloff=7
+set  ruler      "显示当先位置
+
+
+"15 background
+set background=light
+"set background=dark
+
+"end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
