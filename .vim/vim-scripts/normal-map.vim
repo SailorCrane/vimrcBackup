@@ -159,7 +159,12 @@ nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
 
 
-"15 visual:select all lines
+"15 tab mapping
+nnoremap  tn  :tabnew<cr>
+nnoremap  td  :tabclose<cr>
+
+
+"end  visual:select all lines
 " map <c-a> to visual all content if file
 nnoremap  <c-a>  <esc>gg<s-v>G
 
