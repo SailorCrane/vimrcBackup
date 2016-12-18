@@ -22,6 +22,7 @@ autocmd   FileType  tagbar  setlocal  nu
 autocmd   FileType  tagbar  setlocal  rnu
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>p  <nop>
+autocmd   FileType  tagbar  nnoremap  <buffer> ?  :call <SNR>155_ToggleHelp()<cr>
 "autocmd   BufRead,BufNewFile,FileType  tagbar  :setlocal  rnu
 
 
@@ -30,6 +31,7 @@ autocmd   FileType  taglist  setlocal  nu
 autocmd   FileType  taglist  setlocal  rnu
 autocmd   FileType  taglist  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  taglist  nnoremap  <buffer> <leader>p  <nop>
+autocmd   FileType  taglist  nnoremap  <buffer> ?          :call <SNR>57_Tlist_Window_Toggle_Help_Text()<CR>
 
 
 "5: undotree
