@@ -86,5 +86,10 @@ set  ruler      "显示当先位置
 set background=light
 "set background=dark
 
+
+"16 mouse  support: 这样就支持鼠标点击链接了
+set mouse=a
+
+
 "end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate

@@ -49,7 +49,7 @@ nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc
 if has("gui_running")
-    nnoremap  <leader>sv  :source $MYVIMRC<cr>:source ~/.gvimrc<cr>
+    nnoremap  <leader>sv  :source $MYVIMRC<cr>:source $MYGVIMRC<cr>
 else
     nnoremap  <leader>sv  :source $MYVIMRC<cr>
 endif
