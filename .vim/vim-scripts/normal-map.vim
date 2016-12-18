@@ -10,7 +10,7 @@
 " 所以在quickfix文件类型中(即quickfix窗口中)可以使用autocmd  FileType  qx中针对filetype项,设置自动命令,将<cr>重新映射回<cr>
 " 详情见<leader>ef
 nnoremap  ;  :
-nnoremap  :  <nop>
+"nnoremap  :  <nop>
 nnoremap <cr> ;
 
 
