@@ -59,6 +59,7 @@ autocmd   FileType  diff  nnoremap  <buffer> <leader>p  <nop>
 "8: minibufexpl  注意:映射一定要加上<buffer>,不然会影响全局映射
 autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  minibufexpl  nnoremap  <buffer> <leader>p  <nop>
+autocmd   FileType  minibufexpl  nnoremap  <buffer> <c-^>      <nop>
 autocmd   FileType  minibufexpl  nmap      <buffer> <tab>      l
 
 
@@ -69,3 +70,5 @@ autocmd   FileType  conque_term  nnoremap  <buffer>  q          :bd<cr>
 autocmd   FileType  conque_term  nnoremap  <buffer>  <leader>q  :bd<cr>
 autocmd   FileType  conque_term  setlocal   nocursorline
 
+"10:   c, cpp type
+"autocmd   FileType  c,cpp  

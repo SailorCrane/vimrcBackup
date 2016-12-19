@@ -14,3 +14,4 @@ cnoremap  BI   BundleInstall
 cnoremap  BL   BundleList
 cnoremap  BC   BundleClear
 cnoremap  qq   q!
+cnoremap  ll   ls!
