@@ -24,7 +24,7 @@ set shiftwidth=4
 
 "6 indent
 set smartindent
-set cindent
+set cindent             "cindent  disabled smartindent
 
 
 "7 cursor line and line number  show
@@ -79,6 +79,8 @@ set autoread
 
 "14 scrolloff
 set  scrolloff=7
+set  sidescroll=5
+
 set  ruler      "显示当先位置
 
 
@@ -90,6 +92,11 @@ set background=light
 "16 mouse  support: 这样就支持鼠标点击链接了
 set mouse=a
 
+
+"17 some normal settion
+set history=300
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 "end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate

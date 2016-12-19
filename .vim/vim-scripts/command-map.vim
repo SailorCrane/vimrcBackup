@@ -9,8 +9,9 @@ fun! Set_verbose()
     echo 'vbs is ' + &verbose
 endfun
 
-cnoremap  vbs<cr>  :call Set_verbose()<cr>
-cnoremap  BI   BundleInstall
-cnoremap  BL   BundleList
-cnoremap  BC   BundleClear
-cnoremap  qq   q!
+cabbrev  vbs  :call Set_verbose()
+cabbrev  BI   BundleInstall
+cabbrev  BL   BundleList
+cabbrev  BC   BundleClear
+cabbrev  qq   q!
+cabbrev  ll   ls!

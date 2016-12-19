@@ -41,12 +41,14 @@ nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
 nnoremap  <leader>ec  :e ~/.vim/vim-scripts/command-map.vim<cr>
 
 nnoremap  <leader>ea  :e ~/.vim/vim-scripts/abbrev-map.vim<cr>
-nnoremap  <leader>eT  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
 nnoremap  <leader>et  :e ~/.vim/test/HarryPotter-Stone.txt<cr>
+nnoremap  <leader>eT  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
 
 nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
 nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 
+nnoremap  <leader>ee  :e ~/.vim/vim-scripts/example/vimrc_example.vim<cr>
+nnoremap  <leader>eE  :e ~/.vim/vim-scripts/example/<cr>
 
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc
@@ -164,6 +166,10 @@ nnoremap <leader>sa a<cr><esc><up>g_
 "15 tab mapping
 nnoremap  tn  :tabnew<cr>
 nnoremap  td  :tabclose<cr>
+
+
+"16  map Q to gq
+nnoremap  Q  gq
 
 
 "end  visual:select all lines
