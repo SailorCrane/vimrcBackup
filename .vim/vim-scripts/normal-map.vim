@@ -20,6 +20,8 @@ nnoremap <cr> ;
 "  Toggle  sensitive case
 nnoremap  <leader>o   :set nu!  rnu!    nu? rnu? <cr>
 nnoremap  <leader>/   :set hlsearch!    hlsearch?<cr>
+" :nohlsearch 暂时性取消高亮,点击n就会再次高亮
+"nnoremap  <leader>/   :nohlsearch<cr>  
 nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 
 
