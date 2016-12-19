@@ -164,6 +164,10 @@ nnoremap  tn  :tabnew<cr>
 nnoremap  td  :tabclose<cr>
 
 
+"16  map Q to gq
+nnoremap  Q  gq
+
+
 "end  visual:select all lines
 " map <c-a> to visual all content if file
 nnoremap  <c-a>  <esc>gg<s-v>G

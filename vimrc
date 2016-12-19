@@ -24,7 +24,7 @@ set shiftwidth=4
 
 "6 indent
 set smartindent
-set cindent
+set cindent             "cindent  disabled smartindent
 
 
 "7 cursor line and line number  show
@@ -90,6 +90,7 @@ set background=light
 "16 mouse  support: 这样就支持鼠标点击链接了
 set mouse=a
 
+set history=300
 
 "end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
