@@ -90,7 +90,11 @@ set background=light
 "16 mouse  support: 这样就支持鼠标点击链接了
 set mouse=a
 
+
+"17 some normal settion
 set history=300
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 "end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
