@@ -69,3 +69,12 @@ autocmd   FileType  conque_term  nnoremap  <buffer>  q          :bd<cr>
 autocmd   FileType  conque_term  nnoremap  <buffer>  <leader>q  :bd<cr>
 autocmd   FileType  conque_term  setlocal   nocursorline
 
+
+"10: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
+autocmd   FileType  nerdtree  nnoremap  <buffer>  <leader>n  <nop>
+autocmd   FileType  nerdtree  nnoremap  <buffer>  <leader>p  <nop>
+autocmd   FileType  nerdtree  nnoremap  <buffer>  q          :bd<cr>
+autocmd   FileType  nerdtree  nnoremap  <buffer>  <leader>q  :bd<cr>
+autocmd   FileType  nerdtree  setlocal  nu  rnu
+"autocmd   FileType  nerdtree  setlocal   nocursorline
+
