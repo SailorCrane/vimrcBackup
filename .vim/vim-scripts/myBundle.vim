@@ -36,6 +36,9 @@ Bundle 'scrooloose/syntastic'
 let g:syntastic_error_symbol='>>'
 let g:syntastic_warning_symbol='>'
 let g:syntastic_check_on_open=1
+" check_header 可以检测头文件语法错误
+let g:syntastic_c_check_header=1
+let g:syntastic_cpp_check_header = 1
 
 "5: taglist in vim-scripts in github
 Bundle 'taglist.vim'
