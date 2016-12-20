@@ -285,6 +285,9 @@ Bundle "https://github.com/terryma/vim-expand-region"
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
+"38 gundo stand for gnu undo
+Bundle "gundo"
+
 " required
 filetype plugin indent on
 filetype on
