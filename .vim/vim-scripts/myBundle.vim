@@ -260,7 +260,7 @@ Bundle  "potion"
 
 "34 L9: vim library, vim script util.
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
-"Bundle "L9"
+Bundle "L9"
 
 
 " no vundle#end
@@ -287,6 +287,9 @@ vmap V <Plug>(expand_region_shrink)
 
 "38 gundo stand for gnu undo
 Bundle "gundo"
+
+"39 FuzzyFinder : need L9 library 
+Bundle "FuzzyFinder"
 
 " required
 filetype plugin indent on
