@@ -16,8 +16,8 @@ nnoremap <cr> ;
 nnoremap  <leader>o   :set nu!  rnu!    nu? rnu? <cr>
 nnoremap  <leader>/   :set hlsearch!    hlsearch?<cr>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
-"nnoremap  <leader>/   :nohlsearch<cr>  
-nnoremap   <leader>i   :set ignorecase!  ignorecase?<cr>
+"nnoremap  <leader>/   :nohlsearch<cr>
+nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 
 
 "3  quick edit
@@ -56,7 +56,7 @@ else
 endif
 
 
-"5 quick  operation 
+"5 quick  operation
 " Quit the current window : the buffers underlying the window will be quited
 nnoremap  <leader>q  :q<cr>
 " Quit all windows
@@ -79,15 +79,14 @@ nnoremap  <leader>C  ciW
 
 "7 buffer:next/previous/delete
 " buf and tab
-nnoremap <tab>     :bn<cr>
-nnoremap <s-tab>   :bp<cr>
+nnoremap <leader>n :bn<cr>
+nnoremap <leader>p :bp<cr>
 nnoremap <leader>d :bd<cr>:syntax on<cr>
 
-
-nnoremap  tn  :tabnew<cr>
-nnoremap  td  :tabclose<cr>
-nnoremap  <leader>n  gt
-nnoremap  <leader>p  gT
+nnoremap <tab>     gt
+nnoremap <s-tab>   gT
+nnoremap tn        :tabnew<cr>
+nnoremap td        :tabclose<cr>
 
 
 "8 Window manager
@@ -135,7 +134,7 @@ nnoremap  L  $
 
 
 "12-1 屏幕顶部,中央,下端
-" "'" is used for mark, there to top, bottom, middle 
+" "'" is used for mark, there to top, bottom, middle
 noremap   't H
 noremap   'b L
 noremap   'm M
@@ -169,6 +168,11 @@ nnoremap <leader>sa a<cr><esc><up>g_
 "16  map Q to gq
 nnoremap  Q  gq
 
+"17 delete all  trailing White Space
+nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
+
+"18  !ctags -R .
+nnoremap <leader>ct  :!ctags  -R  .<cr>
 
 "end  visual:select all lines
 " map <c-a> to visual all content if file

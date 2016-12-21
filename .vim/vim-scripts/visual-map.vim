@@ -1,6 +1,6 @@
 
-vnoremap  ;  :
-vnoremap  : <nop>
+vnoremap  ;    :
+vnoremap  <cr> ;
 
 " <leader>f,b to  page down up
 vnoremap  <leader>f   5<c-e>
