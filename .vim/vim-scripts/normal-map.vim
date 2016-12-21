@@ -1,9 +1,6 @@
 
 
 "1 Quick into command line
-" Because I want to use ; more quickly
-" So I disabled the ':' keyword
-
 " 将';'映射到':',因为';'更容易敲击,但是':'功能用的更多
 " 因为<cr>默认功能,可以使用j代替,所以将<cr>映射到';',即'f'后,查看下一个.
 " 而在qf(QuickFix)文件类型中的<cr>,选择光标所在行的搜索结果,
@@ -15,14 +12,12 @@ nnoremap <cr> ;
 
 
 "2 Toggle  something
-"  Toggle  number line and relative number line
-"  Toggle  highlight
-"  Toggle  sensitive case
+"  Toggle  number line/relative number line/Toggle  highlight / sensitive case
 nnoremap  <leader>o   :set nu!  rnu!    nu? rnu? <cr>
 nnoremap  <leader>/   :set hlsearch!    hlsearch?<cr>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
 "nnoremap  <leader>/   :nohlsearch<cr>  
-nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
+nnoremap   <leader>i   :set ignorecase!  ignorecase?<cr>
 
 
 "3  quick edit
@@ -49,6 +44,8 @@ nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 
 nnoremap  <leader>ee  :e ~/.vim/vim-scripts/example/vimrc_example.vim<cr>
 nnoremap  <leader>eE  :e ~/.vim/vim-scripts/example/<cr>
+
+nnoremap  <leader>ed  :e ~/.vim/doc/<cr>
 
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc
@@ -80,13 +77,17 @@ nnoremap  <leader>c  ciw
 nnoremap  <leader>C  ciW
 
 
-"7 buffer next,previous,delete
-" Buf next
-nnoremap  <leader>n  :bn<cr>
-" Buf previous
-nnoremap  <leader>p  :bp<cr>
-" Buf delete: delete current buffer
-nnoremap <leader>d   :bd<cr>:syntax on<cr>
+"7 buffer:next/previous/delete
+" buf and tab
+nnoremap <tab>     :bn<cr>
+nnoremap <s-tab>   :bp<cr>
+nnoremap <leader>d :bd<cr>:syntax on<cr>
+
+
+nnoremap  tn  :tabnew<cr>
+nnoremap  td  :tabclose<cr>
+nnoremap  <leader>n  gt
+nnoremap  <leader>p  gT
 
 
 "8 Window manager
@@ -163,9 +164,6 @@ nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
 
 
-"15 tab mapping
-nnoremap  tn  :tabnew<cr>
-nnoremap  td  :tabclose<cr>
 
 
 "16  map Q to gq
