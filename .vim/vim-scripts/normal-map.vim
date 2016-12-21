@@ -175,7 +175,10 @@ nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ct  :!ctags  -R  .<cr>
 
 "19  ctrlp map, sp stand fot "search ctrlP""
+"ctrlp 似乎是只要有别的映射,映射到了CtrlP命令,那么<c-p>的映射就会失效
+"这样<c-p> 就可以用在QuickFix中了
 nnoremap  <leader>sp  :<c-u>CtrlP<cr>
+nnoremap  <leader>sf  :<c-u>FufFile<cr>
 
 
 "100
