@@ -15,3 +15,5 @@ cabbrev  BL   BundleList
 cabbrev  BC   BundleClear
 cabbrev  qq   q!
 cabbrev  ll   ls!
+
+"cnoremap jk   <esc>

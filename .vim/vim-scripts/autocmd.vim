@@ -1,11 +1,12 @@
 
-"1: quick fix
+"1: quickfix
 " 打开QuickFix时, <cr> 恢复 <cr>功能.因为我将<cr>映射为了查找下一个
 autocmd   FileType  qf  nnoremap <buffer>  <cr>  <cr>
+autocmd   FileType  qf  set nu rnu
 "autocmd   FileType  qf   echo "MyFix"
 
 
-"2: help 
+"2: help
 " 打开帮助文档时，自动显示行号
 autocmd   FileType  help  setlocal nu rnu
 
@@ -82,4 +83,4 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 
 
 "10:   c, cpp type
-"autocmd   FileType  c,cpp  
+"autocmd   FileType  c,cpp

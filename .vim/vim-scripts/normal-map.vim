@@ -118,6 +118,8 @@ nnoremap  gB  BgUl
 nnoremap  ge  egul
 nnoremap  gE  egUl
 
+" gt: g toggle: 因为'~'会向右移动一位,所以这里使用visual模式,使其作用于光标下的文字而不在移动
+nnoremap  gt  v~
 nnoremap  gc  gUl
 nnoremap  gC  gul
 
@@ -163,8 +165,6 @@ nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
 
 
-
-
 "16  map Q to gq
 nnoremap  Q  gq
 
@@ -174,8 +174,12 @@ nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
 "18  !ctags -R .
 nnoremap <leader>ct  :!ctags  -R  .<cr>
 
-"end  visual:select all lines
-" map <c-a> to visual all content if file
-nnoremap  <c-a>  <esc>gg<s-v>G
+"19  ctrlp map, sp stand fot "search ctrlP""
+nnoremap  <leader>sp  :<c-u>CtrlP<cr>
+
+
+"100
+" map <c-a> to visual all content, then select to "+, then go to previous position
+nnoremap  <c-a>  <esc>ggVG"+y<c-o>
 
 

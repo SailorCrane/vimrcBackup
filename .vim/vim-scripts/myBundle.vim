@@ -139,7 +139,7 @@ let g:miniBufExplForceSyntaxEnable = 1
 nnoremap  <leader>mb   :MBEToggle!<cr>
 
 "14:  quick fix
-Bundle "romainl/vim-qf"
+"Bundle "romainl/vim-qf"
 
 "15:  rainbow  parentheses
 Bundle 'kien/rainbow_parentheses.vim'
@@ -294,6 +294,9 @@ Bundle "FuzzyFinder"
 "40 ShowTrailingWhiteSpace
 Bundle 'ShowTrailingWhitespace'
 
+"41 FencView: fencview
+Bundle  'mbbill/fencview'
+"Bundle  'fencview'
 
 " required
 filetype plugin indent on
