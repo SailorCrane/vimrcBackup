@@ -174,6 +174,9 @@ nnoremap  Q  gq
 "17 delete all  trailing White Space
 nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
 
+"18  !ctags -R .
+nnoremap <leader>ct  :!ctags  -R  .<cr>
+
 "end  visual:select all lines
 " map <c-a> to visual all content if file
 nnoremap  <c-a>  <esc>gg<s-v>G

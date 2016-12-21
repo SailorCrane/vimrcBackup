@@ -271,7 +271,7 @@ Bundle "https://github.com/terryma/vim-multiple-cursors"
 
 "36 junegunn/vim-easy-align
 Bundle "junegunn/vim-easy-align"
-" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因
+" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因,<Plug>不是vim底层的操作,所以映射之后也没有意义
 vmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 

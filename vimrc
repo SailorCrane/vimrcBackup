@@ -97,6 +97,7 @@ set mouse=a
 set history=300
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+"set endofline      "vim 默认在最后添加空行
 
 "end  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
