@@ -176,10 +176,15 @@ nnoremap <leader>ct  :!ctags  -R  .<cr>
 
 "19  ctrlp map, sp stand fot "search ctrlP""
 "ctrlp 似乎是只要有别的映射,映射到了CtrlP命令,那么<c-p>的映射就会失效
-"这样<c-p> 就可以用在QuickFix中了
+"这样<c-p> 就可以用在QuickFix中了 :cn<cr>
+"释放了 <c-p>
 nnoremap  <leader>sp  :<c-u>CtrlP<cr>
 nnoremap  <leader>sf  :<c-u>FufFile<cr>
 
+"20 释放<c-n>在multiple cursor中功能,由<c-m>去完成
+" <c-m> 在vim中代表回车,就像<c-i>代表 <tab>一样,都不可以映射
+"nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
+"xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
