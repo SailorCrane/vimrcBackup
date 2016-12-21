@@ -298,6 +298,11 @@ Bundle 'ShowTrailingWhitespace'
 Bundle  'mbbill/fencview'
 "Bundle  'fencview'
 
+"42 ack.vim
+Bundle "ack.vim"
+
+
+"100
 " required
 filetype plugin indent on
 filetype on
