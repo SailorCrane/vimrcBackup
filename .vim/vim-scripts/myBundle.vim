@@ -1,11 +1,11 @@
 
 " required
-filetype off        
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
-     
+
 " let Vundle manage Vundle
 " required!
 
@@ -88,7 +88,7 @@ let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
 nnoremap  <leader>mw  :WMToggle<cr>  "定义打开关闭winmanager快捷键为F8
 "imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
 
-let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager 
+let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 
 
 
@@ -288,8 +288,12 @@ vmap V <Plug>(expand_region_shrink)
 "38 gundo stand for gnu undo
 Bundle "gundo"
 
-"39 FuzzyFinder : need L9 library 
+"39 FuzzyFinder : need L9 library
 Bundle "FuzzyFinder"
+
+"40 ShowTrailingWhiteSpace
+Bundle 'ShowTrailingWhitespace'
+
 
 " required
 filetype plugin indent on
