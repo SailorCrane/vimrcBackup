@@ -1,9 +1,6 @@
 
 
 "1 Quick into command line
-" Because I want to use ; more quickly
-" So I disabled the ':' keyword
-
 " 将';'映射到':',因为';'更容易敲击,但是':'功能用的更多
 " 因为<cr>默认功能,可以使用j代替,所以将<cr>映射到';',即'f'后,查看下一个.
 " 而在qf(QuickFix)文件类型中的<cr>,选择光标所在行的搜索结果,
@@ -15,9 +12,7 @@ nnoremap <cr> ;
 
 
 "2 Toggle  something
-"  Toggle  number line and relative number line
-"  Toggle  highlight
-"  Toggle  sensitive case
+"  Toggle  number line/relative number line/Toggle  highlight / sensitive case
 nnoremap  <leader>o   :set nu!  rnu!    nu? rnu? <cr>
 nnoremap  <leader>/   :set hlsearch!    hlsearch?<cr>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
@@ -50,6 +45,8 @@ nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
 nnoremap  <leader>ee  :e ~/.vim/vim-scripts/example/vimrc_example.vim<cr>
 nnoremap  <leader>eE  :e ~/.vim/vim-scripts/example/<cr>
 
+nnoremap  <leader>ed  :e ~/.vim/doc/<cr>
+
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc
 if has("gui_running")
@@ -80,13 +77,16 @@ nnoremap  <leader>c  ciw
 nnoremap  <leader>C  ciW
 
 
-"7 buffer next,previous,delete
-" Buf next
-nnoremap  <leader>n  :bn<cr>
-" Buf previous
-nnoremap  <leader>p  :bp<cr>
-" Buf delete: delete current buffer
-nnoremap <leader>d   :bd<cr>:syntax on<cr>
+"7 buffer:next/previous/delete
+" buf and tab
+nnoremap <leader>n :bn<cr>
+nnoremap <leader>p :bp<cr>
+nnoremap <leader>d :bd<cr>:syntax on<cr>
+
+nnoremap <tab>     gt
+nnoremap <s-tab>   gT
+nnoremap tn        :tabnew<cr>
+nnoremap td        :tabclose<cr>
 
 
 "8 Window manager
@@ -118,6 +118,8 @@ nnoremap  gB  BgUl
 nnoremap  ge  egul
 nnoremap  gE  egUl
 
+" gt: g toggle: 因为'~'会向右移动一位,所以这里使用visual模式,使其作用于光标下的文字而不在移动
+nnoremap  gt  v~
 nnoremap  gc  gUl
 nnoremap  gC  gul
 
@@ -163,11 +165,6 @@ nnoremap <leader>si i<cr><esc><up>g_
 nnoremap <leader>sa a<cr><esc><up>g_
 
 
-"15 tab mapping
-nnoremap  tn  :tabnew<cr>
-nnoremap  td  :tabclose<cr>
-
-
 "16  map Q to gq
 nnoremap  Q  gq
 
@@ -177,8 +174,20 @@ nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
 "18  !ctags -R .
 nnoremap <leader>ct  :!ctags  -R  .<cr>
 
-"end  visual:select all lines
-" map <c-a> to visual all content if file
-nnoremap  <c-a>  <esc>gg<s-v>G
+"19  ctrlp map, sp stand fot "search ctrlP""
+"ctrlp 似乎是只要有别的映射,映射到了CtrlP命令,那么<c-p>的映射就会失效
+"这样<c-p> 就可以用在QuickFix中了 :cn<cr>
+"释放了 <c-p>
+nnoremap  <leader>sp  :<c-u>CtrlP<cr>
+nnoremap  <leader>sf  :<c-u>FufFile<cr>
+
+"20 释放<c-n>在multiple cursor中功能,由<c-m>去完成
+" <c-m> 在vim中代表回车,就像<c-i>代表 <tab>一样,都不可以映射
+"nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
+"xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
+
+"100
+" map <c-a> to visual all content, then select to "+, then go to previous position
+nnoremap  <c-a>  <esc>ggVG"+y<c-o>
 
 

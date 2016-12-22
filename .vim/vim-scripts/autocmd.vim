@@ -1,11 +1,12 @@
 
-"1: quick fix
+"1: quickfix
 " 打开QuickFix时, <cr> 恢复 <cr>功能.因为我将<cr>映射为了查找下一个
 autocmd   FileType  qf  nnoremap <buffer>  <cr>  <cr>
+autocmd   FileType  qf  set nu rnu
 "autocmd   FileType  qf   echo "MyFix"
 
 
-"2: help 
+"2: help
 " 打开帮助文档时，自动显示行号
 autocmd   FileType  help  setlocal nu rnu
 
@@ -22,8 +23,9 @@ autocmd   FileType  tagbar  setlocal  nu
 autocmd   FileType  tagbar  setlocal  rnu
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>p  <nop>
-autocmd   FileType  tagbar  nnoremap  <buffer> ?  :call <SNR>155_ToggleHelp()<cr>
-"autocmd   BufRead,BufNewFile,FileType  tagbar  :setlocal  rnu
+"注意:映射要使用 :<cmd><cr>的方式去映射,因为这里的命令是映射,而不是映射后的命令
+autocmd   FileType  tagbar  nnoremap  <buffer> ?      :call <SNR>141_ToggleHelp()<cr>
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    call tagbar#autoopen()
 
 
 "4-2: taglist
@@ -82,4 +84,4 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 
 
 "10:   c, cpp type
-"autocmd   FileType  c,cpp  
+"autocmd   FileType  c,cpp
