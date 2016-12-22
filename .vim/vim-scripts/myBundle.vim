@@ -174,9 +174,12 @@ let g:rbpt_colorpairs = [
 Bundle  'jiangmiao/auto-pairs.git'
 let g:AutoPairShortcutToggle = '<C-p>'
 
-"17: colors/molokai.vim
+"17-1: colors/molokai.vim
 Bundle  'tomasr/molokai'
 let g:molokai_original = 1
+
+"17-2: altercation/vim-colors-solarized
+Bundle  'altercation/vim-colors-solarized'
 
 
 set t_Co=256
@@ -226,7 +229,14 @@ nnoremap  <leader>tt  :TagbarToggle<cr>
 let g:tagbar_show_linenumbers=1
 
 "25 vim-fugitive
-"Bundle "vim-fugitive"
+Bundle "vim-fugitive"
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gl :Glog<cr>
+nnoremap <leader>gp :Git push<cr>
+nnoremap <leader>gw :Gwrite<cr>
 
 "26 matchit
 Bundle "matchit.zip"
@@ -294,6 +304,8 @@ Bundle "FuzzyFinder"
 "40 ShowTrailingWhiteSpace
 Bundle 'ShowTrailingWhitespace'
 
+"41 godlygeek/tabular
+Bundle "godlygeek/tabular"
 
 " required
 filetype plugin indent on
