@@ -81,7 +81,7 @@ nnoremap  <leader>C  ciW
 " buf and tab
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
-nnoremap <leader>d :bd<cr>:syntax on<cr>
+nnoremap <leader>d :TagbarClose<cr>:bd<cr>:syntax on<cr>
 
 nnoremap <tab>     gt
 nnoremap <s-tab>   gT
