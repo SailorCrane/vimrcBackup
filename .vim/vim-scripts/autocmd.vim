@@ -23,8 +23,10 @@ autocmd   FileType  tagbar  setlocal  nu
 autocmd   FileType  tagbar  setlocal  rnu
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>p  <nop>
-autocmd   FileType  tagbar  nnoremap  <buffer> ?  :call <SNR>155_ToggleHelp()<cr>
-"autocmd   BufRead,BufNewFile,FileType  tagbar  :setlocal  rnu
+"注意:映射要使用 :<cmd><cr>的方式去映射,因为这里的命令是映射,而不是映射后的命令
+autocmd   FileType  tagbar  nnoremap  <buffer> ?      :call <SNR>141_ToggleHelp()<cr>
+"autocmd   BufNewFile,BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    call tagbar#autoopen()
+"autocmd   BufNewFile,BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    syntax on
 
 
 "4-2: taglist

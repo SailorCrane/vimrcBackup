@@ -81,7 +81,7 @@ nnoremap  <leader>C  ciW
 " buf and tab
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
-nnoremap <leader>d :bd<cr>:syntax on<cr>
+nnoremap <leader>d :TagbarClose<cr>:bd<cr>:syntax on<cr>
 
 nnoremap <tab>     gt
 nnoremap <s-tab>   gT
@@ -180,11 +180,20 @@ nnoremap <leader>ct  :!ctags  -R  .<cr>
 "释放了 <c-p>
 nnoremap  <leader>sp  :<c-u>CtrlP<cr>
 nnoremap  <leader>sf  :<c-u>FufFile<cr>
+nnoremap  <leader>sb  :<c-u>FufBuffer<cr>
 
 "20 释放<c-n>在multiple cursor中功能,由<c-m>去完成
 " <c-m> 在vim中代表回车,就像<c-i>代表 <tab>一样,都不可以映射
 "nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
 "xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
+
+"21  在类中给类的 {} 之后添加分号{}; 非常棒
+nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
+"位于分号}上时,在后面添加";"
+"nnoremap  <leader>a;    a;<esc>:write<cr>
+"在行为添加分号, 覆盖了上面 <leader>a;功能
+nnoremap  <leader>l;    $a;<esc>:write<cr>
+nnoremap  <leader>d;    $x<esc>:write<cr>
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
