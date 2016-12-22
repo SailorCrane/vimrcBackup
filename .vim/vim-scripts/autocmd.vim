@@ -25,7 +25,7 @@ autocmd   FileType  tagbar  nnoremap  <buffer> <leader>n  <nop>
 autocmd   FileType  tagbar  nnoremap  <buffer> <leader>p  <nop>
 "注意:映射要使用 :<cmd><cr>的方式去映射,因为这里的命令是映射,而不是映射后的命令
 autocmd   FileType  tagbar  nnoremap  <buffer> ?      :call <SNR>141_ToggleHelp()<cr>
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    call tagbar#autoopen()
+autocmd   BufNewFile,BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    call tagbar#autoopen()
 
 
 "4-2: taglist
