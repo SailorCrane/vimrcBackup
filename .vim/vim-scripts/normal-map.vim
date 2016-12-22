@@ -172,7 +172,7 @@ nnoremap  Q  gq
 nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
 
 "18  !ctags -R .
-nnoremap <leader>ct  :!ctags  -R  .<cr>
+nnoremap <leader>ct  :!ctags -R --fields=+lS .<cr>
 
 "19  ctrlp map, sp stand fot "search ctrlP""
 "ctrlp 似乎是只要有别的映射,映射到了CtrlP命令,那么<c-p>的映射就会失效
