@@ -100,5 +100,10 @@ set history=300
 set backspace=indent,eol,start
 "set endofline      "vim 默认在最后添加空行
 
-"end  vim colorscheme, gvim colorscheme in ~/.gvimrc
+
+"18 autowrite
+set autowrite
+set autowriteall
+
+"100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
