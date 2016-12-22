@@ -1,7 +1,7 @@
 
-" GUI setting 
+" GUI setting
 
-"1 
+"1
 colorscheme molokai
 
 

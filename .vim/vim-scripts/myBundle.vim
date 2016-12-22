@@ -31,14 +31,23 @@ nnoremap <leader>xn :NERDTreeToggle<cr>
 "3: nerdcommenter in scrooloose
 Bundle 'scrooloose/nerdcommenter'
 
+
 "4: syntastic in scrooloose
 Bundle 'scrooloose/syntastic'
-let g:syntastic_error_symbol='>>'
-let g:syntastic_warning_symbol='>'
+" 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
+" symbol设置为不同标志
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_highlighting = 1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+"let g:syntastic_error_symbol='>>'
+"let g:syntastic_warning_symbol='>'
 let g:syntastic_check_on_open=1
 " check_header 可以检测头文件语法错误
 let g:syntastic_c_check_header=1
 let g:syntastic_cpp_check_header = 1
+
 
 "5: taglist in vim-scripts in github
 Bundle 'taglist.vim'
@@ -134,11 +143,14 @@ let g:airline_right_sep = '«'
 "12:  c-support用来支持c或者cpp的快捷键
 Bundle "WolfgangMehner/c-support"
 
-"13:  mini buf explorer
+"13:  minibufexplorer
 Bundle "fholgado/minibufexpl.vim"
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplForceSyntaxEnable = 1
 nnoremap  <leader>mb   :MBEToggle!<cr>
+
+"13-2 bufexplorer
+Bundle  "https://github.com/jlanzarotta/bufexplorer"
 
 "14:  quick fix
 "Bundle "romainl/vim-qf"
@@ -315,6 +327,7 @@ Bundle  'mbbill/fencview'
 
 "43 ack.vim
 Bundle "ack.vim"
+
 
 
 "100
