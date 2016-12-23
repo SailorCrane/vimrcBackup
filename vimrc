@@ -84,7 +84,6 @@ set  sidescroll=5
 
 set  ruler      "显示当先位置
 
-
 "15 background
 set background=light
 "set background=dark
@@ -104,6 +103,11 @@ set backspace=indent,eol,start
 "18 autowrite
 set autowrite
 set autowriteall
+
+
+"19 wildmenu :命令行<tab>补全时,可以在statusline预览接下来会调到的选项
+set wildmenu
+
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate

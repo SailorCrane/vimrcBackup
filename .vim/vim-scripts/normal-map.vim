@@ -191,9 +191,14 @@ nnoremap  <leader>sb  :<c-u>FufBuffer<cr>
 nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
 "位于分号}上时,在后面添加";"
 "nnoremap  <leader>a;    a;<esc>:write<cr>
-"在行为添加分号, 覆盖了上面 <leader>a;功能
+"在行末尾添加分号, 覆盖了上面 <leader>a;功能
 nnoremap  <leader>l;    $a;<esc>:write<cr>
 nnoremap  <leader>d;    $x<esc>:write<cr>
+
+"nnoremap  <leader>l{    $a{  }<left><left><esc>:write<cr>
+nnoremap  <leader>i{    o{<cr><cr>}<up>
+"nnoremap  <leader>d{    <down>f{d%
+nnoremap  <leader>l{    $a {  }<left><left>
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position

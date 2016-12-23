@@ -7,7 +7,7 @@
 inoremap  jk <esc>
 inoremap <esc> <nop>
 
-" 2  arrrow : with ctrl 
+" 2  arrrow : with ctrl
 " <arrrow> set: left, right, up, down
 inoremap <c-h> <Left>
 inoremap <c-j> <Down>
@@ -16,7 +16,9 @@ inoremap <c-l> <Right>
 
 
 " 3 ctrl- : quick  edit
-inoremap  <silent> <C-d>  <esc>ddi
+" <c-d>和插件中某个映射重合,插件每次启动都要检测,然后echom
+" message,好烦,所以取消inoremap <c-d> 映射
+"inoremap  <silent> <C-d>  <esc>ddi
 inoremap  <C-w>  <esc>:w<cr>a
 inoremap  <C-y>  <esc>yypkA
 inoremap  <C-b>  <c-w>

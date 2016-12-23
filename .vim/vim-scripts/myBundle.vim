@@ -220,7 +220,10 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 
 
 "20 SearchComplete
-Bundle 'https://github.com/SailorCrane/SearchComplete'
+" 一个很烂的插件,将我command
+" 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
+" 难道是因为我没有好好读读文档,所以不会使用?
+"Bundle 'https://github.com/SailorCrane/SearchComplete'
 
 "21 ShowMarks
 "Bundle "ShowMarks"
@@ -260,12 +263,13 @@ Bundle "EasyGrep"
 
 
 "28 SnipMate
-Bundle "garbas/vim-snipmate"
+"Bundle "garbas/vim-snipmate"
 " the tow plugins below is necessary for snipmate
-Bundle "tomtom/tlib_vim"
-Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim"
+"Bundle "MarcWeber/vim-addon-mw-utils"
 " snippets is  optional for snipmate
-Bundle  "honza/vim-snippets"
+"Bundle  "honza/vim-snippets"
+
 
 "29 vimim
 "Bundle 'vimim/vimim'
@@ -327,7 +331,6 @@ Bundle  'mbbill/fencview'
 
 "43 ack.vim
 Bundle "ack.vim"
-
 
 
 "100
