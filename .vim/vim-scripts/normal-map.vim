@@ -200,6 +200,14 @@ nnoremap  <leader>i{    o{<cr><cr>}<up>
 "nnoremap  <leader>d{    <down>f{d%
 nnoremap  <leader>l{    $a {  }<left><left>
 
+"22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
+if  exists(":Man")
+    nmap  K  <leader>K
+    "注意,因为<leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
+    "只有当最终映射目标为vim直接输入后的功能时:比如vim自带功能,或者命令行输入...才能使用nnoremap
+    "nmap <leader>K 可以查看到 映射的最终函数
+endif
+
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
 nnoremap  <c-a>  <esc>ggVG"+y<c-o>

@@ -56,18 +56,18 @@ let mapleader=","       "
 let g:mapleader=","     " global <leader>
 
 
-"12 module scripts
-" My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
-source ~/.vim/vim-scripts/myBundle.vim
-source ~/.vim/vim-scripts/normal-map.vim
-source ~/.vim/vim-scripts/insert-map.vim
+""12 module scripts
+"" My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
+"source ~/.vim/vim-scripts/myBundle.vim
+"source ~/.vim/vim-scripts/normal-map.vim
+"source ~/.vim/vim-scripts/insert-map.vim
 
-source ~/.vim/vim-scripts/command-map.vim
-source ~/.vim/vim-scripts/visual-map.vim
+"source ~/.vim/vim-scripts/command-map.vim
+"source ~/.vim/vim-scripts/visual-map.vim
 
-source ~/.vim/vim-scripts/abbrev-map.vim
-source ~/.vim/vim-scripts/tmp-test.vim
-source ~/.vim/vim-scripts/autocmd.vim
+"source ~/.vim/vim-scripts/abbrev-map.vim
+"source ~/.vim/vim-scripts/tmp-test.vim
+"source ~/.vim/vim-scripts/autocmd.vim
 
 " in the end of vimrc, source myBundle.vim
 " because now, <leader> is ready, everything is OK, then to active plugin
@@ -109,6 +109,23 @@ set autowriteall
 "19 wildmenu :命令行<tab>补全时,可以在statusline预览接下来会调到的选项
 set wildmenu
 
+"20 enable :Man
+runtime   ftplugin/man.vim
+
+"12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
+"比如上面的 runtime  ftplugin/man.vim
+"而normal-map 中有一个根据这个,对于<s-k>,即K的映射
+" My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
+source ~/.vim/vim-scripts/myBundle.vim
+source ~/.vim/vim-scripts/normal-map.vim
+source ~/.vim/vim-scripts/insert-map.vim
+
+source ~/.vim/vim-scripts/command-map.vim
+source ~/.vim/vim-scripts/visual-map.vim
+
+source ~/.vim/vim-scripts/abbrev-map.vim
+source ~/.vim/vim-scripts/tmp-test.vim
+source ~/.vim/vim-scripts/autocmd.vim
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
-colorscheme  slate
+colorscheme  molokai
