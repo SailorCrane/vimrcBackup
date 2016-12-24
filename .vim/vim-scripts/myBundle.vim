@@ -147,6 +147,8 @@ Bundle "WolfgangMehner/c-support"
 Bundle "fholgado/minibufexpl.vim"
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplForceSyntaxEnable = 1
+let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
+let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
 nnoremap  <leader>mb   :MBEToggle!<cr>
 
 "13-2 bufexplorer
