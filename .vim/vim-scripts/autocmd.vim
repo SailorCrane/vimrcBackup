@@ -10,6 +10,10 @@ autocmd   FileType  qf  set nu rnu
 " 打开帮助文档时，自动显示行号
 autocmd   FileType  help  setlocal nu rnu
 
+"3: man
+" 打开帮助文档时，自动显示行号
+autocmd   FileType  man  setlocal nu rnu
+
 
 "3: make file
 " 设置所有的"make-"打头的文件名的文件类型都为make,注意vim使用"make"表示makefile文件类型,而不是"makefile"
