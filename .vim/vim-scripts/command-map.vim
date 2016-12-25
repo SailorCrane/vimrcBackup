@@ -16,4 +16,6 @@ cabbrev  BC   BundleClear
 cabbrev  qq   q!
 cabbrev  ll   ls!
 
+cabb  man Man
+
 "cnoremap jk   <esc>

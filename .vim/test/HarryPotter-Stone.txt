@@ -26,6 +26,8 @@ two
 tehree
 
 five
+exec
+printf
 
 
 jin tian tian qi bu cuo
@@ -36,6 +38,7 @@ five
 人教版 中学 英语 2005
 j
 
+rm
 
 hr
 
