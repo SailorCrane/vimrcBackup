@@ -5,12 +5,14 @@ autocmd   FileType  qf  nnoremap <buffer>  <cr>  <cr>
 autocmd   FileType  qf  set nu rnu
 "autocmd   FileType  qf   echo "MyFix"
 
+"1-1:
+
 
 "2: help
 " 打开帮助文档时，自动显示行号
 autocmd   FileType  help  setlocal nu rnu
 
-"3: man
+"2-2: man
 " 打开帮助文档时，自动显示行号
 autocmd   FileType  man  setlocal nu rnu
 

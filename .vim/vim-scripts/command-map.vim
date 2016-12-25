@@ -18,4 +18,7 @@ cabbrev  ll   ls!
 
 cabb  man Man
 
+"因为在normal中";" -----> :,这样当在normal模式中按两下;;,就是:!
+cnoremap  ; !
+
 "cnoremap jk   <esc>
