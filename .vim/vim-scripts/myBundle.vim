@@ -143,6 +143,9 @@ let g:airline_right_sep = '«'
 "12:  c-support用来支持c或者cpp的快捷键
 Bundle "WolfgangMehner/c-support"
 
+"12-2: a.vim :switch between header and source file
+Bundle "a.vim"
+
 "13:  minibufexplorer
 Bundle "fholgado/minibufexpl.vim"
 let g:miniBufExplMapCTabSwitchBufs = 1
@@ -280,7 +283,9 @@ Bundle "EasyGrep"
 Bundle "Chiel92/vim-autoformat"
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
-"Bundle "YankRing.vim"
+Bundle "YankRing.vim"
+nnoremap  <leader>ys  :YRShow<cr>
+nnoremap  <leader>yc  :YRClear<cr>
 
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
@@ -298,6 +303,9 @@ Bundle "L9"
 
 "35 multiple-cursor
 Bundle "https://github.com/terryma/vim-multiple-cursors"
+let g:multi_cursor_start_word_key='g<C-n>'     "选择单词"
+let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
+
 
 "36 junegunn/vim-easy-align
 Bundle "junegunn/vim-easy-align"
