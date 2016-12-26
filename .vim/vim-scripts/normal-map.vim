@@ -208,6 +208,10 @@ if  exists(":Man")
     "nmap <leader>K 可以查看到 映射的最终函数
 endif
 
+"23 
+nnoremap cn :cn<cr>
+nnoremap cp :cp<cr>
+
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
 nnoremap  <c-a>  <esc>ggVG"+y<c-o>
