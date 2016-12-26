@@ -208,9 +208,12 @@ if  exists(":Man")
     "nmap <leader>K 可以查看到 映射的最终函数
 endif
 
-"23 
+"23
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
+
+"24
+nnoremap  <leader>lp  :echo  expand("%:p")<cr>
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
