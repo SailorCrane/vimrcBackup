@@ -128,4 +128,4 @@ source ~/.vim/vim-scripts/tmp-test.vim
 source ~/.vim/vim-scripts/autocmd.vim
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
-colorscheme  molokai
+colorscheme  slate
