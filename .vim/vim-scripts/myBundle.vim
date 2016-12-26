@@ -347,6 +347,9 @@ Bundle  'mbbill/fencview'
 "43 ack.vim
 Bundle "ack.vim"
 
+"44 mkdir, very simple
+Bundle  "https://github.com/pbrisbin/vim-mkdir"
+
 
 "100
 " required
