@@ -193,6 +193,7 @@ nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
 "nnoremap  <leader>a;    a;<esc>:write<cr>
 "在行末尾添加分号, 覆盖了上面 <leader>a;功能
 nnoremap  <leader>l;    $a;<esc>:write<cr>
+nnoremap  <leader>l,    $a,<esc>:write<cr>
 nnoremap  <leader>d;    $x<esc>:write<cr>
 
 "nnoremap  <leader>l{    $a{  }<left><left><esc>:write<cr>
