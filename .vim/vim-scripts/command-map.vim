@@ -32,7 +32,10 @@ cabb  lp  :echo  expand("%:p")
 cnoremap  ; !
 
 "8 cabbv mk to make
-cabbrev  mk  make
+cabbrev  mk   make
+cabbrev  mkb  make -B
+cabbrev  mka  make all
+cabbrev  mkab make all -B
 
 
 "cnoremap jk   <esc>
