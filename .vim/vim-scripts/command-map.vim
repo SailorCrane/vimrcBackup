@@ -31,7 +31,7 @@ cabb  lp  :echo  expand("%:p")
 "7 quick extern cmd因为在normal中";" -----> :,这样当在normal模式中按两下;;,就是:!
 cnoremap  ; !
 
-"8
+"8 cabbv mk to make
 cabbrev  mk  make
 
 
