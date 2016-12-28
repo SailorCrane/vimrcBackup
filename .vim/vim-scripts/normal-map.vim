@@ -47,6 +47,8 @@ nnoremap  <leader>eE  :e ~/.vim/vim-scripts/example/<cr>
 
 nnoremap  <leader>ed  :e ~/.vim/doc/<cr>
 
+nnoremap  <leader>eq  :e ./question-thunder.txt<cr>
+
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc
 if has("gui_running")
