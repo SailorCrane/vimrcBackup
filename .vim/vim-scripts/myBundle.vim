@@ -350,6 +350,12 @@ Bundle "ack.vim"
 "44 mkdir, very simple
 Bundle  "https://github.com/pbrisbin/vim-mkdir"
 
+"45 visual-star search
+Bundle "https://github.com/nelstrom/vim-visual-star-search"
+
+"46 qargs
+Bundle "https://github.com/nelstrom/vim-qargs"
+
 
 "100
 " required

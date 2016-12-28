@@ -198,8 +198,12 @@ nnoremap  <leader>d;    $x<esc>:write<cr>
 
 "nnoremap  <leader>l{    $a{  }<left><left><esc>:write<cr>
 nnoremap  <leader>i{    o{<cr><cr>}<up>
-"nnoremap  <leader>d{    <down>f{d%
 nnoremap  <leader>l{    $a {  }<left><left>
+"nnoremap  <leader>d{    <down>f{d%
+
+" 在字符前， 后添加空格
+nnoremap  <leader>i<space>    i<space><esc>l
+nnoremap  <leader>a<space>    a<space><esc>l
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 if  exists(":Man")
