@@ -100,7 +100,7 @@ nnoremap  <leader>k  <C-w>k
 " _ and - to swith line position
 " 将当前行'-'下移 或者'_'上移
 nnoremap  -  ddp
-nnoremap  _  kddp
+nnoremap  _  kddpk
 
 
 "10 quick  up case
