@@ -37,5 +37,21 @@ cabbrev  mkb  make -B
 cabbrev  mka  make all
 cabbrev  mkab make all -B
 
+"9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
+" r stand for root
+cnoreabbrev cdt    cd test
+cnoreabbrev cdb    cd build
+cnoreabbrev cds    cd source
+cnoreabbrev cdr    cd /
+cnoreabbrev cdh    cd ~
+cnoreabbrev cd-    cd -
+cnoreabbrev cdd    cd ~/Downloads
+cnoreabbrev cdS    cd ~/Share
+
+cnoreabbrev cdp    cd ..
+cnoreabbrev cd2p   cd ../../
+cnoreabbrev cd3p   cd ../../../
+cnoreabbrev cd4p   cd ../../../../
+
 
 "cnoremap jk   <esc>
