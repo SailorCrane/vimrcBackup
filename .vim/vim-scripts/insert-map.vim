@@ -5,7 +5,7 @@
 " if you really want to input "jk", please input <c-v>jk
 " map <esc> to <nop> is to force me use "jk"
 inoremap  jk <esc>
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 
 " 2  arrrow : with ctrl
 " <arrrow> set: left, right, up, down

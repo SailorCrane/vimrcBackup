@@ -99,10 +99,9 @@ nnoremap  <leader>k  <C-w>k
 
 
 "9 quick line switch:快速交换两行
-" _ and - to swith line position
-" 将当前行'-'下移 或者'_'上移
+" 将当前行'-'下移 或者'_'上移, 支持连续移动
 nnoremap  -  ddp
-nnoremap  _  kddp
+nnoremap  _  kddpk
 
 
 "10 quick  up case
@@ -208,6 +207,7 @@ nnoremap  <leader>i<space>    i<space><esc>l
 nnoremap  <leader>a<space>    a<space><esc>l
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
+" 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
 if  exists(":Man")
     nmap  K  <leader>K
     "注意,因为<leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
@@ -221,6 +221,12 @@ nnoremap cp :cp<cr>
 
 "24
 nnoremap  <leader>lp  :echo  expand("%:p")<cr>
+
+"25 本想用ctrl + P(大写P) 映射, 无奈映射在<c->这种同时按下的模式中,不区分大小写
+" 但在连续按下的情况下,还是区分大小写的,这点要注意
+nnoremap  <leader><leader>p  "+p
+nnoremap  <leader><leader>P  "+P
+
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
