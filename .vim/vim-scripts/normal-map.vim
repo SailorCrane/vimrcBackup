@@ -226,7 +226,7 @@ nnoremap  <leader>lp  :echo  expand("%:p")<cr>
 nnoremap  <up>   gk
 nnoremap  <down> gj
 
-"25 本想用ctrl + P(大写P) 映射, 无奈映射在<c->这种同时按下的模式中,不区分大小写
+"26 本想用ctrl + P(大写P) 映射, 无奈映射在<c->这种同时按下的模式中,不区分大小写
 " 但在连续按下的情况下,还是区分大小写的,这点要注意
 nnoremap  <leader><leader>p  "+p
 nnoremap  <leader><leader>P  "+P
