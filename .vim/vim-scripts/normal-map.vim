@@ -170,8 +170,8 @@ nnoremap <leader>sa a<cr><esc><up>g_
 "16  map Q to gq
 nnoremap  Q  gq
 
-"17 delete all  trailing White Space
-nnoremap <leader>xw :%s/\s\+$//<cr>:let @/=''<CR>
+"17 delete all  trailing White Space, w stand for white
+nnoremap <leader>xw :%s/\s\+$//ge<cr>:let @/=''<CR>
 
 "18  !ctags -R .
 nnoremap <leader>ct  :!ctags -R --fields=+lS .<cr>
