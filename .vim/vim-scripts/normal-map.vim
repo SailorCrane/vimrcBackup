@@ -188,23 +188,36 @@ nnoremap  <leader>sb  :<c-u>FufBuffer<cr>
 "nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
 "xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
 
+
 "21  在类中给类的 {} 之后添加分号{}; 非常棒
+" 这是一个比较多的映射,因为在行尾和行上下行添加的东西可能会比较多,每种都需要一个映射
 nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
 "位于分号}上时,在后面添加";"
 "nnoremap  <leader>a;    a;<esc>:write<cr>
 "在行末尾添加分号, 覆盖了上面 <leader>a;功能
 nnoremap  <leader>l;    $a;<esc>:write<cr>
-nnoremap  <leader>l,    $a,<esc>:write<cr>
 nnoremap  <leader>d;    $x<esc>:write<cr>
+nnoremap  <leader>l,    $a,<esc>:write<cr>
+
+" 在末尾添加反斜杠, 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
+nnoremap  <leader>l\    $a<space>\<esc>:write<cr>
+
+" 在当前行下方, 加入空行
+nnoremap  <leader>lo    o<esc>k
+nnoremap  <leader>lO    O<esc>j
+" d 和 u 代表up 和 down, 分别对应o 和O
+nnoremap  <leader>ld    o<esc>k
+nnoremap  <leader>lu    O<esc>j
 
 "nnoremap  <leader>l{    $a{  }<left><left><esc>:write<cr>
 nnoremap  <leader>i{    o{<cr><cr>}<up>
 nnoremap  <leader>l{    $a {  }<left><left>
 "nnoremap  <leader>d{    <down>f{d%
 
-" 在字符前， 后添加空格
+" 在当前字符前， 后添加空格
 nnoremap  <leader>i<space>    i<space><esc>l
 nnoremap  <leader>a<space>    a<space><esc>l
+
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
