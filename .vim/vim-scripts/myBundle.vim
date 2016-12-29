@@ -356,6 +356,9 @@ Bundle "https://github.com/nelstrom/vim-visual-star-search"
 "46 qargs
 Bundle "https://github.com/nelstrom/vim-qargs"
 
+"47 text-object-entire
+Bundle "https://github.com/kana/vim-textobj-user"
+Bundle "https://github.com/kana/vim-textobj-entire"
 
 "100
 " required
