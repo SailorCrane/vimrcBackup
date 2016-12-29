@@ -356,9 +356,12 @@ Bundle "https://github.com/nelstrom/vim-visual-star-search"
 "46 qargs
 Bundle "https://github.com/nelstrom/vim-qargs"
 
-"47 text-object-entire
+"47 text-object-entire: file object
 Bundle "https://github.com/kana/vim-textobj-user"
 Bundle "https://github.com/kana/vim-textobj-entire"
+
+"48 commentary from toppe: operator
+Bundle  "https://github.com/tpope/vim-commentary"
 
 "100
 " required
