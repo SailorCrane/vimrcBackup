@@ -176,9 +176,9 @@ nnoremap <leader>xw :%s/\s\+$//ge<cr>:let @/=''<CR>
 nnoremap <leader>ct  :!ctags -R --fields=+lS .<cr>
 
 "19  ctrlp map, sp stand fot "search ctrlP""
-"ctrlp 似乎是只要有别的映射,映射到了CtrlP命令,那么<c-p>的映射就会失效
-"这样<c-p> 就可以用在QuickFix中了 :cn<cr>
-"释放了 <c-p>
+" CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<c-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
+" 这样<c-p> 就可以用在Yankring中了
+" s stand for "search"
 nnoremap  <leader>sp  :<c-u>CtrlP<cr>
 nnoremap  <leader>sf  :<c-u>FufFile<cr>
 nnoremap  <leader>sb  :<c-u>FufBuffer<cr>
@@ -227,6 +227,16 @@ nnoremap  <leader>lp  :echo  expand("%:p")<cr>
 nnoremap  <leader><leader>p  "+p
 nnoremap  <leader><leader>P  "+P
 
+
+
+"99 关于normal 模式中惯用的n 和 p的总结:
+" 其中CtrlP插件的<c-p> 被 <leader>sp代替
+" QuickFix 使用:cn, cp 直接下一个,或者前一个
+" Multiple Cursor 的 c-n 被 g<c-n>所取代
+" <c-p> 和 <c-n>被映射到了 YankRing中:让n永远和p快乐的在一起窝
+" <leader>n <leader>p 还是buffer next 和 buffer previous, 自己已经用习惯了
+" 至于tab的前一个,和下一个,使用<tab> 和 <s-tab>完成.
+" 但是如此以来<c-i>,也就是<c-o>的反向功能,就不能再使用<tab>了,因为<tab> 和 <c-i>是同一个按键(同一个编码)
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
