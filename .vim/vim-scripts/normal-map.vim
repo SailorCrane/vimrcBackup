@@ -170,7 +170,9 @@ nnoremap <leader>sa a<cr><esc><up>g_
 nnoremap  Q  gq
 
 "17 delete all  trailing White Space, w stand for white
-nnoremap <leader>xw :%s/\s\+$//ge<cr>:let @/=''<CR>
+"nnoremap <leader>xw :%s/\s\+$//ge<cr>:let @/=''<CR>
+" 还是给出错误提示吧,这样就可以知道自己到底是否替换了空行
+nnoremap <leader>xw :%s/\s\+$//g<cr>:let @/=''<CR>
 
 "18  !ctags -R .
 nnoremap <leader>ct  :!ctags -R --fields=+lS .<cr>
@@ -200,11 +202,14 @@ nnoremap  <leader>d;    $x<esc>:write<cr>
 nnoremap  <leader>l,    $a,<esc>:write<cr>
 
 " 在末尾添加反斜杠, 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
-nnoremap  <leader>l\    $a<space>\<esc>:write<cr>
+nnoremap  <leader>l\    $a<space>\<esc>
 
-" 在当前行下方, 加入空行
+" 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
 nnoremap  <leader>lo    o<esc>k
 nnoremap  <leader>lO    O<esc>j
+nnoremap  <leader>go    o<esc>
+nnoremap  <leader>gO    O<esc>
+
 " d 和 u 代表up 和 down, 分别对应o 和O
 nnoremap  <leader>ld    o<esc>k
 nnoremap  <leader>lu    O<esc>j
