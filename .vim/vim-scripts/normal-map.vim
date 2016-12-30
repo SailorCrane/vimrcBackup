@@ -65,7 +65,7 @@ nnoremap  <leader>q  :q<cr>
 nnoremap  <leader>r  :qa<cr>
 " Refresh file, or restore file from file name
 nnoremap  <leader>e  :e!<cr>
-nnoremap  <leader>w  :w<cr>
+nnoremap  <leader>w  :update<cr>
 
 
 "6  word  operation
