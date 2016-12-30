@@ -65,4 +65,6 @@ inoremap jw    <esc>:w<cr>a
 inoremap <c-b> <c-w>
 inoremap jb    <c-w>
 
+inoremap  <leader><leader>p     <c-r>+
+
 
