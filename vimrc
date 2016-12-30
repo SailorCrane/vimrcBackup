@@ -132,3 +132,9 @@ source ~/.vim/vim-scripts/autocmd.vim
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 colorscheme  slate
+
+"101 这是一个对于系统export环境变量的测试, 在$tmpPath中放入了var.vim
+" var.vim echom一句话,借以测试vim是否支持系统环境变量
+" 如果支持,那么所有的脚本,不再使用~/路径, 而是使用路径变量名,
+" 这样移植到其它系统会更容易
+"source $tmpPath/var.vim
