@@ -265,6 +265,8 @@ nnoremap  <leader><leader>P  "+P
 
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
-nnoremap  <c-a>  <esc>ggVG"+y<c-o>
+" 因为有了 text-obj entire 和 vnoremap  <c-j> "+y,
+" 还是继续让<c-a>去对行内数字做加法吧
+"nnoremap  <c-a>  <esc>ggVG"+y<c-o>
 
 
