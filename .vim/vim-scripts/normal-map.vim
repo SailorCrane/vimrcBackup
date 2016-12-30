@@ -199,8 +199,10 @@ nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
 "在行末尾添加分号, 覆盖了上面 <leader>a;功能
 "nnoremap  <leader>l;    $a;<esc>:write<cr>
 nnoremap  <leader>l;    A;<esc>:write<cr>
-nnoremap  <leader>d;    $x<esc>:write<cr>
 nnoremap  <leader>l,    A,<esc>:write<cr>
+" 删除当前行最后一个字符,因为使用了A一下子进入插入模式,然后才删除的字符,所以这是一个可repeat的修改,very nice
+nnoremap  <leader>lx    A<BS><esc>:write<cr>
+
 
 " 在末尾添加反斜杠, 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
 nnoremap  <leader>l\    A<space>\<esc>
