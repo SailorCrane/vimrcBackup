@@ -13,8 +13,12 @@ cabbrev  vbs  :call Set_verbose()
 
 "2 Bundle abb
 cabbrev  BI   BundleInstall
+cabbrev  bi   BundleInstall
 cabbrev  BL   BundleList
+" bl 和 blast冲突了
+"cabbrev  bl   BundleList
 cabbrev  BC   BundleClear
+cabbrev  bc   BundleClear
 
 "3 quit anyway
 cabbrev  qq   q!
