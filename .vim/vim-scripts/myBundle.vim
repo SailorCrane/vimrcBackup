@@ -122,7 +122,7 @@ Bundle "Lokaltog/vim-powerline"
 "set guifont=Powerline\ Consolas\ Bold
 set laststatus=2
 set t_Co=256
-" let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 set fillchars+=stl:\ ,stlnc:\
 
 " unicode symbols
@@ -234,6 +234,8 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 " 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
 " 难道是因为我没有好好读读文档,所以不会使用?
 "Bundle 'https://github.com/SailorCrane/SearchComplete'
+"20-1 CmdlineComplete
+Bundle "CmdlineComplete"
 
 "21 ShowMarks
 "Bundle "ShowMarks"
@@ -362,6 +364,27 @@ Bundle "https://github.com/kana/vim-textobj-entire"
 
 "48 commentary from toppe: operator
 Bundle  "https://github.com/tpope/vim-commentary"
+
+"49 Mark
+Bundle "Mark"
+
+"50 VOoM
+Bundle "VOoM"
+
+"51 calendar
+Bundle "https://github.com/itchyny/calendar.vim"
+
+"52 visincr 提供增长数列功能
+Bundle "VisIncr"
+
+"53 Align  vim-script 294
+Bundle "Align"
+
+"54 python 相关
+Bundle  "pyflakes"
+Bundle  "pydoc"
+Bundle  "indent/python"
+Bundle  "python.vim"
 
 "100
 " required
