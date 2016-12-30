@@ -91,4 +91,5 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 
 
 "10:   c, cpp type
-"autocmd   FileType  c,cpp
+autocmd   FileType  cpp   inoreabbrev sct  std::cout
+autocmd   FileType  cpp   inoreabbrev sel  std::endl
