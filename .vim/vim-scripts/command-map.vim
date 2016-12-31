@@ -57,5 +57,11 @@ cnoreabbrev cd2p   cd ../../
 cnoreabbrev cd3p   cd ../../../
 cnoreabbrev cd4p   cd ../../../../
 
+" <c-k>, <c-j>
+" 因为cmdlinecomplete 将cmd mode下的<c-n> <c-p>占用了
+" 所以使用<c-k>, <c-j>作为重复上一条命令,下一条命令
+cnoremap  <c-k>  <c-p>
+cnoremap  <c-j>  <c-n>
+
 
 "cnoremap jk   <esc>
