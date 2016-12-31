@@ -253,7 +253,9 @@ Bundle "tpope/vim-repeat"
 
 "24 Tagbar in vim-scripts's repo
 Bundle "Tagbar"
-nnoremap  <leader>tt  :TagbarToggle<cr>
+" <leader>tt 被vim-scripts/Align使用了
+" 所以这里使用ti: tag invert, tt :tag toggle
+nnoremap  <leader>ti  :TagbarToggle<cr>
 " 打开tagbar时,自动显示行号
 let g:tagbar_show_linenumbers=1
 
