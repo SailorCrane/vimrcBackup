@@ -18,8 +18,7 @@ set cmdheight=2
 
 "5 tab to space: 1 tab -----> 4 space
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=4 shiftwidth=4  softtabstop=4
 
 
 "6 indent
@@ -52,8 +51,8 @@ set incsearch     " /搜索时, 一遍输入,一遍已经开始实时搜索
 
 
 "11  <leader> , note: global setting
-let mapleader=","       "
-let g:mapleader=","     " global <leader>
+let mapleader   = ","       "
+let g:mapleader = ","       " global <leader>
 
 
 ""12 module scripts
@@ -90,7 +89,9 @@ set background=light
 "set background=dark
 
 
-"16 mouse  support: 这样就支持鼠标点击链接了
+"16 mouse  support: 这样就支持鼠标点击了
+" 支持鼠标改变窗口大小, 点击minibuf中的文件
+" 支持鼠标点击TagBar中Tag
 set mouse=a
 
 
@@ -101,7 +102,7 @@ set backspace=indent,eol,start
 "set endofline      "vim 默认在最后添加空行
 
 
-"18 autowrite
+"18 autowrite :切换buffer时, 文件会自动写入
 set autowrite
 set autowriteall
 
@@ -109,7 +110,9 @@ set autowriteall
 "19 wildmenu :命令行<tab>补全时,可以在statusline预览接下来会调到的选项
 set wildmenu
 
-"20 enable :Man
+"20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
+" 也可以使用<leader>K 去查看光标下的关键字: 通过Man
+" 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<leader>K
 runtime   ftplugin/man.vim
 
 "21
