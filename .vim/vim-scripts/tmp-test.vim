@@ -9,10 +9,10 @@ autocmd FileType c  :iabb <buffer> iff  if()<left>
 "
 ":augroup testgroup
 ":    autocmd!
-":    autocmd BufWrite * :echom "Foo--------------------------------------"
-":    autocmd BufWrite * :echom "Bar--------------------------------------"
+":    autocmd BufWrite * :echomsg "Foo--------------------------------------"
+":    autocmd BufWrite * :echomsg "Bar--------------------------------------"
 ":augroup END
 
 ":augroup testgroup
-":    autocmd BufWrite * :echom "Baz--------------------------------------"
+":    autocmd BufWrite * :echomsg "Baz--------------------------------------"
 ":augroup END
