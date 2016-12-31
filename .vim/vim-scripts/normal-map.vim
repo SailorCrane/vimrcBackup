@@ -229,6 +229,7 @@ nnoremap  <leader>a<space>    a<space><esc>l
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
+" :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
 if  exists(":Man")
     nmap  K  <leader>K
     "注意,因为<leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap

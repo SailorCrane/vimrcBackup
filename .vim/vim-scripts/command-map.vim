@@ -27,7 +27,16 @@ cabbrev  qq   q!
 cabbrev  ll   ls!
 
 "5 man in vim
-cabb  man Man
+" 除非必要情况, 否则command mode下,尽量使用abbrev
+" 而不是使用cmap
+" abbrev, 可以有单词检测的功能
+" :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
+" 同样在normal.vim中, 也设置了对于K映射的判断
+if exists(":Man")
+    cnoreabb  man Man
+else
+    cnoreabb  man !man
+endif
 
 "6 show absolute path of current file
 cabb  lp  :echo  expand("%:p")
