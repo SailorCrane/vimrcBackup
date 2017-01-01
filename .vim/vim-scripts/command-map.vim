@@ -70,8 +70,13 @@ cnoreabbrev cd4p   cd ../../../../
 " <c-k>, <c-j>
 " 因为cmdlinecomplete 将cmd mode下的<c-n> <c-p>占用了
 " 所以使用<c-k>, <c-j>作为重复上一条命令,下一条命令
-cnoremap  <c-k>  <c-p>
-cnoremap  <c-j>  <c-n>
+"cnoremap  <c-k>  <c-p>
+" 虽然<c-p> 和 <up>一样,都可以进行命令回溯,但是<c-p>不能进行命令过滤
+" 本应将<c-p>映射到<up>, 但是因为<c-p>已经用来作为cmdcomplete了
+" 类似于insert模式中的<c-p>所以就算了,这里使用<c-k>来代替
+cnoremap  <c-k>  <up>
+"cnoremap  <c-j>  <c-n>
+cnoremap  <c-j>  <down>
 
 
 "11

@@ -1,9 +1,13 @@
 //                             HarryPotter-Stone.txt
+this is star
+this is +
+
 //　亚瑟士 　Harry Potter and the Sorcerer's Stone 　亚瑟士 　CHAPTER O亚瑟士NE
 //\n
 //\s\
 //        \S
 //　　THE BOY WHO LIVED
+
 //ni hao, wo
 //jintian meiyou
 //qu shanag ban
