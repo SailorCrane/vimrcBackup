@@ -257,6 +257,11 @@ nnoremap  <down> gj
 nnoremap  <leader><leader>p  "+p
 nnoremap  <leader><leader>P  "+P
 
+"27 yp 复制并粘贴
+" 光标位于粘贴新行
+nnoremap  yp  yyp
+" 光标位于旧行
+nnoremap  yP  yyP
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:

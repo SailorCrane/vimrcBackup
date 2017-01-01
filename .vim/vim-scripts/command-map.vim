@@ -66,6 +66,7 @@ cnoreabbrev cd2p   cd ../../
 cnoreabbrev cd3p   cd ../../../
 cnoreabbrev cd4p   cd ../../../../
 
+"10
 " <c-k>, <c-j>
 " 因为cmdlinecomplete 将cmd mode下的<c-n> <c-p>占用了
 " 所以使用<c-k>, <c-j>作为重复上一条命令,下一条命令
@@ -73,4 +74,15 @@ cnoremap  <c-k>  <c-p>
 cnoremap  <c-j>  <c-n>
 
 
-"cnoremap jk   <esc>
+"11
+cnoremap  <c-h>  <left>
+cnoremap  <c-l>  <right>
+
+
+"12 :快速键入当前光标下单词, 第二次可以不用键入ctrl
+" <c-r>a 和 <c-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD
+cnoremap  <c-r>w  <c-r><c-w>
+cnoremap  <c-r>a  <c-r><c-a>
+cnoremap  <c-r>W  <c-r><c-a>
+cnoremap  <c-r>f  <c-r><c-f>
+cnoremap  <c-r>p  <c-r><c-p>
