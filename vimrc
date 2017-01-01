@@ -109,6 +109,14 @@ set autowriteall
 
 "19 wildmenu :命令行<tab>补全时,可以在statusline预览接下来会调到的选项
 set wildmenu
+"虽然在longest模式下,不起作用, 但是还是设置.
+"这样在手动set wildmode=full时,wildmenu选项就可以立即投入使用,不用再去设置一次了
+
+set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildmenu
+"zsh style complete, need wildmenu to view more choise, 注意wildmode默认就是full mode, 这里列出来,主要是和下面形成对比.
+
+"set wildmode=longest,list
+"bash style complete, 这种情况下,就不再需要wildmenu了: 先试一段时间bash风格补全,不习惯再换回full (zsh) 风格
 
 "20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
 " 也可以使用<leader>K 去查看光标下的关键字: 通过Man
