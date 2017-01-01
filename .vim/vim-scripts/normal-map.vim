@@ -93,7 +93,11 @@ nnoremap td        :tabclose<cr>
 
 "8 Window manager
 nnoremap  <leader>h  <C-w>h
+" 因为有了很多以<leader>l开头的映射,
+"用来对行前行后,行尾等操作.
+"<leader>l的速度就慢了下来,所以添加<leader>ll
 nnoremap  <leader>l  <C-w>l
+nnoremap  <leader>ll <C-w>l
 nnoremap  <leader>j  <C-w>j
 nnoremap  <leader>k  <C-w>k
 
