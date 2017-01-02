@@ -9,6 +9,11 @@
 nnoremap  ;  :
 "nnoremap  :  <nop>
 nnoremap <cr> ;
+" 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
+nnoremap <leader><cr>  <cr>
+
+" 1-2
+nnoremap  q;  q:
 
 
 "2 Toggle  something
