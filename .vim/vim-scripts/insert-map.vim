@@ -65,6 +65,11 @@ inoremap jw    <esc>:w<cr>a
 inoremap <c-b> <c-w>
 inoremap jb    <c-w>
 
+" 6 快速在插入模式中粘贴特殊文本:
+" 快速粘贴全局剪切板
 inoremap  <leader><leader>p     <c-r>+
-
+" 快速粘贴全局star 剪切板
+inoremap  <leader><leader>p     <c-r>*
+" 快速粘贴文件名
+inoremap  <leader><leader>f     <c-r>%
 
