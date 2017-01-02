@@ -69,7 +69,7 @@ inoremap jb    <c-w>
 " 快速粘贴全局剪切板
 inoremap  <leader><leader>p     <c-r>+
 " 快速粘贴全局star 剪切板
-inoremap  <leader><leader>p     <c-r>*
+inoremap  <leader><leader>s     <c-r>*
 " 快速粘贴文件名
 inoremap  <leader><leader>f     <c-r>%
 
