@@ -149,7 +149,7 @@ nnoremap  L  $
 " "'" is used for mark, there to top, bottom, middle
 noremap   't H
 noremap   'b L
-noremap   'm M
+"noremap   'm M
 
 
 "12-2
