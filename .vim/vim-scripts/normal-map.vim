@@ -287,6 +287,7 @@ nnoremap  yP  yyP
 "nmap <C-_>i :cs find i^<C-R>=expand("<cfile>")<CR>$<CR>
 "nmap <C-_>d :cs find d<C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:

@@ -147,12 +147,13 @@ Bundle "WolfgangMehner/c-support"
 Bundle "a.vim"
 
 "13:  minibufexplorer
-Bundle "fholgado/minibufexpl.vim"
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplForceSyntaxEnable = 1
-let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
-let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
-nnoremap  <leader>mb   :MBEToggle!<cr>
+" 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
+"Bundle "fholgado/minibufexpl.vim"
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplForceSyntaxEnable = 1
+"let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
+"let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
+"nnoremap  <leader>mb   :MBEToggle!<cr>
 
 "13-2 bufexplorer
 Bundle  "https://github.com/jlanzarotta/bufexplorer"
