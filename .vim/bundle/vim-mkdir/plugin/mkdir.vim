@@ -13,4 +13,4 @@ function s:Mkdir()
   endif
 endfunction
 
-autocmd BufNewFile,BufWritePre * call s:Mkdir()
+autocmd BufWritePre * call s:Mkdir()
