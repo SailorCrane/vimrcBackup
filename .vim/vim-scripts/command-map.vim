@@ -91,3 +91,8 @@ cnoremap  <c-r>a  <c-r><c-a>
 cnoremap  <c-r>W  <c-r><c-a>
 cnoremap  <c-r>f  <c-r><c-f>
 cnoremap  <c-r>p  <c-r><c-p>
+
+"13 清屏: 清除bash屏幕, 这样make时不会混淆视听
+cnoreabbrev  clear !clear
+cnoreabbrev  clr   !clear
+cnoreabbrev  cle   !clear

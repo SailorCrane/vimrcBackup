@@ -237,7 +237,9 @@ nnoremap  <leader>a<space>    a<space><esc>l
 
 
 " 21-2 在一行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
+" lc 表示 line comment, 因为'c' 比 '*' 更好按
 nnoremap  <leader>l*     I/*<space><esc>A<space>*/<esc>
+nnoremap  <leader>lc     I/*<space><esc>A<space>*/<esc>
 
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
@@ -271,6 +273,20 @@ nnoremap  <leader><leader>P  "+P
 nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
+
+" 28 cscope setting
+" 这个是设定是否使用 quickfix 窗口来显示 cscope 结果, 用法在后面会说到。
+" 如果每次查找都要输入一长串命令的话还真是件讨人厌的事情, Cscope的帮助手册中推荐了一些快捷键的用法,
+" 下面是其中一组,也是我用的, 将下面的内容添加到~/.vimrc中, 并重启vim:
+"nmap <C-_>s :cs find s<C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>g :cs find g<C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>c :cs find c<C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>t :cs find t<C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>e :cs find e<C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>f :cs find f<C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-_>i :cs find i^<C-R>=expand("<cfile>")<CR>$<CR>
+"nmap <C-_>d :cs find d<C-R>=expand("<cword>")<CR><CR>
+set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
