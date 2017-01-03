@@ -368,7 +368,8 @@ Bundle "https://github.com/kana/vim-textobj-entire"
 Bundle  "https://github.com/tpope/vim-commentary"
 
 "49 Mark
-Bundle "Mark"
+" 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
+"Bundle "Mark"
 
 "50 VOoM
 Bundle "VOoM"
@@ -384,9 +385,12 @@ Bundle "Align"
 
 "54 python 相关
 Bundle  "pyflakes"
-Bundle  "pydoc"
-Bundle  "indent/python"
+Bundle  "pydoc.vim"
+Bundle  "indentpython.vim"
 Bundle  "python.vim"
+
+"55 ReplaceWithRegister
+Bundle "ReplaceWithRegister"
 
 "100
 " required
