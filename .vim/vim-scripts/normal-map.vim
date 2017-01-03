@@ -90,10 +90,12 @@ nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
 nnoremap <leader>d :TagbarClose<cr>:bd<cr>:syntax on<cr>
 
-nnoremap <tab>     gt
-nnoremap <s-tab>   gT
-nnoremap tn        :tabnew<cr>
-nnoremap td        :tabclose<cr>
+nnoremap <tab>   gt
+nnoremap <s-tab> gT
+nnoremap tn      :tabnew<cr>
+nnoremap tc      :tabclose<cr>
+nnoremap c<tab>  :tabnew<cr>
+nnoremap d<tab>  :tabclose<cr>
 
 
 "8 Window manager
