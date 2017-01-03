@@ -110,7 +110,7 @@ Bundle 'mbbill/echofunc'
 Bundle  'oplatek/Conque-Shell'
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
-noremap  <leader>b  :ConqueTermVSplit bash<CR>
+noremap  <leader>ba  :ConqueTermVSplit bash<CR>
 
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
@@ -147,15 +147,19 @@ Bundle "WolfgangMehner/c-support"
 Bundle "a.vim"
 
 "13:  minibufexplorer
-Bundle "fholgado/minibufexpl.vim"
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplForceSyntaxEnable = 1
-let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
-let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
-nnoremap  <leader>mb   :MBEToggle!<cr>
+" 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
+"Bundle "fholgado/minibufexpl.vim"
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplForceSyntaxEnable = 1
+"let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
+"let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
+"nnoremap  <leader>mb   :MBEToggle!<cr>
 
 "13-2 bufexplorer
 Bundle  "https://github.com/jlanzarotta/bufexplorer"
+let g:bufExplorerSplitVertSize=30
+nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
+nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
 
 "14:  quick fix
 "Bundle "romainl/vim-qf"
@@ -368,7 +372,8 @@ Bundle "https://github.com/kana/vim-textobj-entire"
 Bundle  "https://github.com/tpope/vim-commentary"
 
 "49 Mark
-Bundle "Mark"
+" 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
+"Bundle "Mark"
 
 "50 VOoM
 Bundle "VOoM"
@@ -384,9 +389,12 @@ Bundle "Align"
 
 "54 python 相关
 Bundle  "pyflakes"
-Bundle  "pydoc"
-Bundle  "indent/python"
+Bundle  "pydoc.vim"
+Bundle  "indentpython.vim"
 Bundle  "python.vim"
+
+"55 ReplaceWithRegister
+Bundle "ReplaceWithRegister"
 
 "100
 " required
