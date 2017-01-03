@@ -110,7 +110,7 @@ Bundle 'mbbill/echofunc'
 Bundle  'oplatek/Conque-Shell'
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
-noremap  <leader>b  :ConqueTermVSplit bash<CR>
+noremap  <leader>ba  :ConqueTermVSplit bash<CR>
 
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
@@ -157,6 +157,9 @@ Bundle "a.vim"
 
 "13-2 bufexplorer
 Bundle  "https://github.com/jlanzarotta/bufexplorer"
+let g:bufExplorerSplitVertSize=30
+nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
+nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
 
 "14:  quick fix
 "Bundle "romainl/vim-qf"

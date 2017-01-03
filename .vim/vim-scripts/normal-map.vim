@@ -164,7 +164,7 @@ nnoremap  <leader>f   5<c-e>
 
 
 "13 show list, just funny, and test
-nnoremap  <f3>  :set list!<cr>
+"nnoremap  <f3>  :set list!<cr>
 
 
 "14 To segment a line ----> two line
