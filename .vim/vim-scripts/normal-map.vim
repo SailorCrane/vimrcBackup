@@ -236,6 +236,10 @@ nnoremap  <leader>i<space>    i<space><esc>l
 nnoremap  <leader>a<space>    a<space><esc>l
 
 
+" 21-2 在一行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
+nnoremap  <leader>l*     I/*<space><esc>A<space>*/<esc>
+
+
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
 " :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
