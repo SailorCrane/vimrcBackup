@@ -401,6 +401,13 @@ Bundle "ReplaceWithRegister"
 "56  vim-exchange :learned from vimcasts
 Bundle "tommcdo/vim-exchange"
 
+
+"56  vim-unimpaired : toggle twince, paste once
+" h paste
+" h pasteoggle
+Bundle  "tpope/vim-unimpaired"
+
+
 "100
 " required
 filetype plugin indent on
