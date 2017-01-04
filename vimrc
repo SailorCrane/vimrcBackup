@@ -135,10 +135,26 @@ endif
 
 
 "23 about list: show whitespace
-" tab:triangle is ctrl-v u25b8
+" tab:triangle ▸ is ctrl-v u25b8
 " eol:ሴ is ctrl-v u1234
+" eol:¬ is ctrl-v u00ac 这个换行符更好些,看起来更形象
+" ¬ 是从vimcasts 复制过来, 然后个ga查看其编码的
+" 当然: listchars 也可以显示trailing,
+" 但是因为自己已经使用了showWhiteSpace插件, 所以就用不到这个了
 set nolist
-set listchars=tab:▸\ ,eol:ሴ
+set listchars=tab:▸\ ,eol:¬
+"set listchars=tab:▸\ ,eol:ሴ
+" Invisible character colors
+highlight NonText    guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" 23-2 :special  symbol
+" Symbol	Unicode	Name
+" ¬	    U+00AC	not   sign
+" ▸	    U+25B8	black right-pointing small triangle
+" ☠	    U+2620	skull and crossbones
+" ❤	    U+2764	heavy black heart
+" ‽	    U+203d	interobang
 
 
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
