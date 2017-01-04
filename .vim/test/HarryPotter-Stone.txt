@@ -1,4 +1,6 @@
                              HarryPotter-Stone.txt
+eol:¬
+¬
 is is star
 is is +
 

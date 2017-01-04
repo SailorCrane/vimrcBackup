@@ -397,6 +397,10 @@ Bundle  "python.vim"
 "55 ReplaceWithRegister
 Bundle "ReplaceWithRegister"
 
+
+"56  vim-exchange :learned from vimcasts
+Bundle "tommcdo/vim-exchange"
+
 "100
 " required
 filetype plugin indent on
