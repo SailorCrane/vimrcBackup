@@ -254,27 +254,33 @@ if  exists(":Man")
     "nmap <leader>K 可以查看到 映射的最终函数
 endif
 
+
 "23
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
 
+
 "24
 nnoremap  <leader>lp  :echo  expand("%:p")<cr>
+
 
 "25
 nnoremap  <up>   gk
 nnoremap  <down> gj
+
 
 "26 本想用ctrl + P(大写P) 映射, 无奈映射在<c->这种同时按下的模式中,不区分大小写
 " 但在连续按下的情况下,还是区分大小写的,这点要注意
 nnoremap  <leader><leader>p  "+p
 nnoremap  <leader><leader>P  "+P
 
+
 "27 yp 复制并粘贴
 " 光标位于粘贴新行
 nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
+
 
 " 28 cscope setting
 " 这个是设定是否使用 quickfix 窗口来显示 cscope 结果, 用法在后面会说到。
@@ -291,6 +297,9 @@ nnoremap  yP  yyP
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 
+
+" 29
+nnoremap  <leader>ls   :set  list!<cr>
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替

@@ -123,13 +123,23 @@ set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildme
 " 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<leader>K
 runtime   ftplugin/man.vim
 
+
 "21
 set fileformats=unix,dos,mac
+
 
 "22  cscope setting
 if has("cscope")
     set cscopetag
 endif
+
+
+"23 about list: show whitespace
+" tab:triangle is ctrl-v u25b8
+" eol:ሴ is ctrl-v u1234
+set nolist
+set listchars=tab:▸\ ,eol:ሴ
+
 
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
 "比如上面的 runtime  ftplugin/man.vim
