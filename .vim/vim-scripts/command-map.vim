@@ -93,6 +93,8 @@ cnoremap  <c-r>f  <c-r><c-f>
 cnoremap  <c-r>p  <c-r><c-p>
 
 "13 清屏: 清除bash屏幕, 这样make时不会混淆视听
-cnoreabbrev  clear !clear
+"有时候自己要运行当前目录下的./clear 清空一下文件,
+"clear缩写影响自己,所以disable, 就用clr好了
+"cnoreabbrev  clear !clear
 cnoreabbrev  clr   !clear
 cnoreabbrev  cle   !clear

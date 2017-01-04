@@ -128,7 +128,7 @@ set fileformats=unix,dos,mac
 
 "22  cscope setting
 if has("cscope")
-    set cscopetag
+    set cscopetag   "优先使用cscopetag文件, 针对 ctrl-] 动作
 endif
 
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
