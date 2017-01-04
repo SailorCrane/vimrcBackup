@@ -233,9 +233,11 @@ nnoremap  <leader>i{    o{<cr><cr>}<up>
 nnoremap  <leader>l{    $a {  }<left><left>
 "nnoremap  <leader>d{    <down>f{d%
 
-" 在当前字符前， 后添加空格
-nnoremap  <leader>i<space>    i<space><esc>l
-nnoremap  <leader>a<space>    a<space><esc>l
+" 在当前字符前， 后添加 <space>/&
+nnoremap  <leader>i<space>  i<space><esc>l
+nnoremap  <leader>a<space>  a<space><esc>l
+nnoremap  <leader>i&        i&<esc>l
+nnoremap  <leader>a&        a&<esc>l
 
 
 " 21-2 在一行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了

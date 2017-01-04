@@ -159,6 +159,7 @@ Bundle "a.vim"
 Bundle  "https://github.com/jlanzarotta/bufexplorer"
 let g:bufExplorerSplitVertSize=30
 nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
+nnoremap <f4>       :ToggleBufExplorer<CR>
 nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
 
 "14:  quick fix
