@@ -320,6 +320,7 @@ nnoremap  dh "_d
 
 " 31-2
 " 默认Y功能是yy, 感觉比较鸡肋, :help  Y 文档中也建议改为y $, 更有用些
+" 自此以后Y=y$, D=d$, C=c$, 只有S=cc, 所以S也有些鸡肋
 nnoremap  Y  y$
 
 
