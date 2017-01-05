@@ -316,7 +316,11 @@ nnoremap  g<c-o>  <c-i>
 " 那么dh的功能, 可以使用X来完成:h dh, :h X, 删除光标左边的字符
 " 使用示例: dhd == "_dd,  dhiw == "_diw,
 " 使用基本和d相同,只不过不影响匿名寄存器
-nnoremap  dh  "_d
+nnoremap  dh "_d
+
+" 31-2
+" 默认Y功能是yy, 感觉比较鸡肋, :help  Y 文档中也建议改为y $, 更有用些
+nnoremap  Y  y$
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
