@@ -52,6 +52,7 @@ cabbrev  mkab make all -B
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
+cnoreabbrev cdv    cd ~/.vim
 cnoreabbrev cdt    cd test
 cnoreabbrev cdb    cd build
 cnoreabbrev cds    cd source
