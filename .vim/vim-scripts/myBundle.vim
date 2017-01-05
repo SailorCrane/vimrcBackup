@@ -406,10 +406,15 @@ Bundle "ReplaceWithRegister"
 Bundle "tommcdo/vim-exchange"
 
 
-"56  vim-unimpaired : toggle twince, paste once
+"57  vim-unimpaired : toggle twince, paste once
 " h paste
 " h pasteoggle
 Bundle  "tpope/vim-unimpaired"
+
+
+"58  vim-workspace
+Bundle "https://github.com/thaerkh/vim-workspace"
+
 
 
 "100
