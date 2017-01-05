@@ -55,16 +55,24 @@ cabbrev  mkab make all -B
 cnoreabbrev cdt    cd test
 cnoreabbrev cdb    cd build
 cnoreabbrev cds    cd source
+" cd root
 cnoreabbrev cdr    cd /
+" cd home
 cnoreabbrev cdh    cd ~
 cnoreabbrev cd-    cd -
 cnoreabbrev cdd    cd ~/Downloads
 cnoreabbrev cdS    cd ~/Share
 
-cnoreabbrev cdp    cd ..
+cnoreabbrev cdp    cd ../
 cnoreabbrev cd2p   cd ../../
 cnoreabbrev cd3p   cd ../../../
 cnoreabbrev cd4p   cd ../../../../
+
+" 直接去掉p,更快
+cnoreabbrev cd1   cd ../
+cnoreabbrev cd2   cd ../../
+cnoreabbrev cd3   cd ../../../
+cnoreabbrev cd4   cd ../../../../
 
 "10
 " <c-k>, <c-j>
