@@ -122,6 +122,7 @@ set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildme
 " 也可以使用<leader>K 去查看光标下的关键字: 通过Man
 " 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<leader>K
 runtime   ftplugin/man.vim
+runtime   macros/matchit.vim    "激活vim自带的matchit.vim, 这样就不用这个matchit.vim插件了
 
 
 "21

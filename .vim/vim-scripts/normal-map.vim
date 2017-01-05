@@ -303,6 +303,12 @@ nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 " 29
 nnoremap  <leader>ls   :set  list!<cr>
 
+
+" 30 因为<c-i> 就是tab,被用来在vim顶上的tab间跳转,
+" 所以这里使用g_ctrl-o代替原来ctrl-i功能
+nnoremap  g<c-o>  <c-i>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
