@@ -210,6 +210,9 @@ let g:molokai_original = 1
 "17-2: altercation/vim-colors-solarized
 Bundle  'altercation/vim-colors-solarized'
 
+"17-3: color sampler
+Bundle  "Colour-Sampler-Pack"
+
 
 set t_Co=256
 set background=dark
