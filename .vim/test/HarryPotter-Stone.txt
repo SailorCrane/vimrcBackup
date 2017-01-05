@@ -4,15 +4,20 @@ eol:¬
 is is star
 is is +
 
-　亚瑟士 　Harry Potter and the Sorcerer's Stone 　亚瑟士 　CHAPTER O亚瑟士NE
+　亚瑟士 　Potter Harry Harry the Sorcerer's Stone 　亚瑟士 　CHAPTER O亚瑟士NE
+
 \n,
 \s\
         \S
 　　THE BOY WHO LIVED
 'good'
-asf 'nimade' 'and' 'one'
+asf 'nimade' 'and' ''
+\s\
+\s\
 
-abc|def
+|def
+\s\
+\s\
 abc|def|wan
 abc
 abdewan

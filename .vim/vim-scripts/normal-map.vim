@@ -309,6 +309,16 @@ nnoremap  <leader>ls   :set  list!<cr>
 nnoremap  g<c-o>  <c-i>
 
 
+" 31 black hole delete
+" h stand for hole, 之所以不使用db, 是因为b是一个motion, 移动到上一个单词
+" 相比之下,dh功能就弱的多,仅仅是删除左边字符,并且可以使用X代替
+" 事实表明, 这里不使用map,,而是使用nnoremap, 也可以工作的很好
+" 那么dh的功能, 可以使用X来完成:h dh, :h X, 删除光标左边的字符
+" 使用示例: dhd == "_dd,  dhiw == "_diw,
+" 使用基本和d相同,只不过不影响匿名寄存器
+nnoremap  dh  "_d
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
