@@ -174,7 +174,8 @@ source ~/.vim/vim-scripts/tmp-test.vim
 source ~/.vim/vim-scripts/autocmd.vim
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
-colorscheme  slate
+"colorscheme  slate
+colorscheme  marklar   "from Colour-Sampler-Pack
 
 "101 这是一个对于系统export环境变量的测试, 在$tmpPath中放入了var.vim
 " var.vim echom一句话,借以测试vim是否支持系统环境变量
