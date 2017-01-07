@@ -282,8 +282,10 @@ endif
 
 
 "23
-nnoremap cn :cn<cr>
-nnoremap cp :cp<cr>
+nnoremap cn  :cnext<cr>
+nnoremap cp  :cprevious<cr>
+nnoremap co  :cclose<cr>
+nnoremap coo :cclose<cr>
 
 
 "24
