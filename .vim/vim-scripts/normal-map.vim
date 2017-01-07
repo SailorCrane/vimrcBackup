@@ -108,6 +108,30 @@ nnoremap  <leader>ll <C-w>l
 nnoremap  <leader>j  <C-w>j
 nnoremap  <leader>k  <C-w>k
 
+" 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
+" 使用:nmap <c-w>a 命令查看映射, 只能看到<C-w>_<C-w>
+" 并且在命令行执行映射: nnoremap <c-w>a  <c-w>|<c-w>_命令: 会出现 E488
+" 但是交换<c-w>_ 和 <c-w>| 不会报错: 虽然"|"没有映射成功
+" 估计"|" 在vim脚本中是个特殊字符, 后面需要跟东西才可以
+" 补充:关于"|", 是用来在vim Ex模式分割命令的, 参见:h :bar, :h :\bar
+
+" a 表示 all screen: 即最大化屏幕
+nnoremap  <C-w>a  <C-w>_<C-w>\|
+
+" 因为水平最大化用的多, 所以和_切换
+nnoremap  <C-w>-  <C-w>_
+nnoremap  <C-w>_  <C-w>-
+
+" 因为垂直最大化用的多, 所以和\直接实现, 不切换, 因为<C-w>\原义并无意义
+" 因为| 在"Ex"模式中用来分割命令, :h :bar, 而nnoremap 刚好是Ex命令其中之一
+nnoremap  <C-w>\  <C-w>\|
+
+" e stand for equal
+nnoremap <C-w>e  <C-w>=
+
+" x 表示减, 和normal模式下<c-x> 对于数字减1对应起来
+nnoremap <C-w>x  <C-w>-
+
 
 "9 quick line switch:快速交换两行
 " 将当前行'-'下移 或者'_'上移, 支持连续移动
