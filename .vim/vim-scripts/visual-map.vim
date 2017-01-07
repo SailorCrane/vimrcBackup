@@ -13,3 +13,7 @@ vnoremap  <c-j>  "+y
 "4: visual 模式下粘贴"+ 系统寄存器中内容, 和normal模式下统一起来
 vnoremap  <leader><leader>p  "+p
 vnoremap  <leader><leader>P  "+P
+
+"5: blocl visual 模式下, 在列最前面添加空格
+vnoremap  <leader>i<space>   I<space><esc>
+"vnoremap  <leader>a<space>   I<space><esc>
