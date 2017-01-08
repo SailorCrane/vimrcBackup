@@ -323,6 +323,8 @@ nnoremap  yP  yyP
 "nmap <C-_>i :cs find i^<C-R>=expand("<cfile>")<CR>$<CR>
 "nmap <C-_>d :cs find d<C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+" 下面映射的两个<CR>, 一个为执行expand("<cword>"), 另一个执行cs命令
 nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 
 
