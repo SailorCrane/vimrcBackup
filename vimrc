@@ -3,13 +3,12 @@
 " 这样以后如果想配置在其它服务器上, 那么改变这里的变量即可
 " edit 和 source 文件路径, 由变量作为路径前缀, 而不使用具体路径
 " ====================================================================
-
 let  $CRANE_VIM_HOME = '~'
 
 " 下面的 "." 是vim的字符串连接运算符, 相当于其它编程语言中的string() + string()
 " 下面的赋值语句, 相当于一个字符串 加法
+" 一般情况下是 ~/.vim, 注意最后没有/结尾
 let  $CRANE_DOT_VIM  = $CRANE_VIM_HOME . "/.vim"
-
 " ====================================================================
 
 
@@ -50,6 +49,7 @@ set nu
 "8 verbose is 0
 " If need, set vbs=1 to show more information, vbs stand for verbose
 set vbs=0
+
 
 "9 show cmd which not end
 " 执行命令时,在右下角显示未完成的命令
@@ -104,6 +104,7 @@ set  sidescroll=5
 
 set  ruler      "显示当先位置
 
+
 "15 background
 set background=light
 "set background=dark
@@ -137,6 +138,7 @@ set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildme
 
 "set wildmode=longest,list
 "bash style complete, 这种情况下,就不再需要wildmenu了: 先试一段时间bash风格补全,不习惯再换回full (zsh) 风格
+
 
 "20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
 " 也可以使用<leader>K 去查看光标下的关键字: 通过Man
@@ -185,23 +187,27 @@ set pastetoggle=<f9>
 
 
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
-"比如上面的 runtime  ftplugin/man.vim
-"而normal-map 中有一个根据这个,对于<s-k>,即K的映射
+" 比如上面的 runtime  ftplugin/man.vim
+" 而normal-map 中有一个根据这个,对于<s-k>,即K的映射
 " My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
-source ~/.vim/vim-scripts/myBundle.vim
-source ~/.vim/vim-scripts/normal-map.vim
-source ~/.vim/vim-scripts/insert-map.vim
+" source ~/.vim/vim-scripts/myBundle.vim
+" 注意这里如果要编辑, 只能使用<leader>e 前缀编辑, 无法通过gf跳转.
+source  $CRANE_DOT_VIM/vim-scripts/myBundle.vim
+source  $CRANE_DOT_VIM/vim-scripts/normal-map.vim
+source  $CRANE_DOT_VIM/vim-scripts/insert-map.vim
 
-source ~/.vim/vim-scripts/command-map.vim
-source ~/.vim/vim-scripts/visual-map.vim
+source  $CRANE_DOT_VIM/vim-scripts/command-map.vim
+source  $CRANE_DOT_VIM/vim-scripts/visual-map.vim
 
-source ~/.vim/vim-scripts/abbrev-map.vim
-source ~/.vim/vim-scripts/tmp-test.vim
-source ~/.vim/vim-scripts/autocmd.vim
+source  $CRANE_DOT_VIM/vim-scripts/abbrev-map.vim
+source  $CRANE_DOT_VIM/vim-scripts/tmp-test.vim
+source  $CRANE_DOT_VIM/vim-scripts/autocmd.vim
+
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate
 colorscheme  marklar   "from Colour-Sampler-Pack
+
 
 "101 这是一个对于系统export环境变量的测试, 在$tmpPath中放入了var.vim
 " var.vim echom一句话,借以测试vim是否支持系统环境变量
