@@ -58,10 +58,15 @@ set showcmd
 
 "10  about  search:  "/", "?"
 " 在normal-map.vim 有快速toggle ignorecase 和 hlsearch的映射
-set noignorecase  "大小写敏感
-set smartcase     " 智能敏感:全部是小写时,大小写不敏感,包含大写时,大小写敏感
-set nohlsearch    " 搜索结果高亮显示
-set incsearch     " /搜索时, 一遍输入,一遍已经开始实时搜索
+set ignorecase      " 忽略大小写敏感
+
+" 智能敏感:全部是小写时,大小写不敏感,包含大写时,大小写敏感.
+" 注意: 激活了smartcase, 只有ignorecase之后, smartcase选项才能激活.
+" 否则大小写敏感情况下, smartcase无论值是真是假, 都没用
+set smartcase
+
+set nohlsearch          " 永久激活:搜索结果高亮显示
+set incsearch         " /搜索时, 一遍输入,一遍已经开始实时搜索
 "set hlsearch incsearch
 
 
