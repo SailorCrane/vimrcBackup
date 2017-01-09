@@ -75,6 +75,10 @@ nnoremap  <leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<cr>
 
 nnoremap  <leader>ed  :e  $CRANE_DOT_VIM/doc/<cr>
 
+" Prompt to open file with same name, different extension
+" from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
+" <CR>用来完成 <C-r>=
+noremap  <leader>er   :e <C-R>=expand("%:r")."."<CR>
 
 
 "4 source .vimrc  and  source  .gvimrc
