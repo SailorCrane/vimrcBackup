@@ -1,3 +1,7 @@
+"0 说明
+" 一般映射, 如果有对于选项的toggle!, 就会有? show
+" 例如 set  list!  list?
+" 每个项目内如果隔开, 使用一行. 项目和项目之前分隔使用两行
 
 
 "1 Quick into command line
@@ -12,7 +16,8 @@ nnoremap <cr> ;
 " 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
 nnoremap <leader><cr>  <cr>
 
-" 1-2
+
+"1-2
 nnoremap  q;  q:
 
 
@@ -70,26 +75,38 @@ nnoremap  <leader>q  :q<cr>
 nnoremap  <leader>r  :qa<cr>
 " Refresh file, or restore file from file name
 nnoremap  <leader>e  :e!<cr>
+
+" 因为<leader>e 前缀的edit很多, 所以这里添加 <leader>ee,
+" 这是我的命名风格, 如果有相同前缀, 那么就重复字母
+nnoremap  <leader>ee :e!<cr>
 nnoremap  <leader>w  :update<cr>
+" 这里<leader>ww 和上述<leader>情况相似
+nnoremap  <leader>ww :update<cr>
 
 
-"6  word  operation
+"6  word  operation: 感觉很鸡肋
+" 不如yiw, diw, diW更有思考连贯性, 虽然似乎少了一个按键还是注释掉吧
+
 " 快速删除一个词：word 或者Word
 " 因为<leader>d被用来作为down翻页，所以这里将其disable,毕竟diw也就多了一个字母而已
 " 但是删除一个Word：长词，是一个非常好的特性
 "nnoremap  <leader>d  diw
-nnoremap  <leader>D  diW
+"nnoremap  <leader>D  diW
 
-nnoremap  <leader>c  ciw
-nnoremap  <leader>C  ciW
+"nnoremap  <leader>c  ciw
+"nnoremap  <leader>C  ciW
 
 
 "7 buffer:next/previous/delete
 " buf and tab
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
+
+" 因为如果不先关掉 TabBar窗口就 delete buffer,
+" 当tagbar检测到自身是唯一打开窗口时, 会退出gvim, 悲哀啊!
 nnoremap <leader>d :TagbarClose<cr>:bd<cr>:syntax on<cr>
 
+"7-2下面是vim 相关tab映射
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
 nnoremap tn      :tabnew<cr>
@@ -98,21 +115,25 @@ nnoremap c<tab>  :tabnew<cr>
 nnoremap d<tab>  :tabclose<cr>
 
 
-"8 Window manager
+"8 Window  motion and manager: 快速窗口移动和管理
 nnoremap  <leader>h  <C-w>h
 " 因为有了很多以<leader>l开头的映射,
 "用来对行前行后,行尾等操作.
 "<leader>l的速度就慢了下来,所以添加<leader>ll
 nnoremap  <leader>l  <C-w>l
+" 因为<leader>l前缀太多:对于行结尾的操作, 所以这里添加<leader>ll
+" 其实还不如vim自带的<c-w>l 方便, 但为了和其它映射一致, 还是添加上吧
 nnoremap  <leader>ll <C-w>l
 nnoremap  <leader>j  <C-w>j
 nnoremap  <leader>k  <C-w>k
 
+" 8-2
 " 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
 " 使用:nmap <c-w>a 命令查看映射, 只能看到<C-w>_<C-w>
 " 并且在命令行执行映射: nnoremap <c-w>a  <c-w>|<c-w>_命令: 会出现 E488
 " 但是交换<c-w>_ 和 <c-w>| 不会报错: 虽然"|"没有映射成功
 " 估计"|" 在vim脚本中是个特殊字符, 后面需要跟东西才可以
+
 " 补充:关于"|", 是用来在vim Ex模式分割命令的, 参见:h :bar, :h :\bar
 
 " a 表示 all screen: 即最大化屏幕
@@ -139,7 +160,8 @@ nnoremap  -  ddp
 nnoremap  _  kddpk
 
 
-"10 quick  up case
+"10 quick  up case : 感觉这里的映射, 也很鸡肋
+" 仅仅是按键少了, 但是思考方式和vim完全不同了. 后期估计会注释掉
 " g motion and operation on word
 " w:word, b:back, c:current character, e:end of word
 " 因为将当前字母更改为大写用的更多，所以将gc功能作为修改当前字母为大写
@@ -154,7 +176,10 @@ nnoremap  gB  BgUl
 nnoremap  ge  egul
 nnoremap  gE  egUl
 
+
+"10-2 因为gt经常使用, 所以单独列出来: 这样如果回头注释上面, 这里可以防止被注释
 " gt: g toggle: 因为'~'会向右移动一位,所以这里使用visual模式,使其作用于光标下的文字而不在移动
+" gt 用的比较多
 nnoremap  gt  v~
 nnoremap  gc  gUl
 nnoremap  gC  gul
@@ -163,6 +188,7 @@ nnoremap  gC  gul
 "11 快速在文件内部跳转:第一行,最后一行,当前行最左,最右
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
+" 这组映射用的很多, 因为ctrl 和 caplock交换后, 很方便按
 nnoremap  <c-k>  gg
 nnoremap  <c-j>  G
 nnoremap  <c-h>  ^
@@ -178,7 +204,7 @@ noremap   'b L
 "noremap   'm M
 
 
-"12-2
+"12-2 很常用
 " <leader>f,b to  page down up
 " u:up , d:down
 " 这里的up指翻页时，可以看到上方更多的字，同理down可以看到下方更多的字
@@ -189,7 +215,7 @@ nnoremap  <leader>f   5<c-e>
 "nnoremap  <leader>d   5<c-e>
 
 
-"13 show list, just funny, and test
+"13 show list, just funny, and test, 已经被<leader>ls代替
 "nnoremap  <f3>  :set list!<cr>
 
 
@@ -197,22 +223,37 @@ nnoremap  <leader>f   5<c-e>
 " seg line, then go to end of origin line
 " g_ go to end of no space character
 " i:insert a:append
-nnoremap <leader>si i<cr><esc><up>g_
-nnoremap <leader>sa a<cr><esc><up>g_
+nnoremap <leader>si   i<cr><esc><up>g_
+nnoremap <leader>sa   a<cr><esc><up>g_
 
 
-"16  map Q to gq
+"16  map Q to gq: format line
+" Q本意是切换到Ex模式, 注意不是vim的Ex命令行, 而是vi的遗留产物,
+" 没用还会混淆视听
+" 所以这里说Q 映射到gq, 不如说是为了 禁止 Q切换到Ex模式
+" 也许 nnoremap Q <nop> 会更好些
 nnoremap  Q  gq
+"nnoremap  Q  <nop>
+
 
 "17 delete all  trailing White Space, w stand for white
 "nnoremap <leader>xw :%s/\s\+$//ge<cr>:let @/=''<CR>
 " 还是给出错误提示吧,这样就可以知道自己到底是否替换了空行
-nnoremap <leader>xw :%s/\s\+$//g<cr>:let @/=''<CR>
+" 这里要结合ShowTrailingWhiteSpace 插件使用, 因为只有插件可以显示末尾空格时, 才会有用
+" 当然也可以不使用ShowTrailingWhiteSpace插件, 通过设置listchar, 然后 set list!显示末尾空白
+nnoremap  <leader>xw  :%s/\s\+$//g<cr>:let @/=''<CR>
 
-"18  !ctags -R .
-nnoremap <leader>ct  :!ctags -R --fields=+lS .<cr>
 
-"19  ctrlp map, sp stand fot "search ctrlP""
+"18  !ctags -R . , 后期加上对于cscope支持
+"!ctags -R .
+"!cscope  -Rbq
+"nnoremap  <leader>ct  :!ctags -R --fields=+lS .<cr>:!cscope  -Rbq<cr><cr>
+nnoremap  <leader>ct  :!ctags -R --fields=+lS .<cr>:!cscope  -Rbq<cr>
+
+
+"19  ctrlp and  fuzzyfinder  mapping,
+" sp stand for "search ctrlP"
+" sf stand for "search FuzzyFinder"
 " CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<c-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
 " 这样<c-p> 就可以用在Yankring中了
 " s stand for "search"
@@ -220,27 +261,32 @@ nnoremap  <leader>sp  :<c-u>CtrlP<cr>
 nnoremap  <leader>sf  :<c-u>FufFile<cr>
 nnoremap  <leader>sb  :<c-u>FufBuffer<cr>
 
+
 "20 释放<c-n>在multiple cursor中功能,由<c-m>去完成
 " <c-m> 在vim中代表回车,就像<c-i>代表 <tab>一样,都不可以映射
-"nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
-"xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
+" nnoremap  <c-m>  :call multiple_cursors#new("n", 1)<CR>
+" xnoremap  <c-m>  :call multiple_cursors#new("v", 0)<CR>
 
 
-"21  在类中给类的 {} 之后添加分号{}; 非常棒
-" 这是一个比较多的映射,因为在行尾和行上下行添加的东西可能会比较多,每种都需要一个映射
+"21 关于行的操作
+" 这是一个比较多的映射组,因为在行尾和行上下行添加的东西可能会比较多,每种都需要一个映射
+
+" 在类的结尾"}"后面添加分号.
 nnoremap  <leader>i;    ][a;<esc>:write<cr><c-o>
-"位于分号}上时,在后面添加";"
+
 "nnoremap  <leader>a;    a;<esc>:write<cr>
 "在行末尾添加分号, 覆盖了上面 <leader>a;功能
 "nnoremap  <leader>l;    $a;<esc>:write<cr>
 nnoremap  <leader>l;    A;<esc>:write<cr>
 nnoremap  <leader>l,    A,<esc>:write<cr>
+nnoremap  <leader>l.    A.<esc>:write<cr>
+nnoremap  <leader>l!    A!<esc>:write<cr>
+
+" 在末尾添加 "空格 + 反斜杠", 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
+nnoremap  <leader>l\    A<space>\<esc>
+
 " 删除当前行最后一个字符,因为使用了A一下子进入插入模式,然后才删除的字符,所以这是一个可repeat的修改,very nice
 nnoremap  <leader>lx    A<BS><esc>:write<cr>
-
-
-" 在末尾添加反斜杠, 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
-nnoremap  <leader>l\    A<space>\<esc>
 
 " 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
 nnoremap  <leader>lo    o<esc>k
@@ -248,24 +294,26 @@ nnoremap  <leader>lO    O<esc>j
 nnoremap  <leader>go    o<esc>
 nnoremap  <leader>gO    O<esc>
 
-" d 和 u 代表up 和 down, 分别对应o 和O
-nnoremap  <leader>ld    o<esc>k
-nnoremap  <leader>lu    O<esc>j
+" d 和 u 代表up 和 down, 分别对应o 和O: 但是几乎没有用过
+" 有些鸡肋
+"nnoremap  <leader>ld    o<esc>k
+"nnoremap  <leader>lu    O<esc>j
 
 "nnoremap  <leader>l{    $a{  }<left><left><esc>:write<cr>
 nnoremap  <leader>i{    o{<cr><cr>}<up>
 nnoremap  <leader>l{    $a {  }<left><left>
 "nnoremap  <leader>d{    <down>f{d%
 
-" 在当前字符前， 后添加 <space>/&
+"21-2 在当前字符前， 后添加 <space>/&
 nnoremap  <leader>i<space>  i<space><esc>l
 nnoremap  <leader>a<space>  a<space><esc>l
 nnoremap  <leader>i&        i&<esc>l
 nnoremap  <leader>a&        a&<esc>l
 
 
-" 21-2 在一行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
+" 21-3 在当前行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
 " lc 表示 line comment, 因为'c' 比 '*' 更好按
+" 没有用过, 但是很好用: 自己真聪明
 nnoremap  <leader>l*     I/*<space><esc>A<space>*/<esc>
 nnoremap  <leader>lc     I/*<space><esc>A<space>*/<esc>
 
@@ -281,24 +329,25 @@ if  exists(":Man")
 endif
 
 
-"23
+"23 quick fix 快速切换
 nnoremap cn  :cnext<cr>
 nnoremap cp  :cprevious<cr>
 nnoremap co  :cclose<cr>
 nnoremap coo :cclose<cr>
 
 
-"24
+"24 输出当前缓冲区文件的绝对路径
 nnoremap  <leader>lp  :echo  expand("%:p")<cr>
 
 
-"25
+"25  将<up> 和 <down> 映射为屏幕行上下, 这个是在vim reference中学到的建议
 nnoremap  <up>   gk
 nnoremap  <down> gj
 
 
 "26 本想用ctrl + P(大写P) 映射, 无奈映射在<c->这种同时按下的模式中,不区分大小写
 " 但在连续按下的情况下,还是区分大小写的,这点要注意
+" inoremap 中也有类似的映射, 见 insert-map.vim
 nnoremap  <leader><leader>p  "+p
 nnoremap  <leader><leader>P  "+P
 
@@ -328,8 +377,10 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 
 
-" 29
-nnoremap  <leader>ls   :set  list!<cr>
+"29 切换是否显示空白标志:
+" 结合 set listchars=tab:▸\ ,eol:¬ 使用
+" 在makefile中, 查看是否前置空白是不是tab, 很有用
+nnoremap  <leader>ls   :set  list!  list?<cr>
 
 
 " 30 因为<c-i> 就是tab,被用来在vim顶上的tab间跳转,
@@ -344,7 +395,8 @@ nnoremap  g<c-o>  <c-i>
 " 那么dh的功能, 可以使用X来完成:h dh, :h X, 删除光标左边的字符
 " 使用示例: dhd == "_dd,  dhiw == "_diw,
 " 使用基本和d相同,只不过不影响匿名寄存器
-nnoremap  dh "_d
+nnoremap  dh  "_d
+
 
 " 31-2
 " 默认Y功能是yy, 感觉比较鸡肋, :help  Y 文档中也建议改为y $, 更有用些
@@ -352,7 +404,7 @@ nnoremap  dh "_d
 nnoremap  Y  y$
 
 
-" 32 关于cursor line 和 cursor column
+" 32 关于cursor line 和 cursor column 显示与隐藏
 nnoremap  <leader>ch  :set  cursorline!    cursorline?<cr>
 nnoremap  <leader>cv  :set  cursorcolumn!  cursorcolumn?<cr>
 
