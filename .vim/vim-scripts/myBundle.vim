@@ -402,6 +402,8 @@ Bundle  "https://github.com/pbrisbin/vim-mkdir"
 
 
 "45 visual-star search
+" 这是vim-practical 作者的一款插件, 实现很简单
+" 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
 Bundle "https://github.com/nelstrom/vim-visual-star-search"
 
 
