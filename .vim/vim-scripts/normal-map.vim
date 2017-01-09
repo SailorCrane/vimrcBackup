@@ -420,6 +420,12 @@ nnoremap  <leader>ch  :set  cursorline!    cursorline?<cr>
 nnoremap  <leader>cv  :set  cursorcolumn!  cursorcolumn?<cr>
 
 
+" 34 统计模式/出现次数: word count/number
+" 因为wc不是很好按, 所以用<leader>wn
+nnoremap  <leader>wn  :%s///gn<CR>
+nnoremap  <leader>wc  :%s///gn<CR>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
