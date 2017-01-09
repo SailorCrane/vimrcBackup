@@ -92,6 +92,7 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 
 "10:   c, cpp type
 autocmd   FileType  cpp   inoreabbrev sct  std::cout
+autocmd   FileType  cpp   inoreabbrev scr  std::cerr
 autocmd   FileType  cpp   inoreabbrev sel  std::endl
 "autocmd   FileType  c,cpp   inoreabbrev inm  int main(int argc, char **argv)<cr>{<cr>}<up><cr>
 autocmd   FileType  c,cpp   inoreabbrev imn  int main(int argc, char **argv)<cr>{<cr>}<up><cr>
