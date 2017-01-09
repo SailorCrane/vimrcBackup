@@ -398,6 +398,10 @@ Bundle  "pydoc.vim"
 Bundle  "indentpython.vim"
 Bundle  "python.vim"
 
+" python 的一款补全插件
+Bundle  "davidhalter/jedi-vim"
+
+
 "55 ReplaceWithRegister
 Bundle "ReplaceWithRegister"
 
