@@ -326,6 +326,11 @@ nnoremap  dh "_d
 nnoremap  Y  y$
 
 
+" 32 关于cursor line 和 cursor column
+nnoremap  <leader>ch  :set  cursorline!    cursorline?<cr>
+nnoremap  <leader>cv  :set  cursorcolumn!  cursorcolumn?<cr>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
