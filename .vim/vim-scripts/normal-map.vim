@@ -418,6 +418,7 @@ nnoremap  <leader>cv  :set  cursorcolumn!  cursorcolumn?<cr>
 " 至于tab的前一个,和下一个,使用<tab> 和 <s-tab>完成.
 " 但是如此以来<c-i>,也就是<c-o>的反向功能,就不能再使用<tab>了,因为<tab> 和 <c-i>是同一个按键(同一个编码)
 
+
 "100
 " map <c-a> to visual all content, then select to "+, then go to previous position
 " 因为有了 text-obj entire 和 vnoremap  <c-j> "+y,

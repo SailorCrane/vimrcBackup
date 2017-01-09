@@ -6,6 +6,7 @@
 inoremap  jk <esc>
 "inoremap <esc> <nop>
 
+
 " 2  arrrow : with ctrl
 " <arrrow> set: left, right, up, down
 inoremap <c-h> <Left>
@@ -20,17 +21,17 @@ inoremap <c-l> <Right>
 "inoremap  <silent> <C-d>  <esc>ddi
 "inoremap  <C-w>  <esc>:w<cr>a
 " NOTE:  <c-w>的习惯还是不能改: 无论是在插入模式, Ex模式, 还是bash中
-""""""" <C-s>在终端下, 依旧是停止回显, 只能在gvim中使用, 所以这里又
-" 搞了一个<c-w>
-inoremap  <C-s>  <esc>:w<cr>a
+" <C-s>在终端下, 依旧是停止回显, 只能在gvim中使用, 所以后面添加了<C-b>
+"inoremap  <C-s>  <esc>:w<cr>a
+
 " i_ctrl-y 和 i_ctrl-e 一样,也是没有什么卵用的按键, 所以映射为复制一行
 " 并且光标移动到复制后的行.这是因为使用中,发现一般复制后,更多会移动到
 " 复制后的行, 去操作
 inoremap  <C-y>  <esc>yypA
-" <c-b> 代替了原有<c-w>的功能,删除一个单词
-inoremap  <C-b>  <c-w>
+
 " <c-o> 在插入模式下,还有别的妙用: 本职功能: 进入insert-normal子模式
 "inoremap  <C-o>  <esc>o
+"
 
 " 4 <c-z> 屏幕居中
 " 插入模式下， <cr>
@@ -54,13 +55,13 @@ inoremap  <c-e>   <esc>A
 " Open new line in  'Insert Mode'
 "inoremap <c-o> <esc>o
 " new line below
-inoremap jo <esc>o
+"inoremap jo <esc>o
 " new line above
-inoremap jO <esc>O
+"inoremap jO <esc>O
 
 " Write/Save file at Insert Mode
 "inoremap <c-w> <esc>:w<cr>a
-inoremap jw    <esc>:w<cr>a
+inoremap  jw    <esc>:w<cr>a
 
 " Back word,注意: 因为是inoremap非递归映射<c-w>是vim底层的操作.
 "inoremap <c-b> <c-w>
@@ -68,13 +69,23 @@ inoremap jw    <esc>:w<cr>a
 " ctrl-w都是删除一个单词, 修改它是个不明智的选择, 所以还是用<c-b>去保存文件吧
 " 不得已之举
 inoremap <c-b> <esc>:w<cr>a
-inoremap jb    <c-w>
+"inoremap jb    <c-w>
 
-" 6 快速在插入模式中粘贴特殊文本:
+
+" 6 快速在插入模式中粘贴特殊寄存器:非常好用
 " 快速粘贴全局剪切板
 inoremap  <leader><leader>p     <c-r>+
+inoremap  <leader><leader>+     <c-r>+
+
 " 快速粘贴全局star 剪切板
 inoremap  <leader><leader>s     <c-r>*
+inoremap  <leader><leader>*     <c-r>*
+
 " 快速粘贴文件名
 inoremap  <leader><leader>f     <c-r>%
+inoremap  <leader><leader>%     <c-r>%
+
+" toggle buffer
+inoremap  <leader><leader>t     <c-r>#
+inoremap  <leader><leader>#     <c-r>#
 
