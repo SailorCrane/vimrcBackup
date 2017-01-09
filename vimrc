@@ -28,6 +28,7 @@ set cindent             "cindent  disabled smartindent
 
 "7 cursor line and line number  show
 set cursorline
+"set cursorcolumn
 set rnu
 set nu
 
