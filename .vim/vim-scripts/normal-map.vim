@@ -22,11 +22,17 @@ nnoremap  q;  q:
 
 
 "2 Toggle  something
+
 "  Toggle  number line/relative number line/Toggle  highlight / sensitive case
 nnoremap  <leader>o   :set nu!  rnu!    nu? rnu? <cr>
+
+" 使用n 和 N搜索前, 先激活hlsearch选项
+nnoremap  n           :set hlsearch<Cr>n
+nnoremap  N           :set hlsearch<Cr>N
 nnoremap  <leader>/   :set hlsearch!    hlsearch?<cr>
+"nnoremap  <leader>/   :nohlsearch<CR>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
-"nnoremap  <leader>/   :nohlsearch<cr>
+
 nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 
 
