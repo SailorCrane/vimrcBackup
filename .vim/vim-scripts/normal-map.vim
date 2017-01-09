@@ -49,9 +49,13 @@ nnoremap  <leader>eA  :e ~/myAlias.sh<cr>
 nnoremap  <leader>em  :e ./makefile<cr>
 nnoremap  <leader>eq  :e ./question-thunder.txt<cr>
 
-" ./.vimrc  and  ./.gvimrc edit
-nnoremap  <leader>ev  :e $MYVIMRC<cr>
-nnoremap  <leader>eg  :e $MYGVIMRC<cr>
+" local  ./.vimrc  and  ./.gvimrc edit
+nnoremap  <leader>elv :e $MYVIMRC<cr>
+nnoremap  <leader>elg :e $MYGVIMRC<cr>
+
+" mobile rc  ./.vimrc and ./.gvimrc  edit
+nnoremap  <leader>ev  :e  $CRANE_VIM_HOME/.vimrc<CR>
+nnoremap  <leader>eg  :e  $CRANE_VIM_HOME/.gvimrc<CR>
 
 " vim script edit
 nnoremap  <leader>eV  :e  $CRANE_DOT_VIM/vim-scripts/visual-map.vim<cr>
