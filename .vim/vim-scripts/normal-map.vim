@@ -39,31 +39,47 @@ nnoremap  <leader>i   :set ignorecase!  ignorecase?<cr>
 "3  quick edit
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " edit  ~/.bashrc
+
+" ~/file  edit
 nnoremap  <leader>eb  :e ~/.bashrc<cr>
-nnoremap  <leader>em  :e ./makefile<cr>
-nnoremap  <leader>eg  :e ~/.gvimrc<cr>
 nnoremap  <leader>eG  :e ~/.gitconfig<cr>
 nnoremap  <leader>eA  :e ~/myAlias.sh<cr>
 
-nnoremap  <leader>ev  :e $MYVIMRC<cr>
-nnoremap  <leader>eV  :e ~/.vim/vim-scripts/visual-map.vim<cr>
-nnoremap  <leader>en  :e ~/.vim/vim-scripts/normal-map.vim<cr>
-nnoremap  <leader>ei  :e ~/.vim/vim-scripts/insert-map.vim<cr>
-nnoremap  <leader>ec  :e ~/.vim/vim-scripts/command-map.vim<cr>
-
-nnoremap  <leader>ea  :e ~/.vim/vim-scripts/abbrev-map.vim<cr>
-nnoremap  <leader>et  :e ~/.vim/test/HarryPotter-Stone.txt<cr>
-nnoremap  <leader>eT  :e ~/.vim/vim-scripts/tmp-test.vim<cr>
-
-nnoremap  <leader>ep  :e ~/.vim/vim-scripts/myBundle.vim<cr>
-nnoremap  <leader>ef  :e ~/.vim/vim-scripts/autocmd.vim<cr>
-
-nnoremap  <leader>ee  :e ~/.vim/vim-scripts/example/vimrc_example.vim<cr>
-nnoremap  <leader>eE  :e ~/.vim/vim-scripts/example/<cr>
-
-nnoremap  <leader>ed  :e ~/.vim/doc/<cr>
-
+" ./file  edit
+nnoremap  <leader>em  :e ./makefile<cr>
 nnoremap  <leader>eq  :e ./question-thunder.txt<cr>
+
+" local  ./.vimrc  and  ./.gvimrc edit
+nnoremap  <leader>elv :e $MYVIMRC<cr>
+nnoremap  <leader>elg :e $MYGVIMRC<cr>
+
+" mobile rc  ./.vimrc and ./.gvimrc  edit
+nnoremap  <leader>ev  :e  $CRANE_VIM_HOME/.vimrc<CR>
+nnoremap  <leader>eg  :e  $CRANE_VIM_HOME/.gvimrc<CR>
+
+" vim script edit
+nnoremap  <leader>eV  :e  $CRANE_DOT_VIM/vim-scripts/visual-map.vim<cr>
+nnoremap  <leader>en  :e  $CRANE_DOT_VIM/vim-scripts/normal-map.vim<cr>
+nnoremap  <leader>ei  :e  $CRANE_DOT_VIM/vim-scripts/insert-map.vim<cr>
+nnoremap  <leader>ec  :e  $CRANE_DOT_VIM/vim-scripts/command-map.vim<cr>
+
+nnoremap  <leader>ea  :e  $CRANE_DOT_VIM/vim-scripts/abbrev-map.vim<cr>
+nnoremap  <leader>et  :e  $CRANE_DOT_VIM/test/HarryPotter-Stone.txt<cr>
+nnoremap  <leader>eT  :e  $CRANE_DOT_VIM/vim-scripts/tmp-test.vim<cr>
+
+nnoremap  <leader>ep  :e  $CRANE_DOT_VIM/vim-scripts/myBundle.vim<cr>
+nnoremap  <leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<cr>
+
+nnoremap  <leader>ee  :e  $CRANE_DOT_VIM/vim-scripts/example/vimrc_example.vim<cr>
+nnoremap  <leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<cr>
+
+nnoremap  <leader>ed  :e  $CRANE_DOT_VIM/doc/<cr>
+
+" Prompt to open file with same name, different extension
+" from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
+" <CR>用来完成 <C-r>=
+noremap  <leader>er   :e <C-R>=expand("%:r")."."<CR>
+
 
 "4 source .vimrc  and  source  .gvimrc
 " <leader>sv source .vimrc or .gvimrc

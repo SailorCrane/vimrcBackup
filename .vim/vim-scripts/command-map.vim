@@ -1,4 +1,5 @@
 
+
 "1 Toggle verbose
 fun! Set_verbose()
     if( 0 == &verbose )
@@ -11,6 +12,7 @@ endfun
 
 cabbrev  vbs  :call Set_verbose()
 
+
 "2 Bundle abb
 cabbrev  BI   BundleInstall
 cabbrev  bi   BundleInstall
@@ -20,11 +22,14 @@ cabbrev  BL   BundleList
 cabbrev  BC   BundleClear
 cabbrev  bc   BundleClear
 
+
 "3 quit anyway
 cabbrev  qq   q!
 
+
 "4 ls unlistd file
 cabbrev  ll   ls!
+
 
 "5 man in vim
 " 除非必要情况, 否则command mode下,尽量使用abbrev
@@ -41,14 +46,17 @@ endif
 "6 show absolute path of current file
 cabb  lp  :echo  expand("%:p")
 
+
 "7 quick extern cmd因为在normal中";" -----> :,这样当在normal模式中按两下;;,就是:!
 cnoremap  ; !
+
 
 "8 cabbv mk to make
 cabbrev  mk   make
 cabbrev  mkb  make -B
 cabbrev  mka  make all
 cabbrev  mkab make all -B
+
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
@@ -75,6 +83,7 @@ cnoreabbrev cd2   cd ../../
 cnoreabbrev cd3   cd ../../../
 cnoreabbrev cd4   cd ../../../../
 
+
 "10
 " <c-k>, <c-j>
 " 因为cmdlinecomplete 将cmd mode下的<c-n> <c-p>占用了
@@ -100,6 +109,7 @@ cnoremap  <c-r>a  <c-r><c-a>
 cnoremap  <c-r>W  <c-r><c-a>
 cnoremap  <c-r>f  <c-r><c-f>
 cnoremap  <c-r>p  <c-r><c-p>
+
 
 "13 清屏: 清除bash屏幕, 这样make时不会混淆视听
 "有时候自己要运行当前目录下的./clear 清空一下文件,

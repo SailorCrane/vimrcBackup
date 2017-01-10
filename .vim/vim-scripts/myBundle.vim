@@ -1,16 +1,21 @@
 
-" required
-filetype off
+"==================================================
+"0: begin vundle
+filetype off     " required
 
-set rtp+=~/.vim/bundle/vundle/
+" 注意 '+=' 两边不能有空格
+" 所有vim内置的set命令, 等号两边都不能有空格
+" $CRANE_DOT_VIM 在 本项目自带的vimrc中配置
+set  rtp+=$CRANE_DOT_VIM/bundle/vundle/
 
-call vundle#rc()
+call vundle#rc() " let Vundle manage Vundle,  required!
 
-" let Vundle manage Vundle
-" required!
+"==================================================
+
 
 "1: vundle in github
 Bundle 'gmarik/vundle'
+
 
 "2: NERDTree in scrooloose
 Bundle 'scrooloose/nerdtree'
@@ -27,6 +32,7 @@ let NERDTreeWinPos="left"
 " b:NERDTreeType == "primary") | q | endif
 " " Open a NERDTree
 nnoremap <leader>xn :NERDTreeToggle<cr>
+
 
 "3: nerdcommenter in scrooloose
 Bundle 'scrooloose/nerdcommenter'
@@ -51,6 +57,7 @@ let g:syntastic_cpp_check_header = 1
 
 "5: taglist in vim-scripts in github
 Bundle 'taglist.vim'
+
 
 "6: YouCompleteMe
 "Bundle 'Valloric/YouCompleteMe'
@@ -78,9 +85,11 @@ let g:ycm_min_num_of_chars_for_completion=2	" 从第2个键入字符就开始罗
 let g:ycm_cache_omnifunc=0	" 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_seed_identifiers_with_syntax=1	" 语法关键字补全
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>	"force recomile with syntastic
+
 "nnoremap <leader>lo :lopen<CR>	"open locationlist
 "nnoremap <leader>lc :lclose<CR>	"close locationlist
 inoremap <leader><leader> <C-x><C-o>
+
 "在注释输入中也能补全
 let g:ycm_complete_in_comments = 1
 "在字符串输入中也能补全
@@ -89,6 +98,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 nnoremap <leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+
 
 "7: WinManager
 Bundle  'winmanager'
@@ -106,14 +116,17 @@ let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 "8: echofunc
 Bundle 'mbbill/echofunc'
 
+
 "9: Conque-Shell
 Bundle  'oplatek/Conque-Shell'
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
 noremap  <leader>ba  :ConqueTermVSplit bash<CR>
 
+
 "10: wakatime/vim-wakatime
 Bundle 'wakatime/vim-wakatime'
+
 
 "11:  powerline
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
@@ -146,6 +159,7 @@ Bundle "WolfgangMehner/c-support"
 "12-2: a.vim :switch between header and source file
 Bundle "a.vim"
 
+
 "13:  minibufexplorer
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
 "Bundle "fholgado/minibufexpl.vim"
@@ -162,8 +176,10 @@ nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
 nnoremap <f4>       :ToggleBufExplorer<CR>
 nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
 
+
 "14:  quick fix
 "Bundle "romainl/vim-qf"
+
 
 "15:  rainbow  parentheses
 Bundle 'kien/rainbow_parentheses.vim'
@@ -199,6 +215,7 @@ au Syntax * RainbowParenthesesLoadBraces
  autocmd Syntax * RainbowParenthesesLoadSquare
  autocmd Syntax * RainbowParenthesesLoadBraces
 
+
 "16: jiangmiao/auto-pairs.git
 Bundle  'jiangmiao/auto-pairs.git'
 let g:AutoPairShortcutToggle = '<C-p>'
@@ -218,12 +235,15 @@ set t_Co=256
 set background=dark
 colorscheme molokai
 
+
 "17: mbbill/undotree
 Bundle 'mbbill/undotree'
 nnoremap <F2>  :UndotreeToggle<cr>
 
+
 "18: https://github.com/kien/ctrlp.vim
 Bundle 'https://github.com/kien/ctrlp.vim'
+
 
 "19: easy-motion
 Bundle 'https://github.com/easymotion/vim-easymotion'
@@ -245,8 +265,10 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 "20-1 CmdlineComplete
 Bundle "CmdlineComplete"
 
+
 "21 ShowMarks
 "Bundle "ShowMarks"
+
 
 "22 vim-surround
 Bundle "tpope/vim-surround"
@@ -254,10 +276,12 @@ Bundle "tpope/vim-surround"
 " ds"
 " ysiw"
 
+
 "23 repeat ,和surround同一个作者,主要用于 重复执行surround的操作
 "  ysiW": 给W添加"
 "  yss" : 给一行添加"
 Bundle "tpope/vim-repeat"
+
 
 "24 Tagbar in vim-scripts's repo
 Bundle "Tagbar"
@@ -266,6 +290,7 @@ Bundle "Tagbar"
 nnoremap  <leader>ti  :TagbarToggle<cr>
 " 打开tagbar时,自动显示行号
 let g:tagbar_show_linenumbers=1
+
 
 "25 vim-fugitive
 Bundle "vim-fugitive"
@@ -280,6 +305,7 @@ nnoremap <leader>gw :Gwrite<cr>
 "26 matchit 注释这个插件, 因为vim已经自带了
 "只用在vimrc中添加 runtime macros/matchit.vim即可
 "Bundle "matchit.zip"
+
 
 "27 EasyGrep
 Bundle "EasyGrep"
@@ -300,16 +326,20 @@ Bundle "EasyGrep"
 "30 Chiel92/vim-autoformat
 Bundle "Chiel92/vim-autoformat"
 
+
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
 Bundle "YankRing.vim"
 nnoremap  <leader>ys  :YRShow<cr>
 nnoremap  <leader>yc  :YRClear<cr>
 
+
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
 
+
 "33 potion, my handwriting
 Bundle  "potion"
+
 
 "34 L9: vim library, vim script util.
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
@@ -318,6 +348,7 @@ Bundle "L9"
 
 " no vundle#end
 "call vundle#end()           " required with vundle#begin()
+
 
 "35 multiple-cursor
 Bundle "https://github.com/terryma/vim-multiple-cursors"
@@ -336,67 +367,88 @@ if !exists('g:easy_align_delimiters')
 endif
 let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']  }
 
+
 "37 expand-region
 Bundle "https://github.com/terryma/vim-expand-region"
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
+
 "38 gundo stand for gnu undo
 Bundle "gundo"
+
 
 "39 FuzzyFinder : need L9 library
 Bundle "FuzzyFinder"
 
+
 "40 ShowTrailingWhiteSpace
 Bundle 'ShowTrailingWhitespace'
 
+
 "41 godlygeek/tabular
 Bundle "godlygeek/tabular"
+
 
 "42 FencView: fencview
 Bundle  'mbbill/fencview'
 "Bundle  'fencview'
 
+
 "43 ack.vim
 Bundle "ack.vim"
+
 
 "44 mkdir, very simple
 Bundle  "https://github.com/pbrisbin/vim-mkdir"
 
+
 "45 visual-star search
+" 这是vim-practical 作者的一款插件, 实现很简单
+" 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
 Bundle "https://github.com/nelstrom/vim-visual-star-search"
+
 
 "46 qargs
 Bundle "https://github.com/nelstrom/vim-qargs"
+
 
 "47 text-object-entire: file object
 Bundle "https://github.com/kana/vim-textobj-user"
 Bundle "https://github.com/kana/vim-textobj-entire"
 
+
 "48 commentary from toppe: operator
 Bundle  "https://github.com/tpope/vim-commentary"
+
 
 "49 Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
 "Bundle "Mark"
 
+
 "50 VOoM
 Bundle "VOoM"
+
 
 "51 calendar
 Bundle "https://github.com/itchyny/calendar.vim"
 
+
 "52 visincr 提供增长数列功能
 Bundle "VisIncr"
 
+
 "53 Align  vim-script 294
 Bundle "Align"
+
 
 "54 python 相关
 Bundle  "pyflakes"
 Bundle  "pydoc.vim"
 Bundle  "indentpython.vim"
 Bundle  "python.vim"
+
 
 " python 的一款补全插件
 Bundle  "davidhalter/jedi-vim"
