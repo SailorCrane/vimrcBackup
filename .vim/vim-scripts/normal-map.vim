@@ -450,6 +450,8 @@ nnoremap  <leader>wc  :%s///gn<CR>
 " 35 跳转到/*, 或者跳转到 */
 nnoremap  </  [/
 nnoremap  >/  ]/
+nnoremap  <#  [#
+nnoremap  >#  ]#
 
 
 " 36 quick :s
