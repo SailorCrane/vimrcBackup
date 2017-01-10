@@ -122,3 +122,7 @@ cnoreabbrev  cle   !clear
 "14 映射 :co 为 :cclose, 因为:co 也可以用:t 表示(用to记忆)
 cnoreabbrev  co   cclose
 
+
+"15 quick :%s
+cnoreabbrev  ss  :%s///g<left><left><left>
+

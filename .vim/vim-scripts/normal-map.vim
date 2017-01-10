@@ -448,6 +448,10 @@ nnoremap  </  [/
 nnoremap  >/  ]/
 
 
+" 36 quick :s
+nnoremap  <leader>ss  :%s<space>///g<left><left><left>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个

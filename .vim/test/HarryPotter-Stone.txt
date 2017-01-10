@@ -1,14 +1,31 @@
-             添加递增数字, 使用了 let  g:i = 1, 注意必须是全局变量
+TODO: ex
+TODO: ec
+:g/TODO/yank A
+:g/TODO/yank Q
+html {
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+}
+body {
+        background: white;
+        color: black;
+        line-height: 1.5;
+}
+添加递增数字, 使用了 let  g:i = 1, 注意必须是全局变量
+             so many langs g
              the lang is Ch
              the lang is En
-             so many langs g
 "uyiW
 /<c-r>=escape(@u, getcmdtype()."\")<cr>
 ?<c-r>=escape(@u, getcmdtype()."\")<cr>
 http://www.baidu.com/s?
 
-这里使用了 @u 寄存器变量作为函数参数,
 使用了escape()函数和getcmdtype()函数
+这里使用了 @u 寄存器变量作为函数参数,
 
 "q 寄存器值如下:
 0i=g:i ):let g:i += 1
