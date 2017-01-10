@@ -1,4 +1,7 @@
              添加递增数字, 使用了 let  g:i = 1, 注意必须是全局变量
+             the lang is Ch
+             the lang is En
+             so many langs g
 "uyiW
 /<c-r>=escape(@u, getcmdtype()."\")<cr>
 ?<c-r>=escape(@u, getcmdtype()."\")<cr>
