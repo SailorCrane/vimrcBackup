@@ -339,11 +339,15 @@ nnoremap  <leader>a&        a&<esc>l
 " 没有用过, 但是很好用: 自己真聪明
 nnoremap  <leader>l*     I/*<space><esc>A<space>*/<esc>
 nnoremap  <leader>lC     I/*<space><esc>A<space>*/<esc>
+" 复制并使用/* */注释
+nnoremap  <leader>lY     yyI/*<space><esc>A<space>*/<esc>
 
 " 插入 // 注释 C/Cpp, 因为 如果语句中含有 /* */
 " 那么NerdCommenter  ,ci 注释,会替换掉/* */, 这样下次,cu 或者,ci 去掉注释后,
 " 代码不能正常工作, 所以这时候使用自己的 <leader>lc
 nnoremap  <leader>lc     I//<esc>
+" 复制并使用//注释
+nnoremap  <leader>ly     yyI//<esc>
 
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
