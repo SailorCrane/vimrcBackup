@@ -478,6 +478,12 @@ Bundle "https://github.com/thaerkh/vim-workspace"
 "Bundle  "kana/vim-textobj-lastpat"
 
 
+"60 vim-abolish
+"使用:S 命令, 交换词
+":S/{good, bad}/
+Bundle "tpope/vim-abolish"
+
+
 "100
 " required
 filetype plugin indent on
