@@ -1,3 +1,4 @@
+
 "0 说明
 " 一般映射, 如果有对于选项的toggle!, 就会有? show
 " 例如 set  list!  list?
@@ -440,6 +441,11 @@ nnoremap  <leader>cv  :set  cursorcolumn!  cursorcolumn?<cr>
 " 因为wc不是很好按, 所以用<leader>wn
 nnoremap  <leader>wn  :%s///gn<CR>
 nnoremap  <leader>wc  :%s///gn<CR>
+
+
+" 35 跳转到/*, 或者跳转到 */
+nnoremap  </  [/
+nnoremap  >/  ]/
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
