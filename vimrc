@@ -1,4 +1,4 @@
-
+ 
 "0 一些变量的设置: 主要是.vimrc 和 .vim脚本位置
 " 这样以后如果想配置在其它服务器上, 那么改变这里的变量即可
 " edit 和 source 文件路径, 由变量作为路径前缀, 而不使用具体路径
@@ -184,6 +184,11 @@ highlight SpecialKey guifg=#4a4a59
 " 无论insert 和 normal模式,都可以用, 插入模式也可以用
 " 注意这不是一个自定义映射, 是vim帮我们设置的一个映射
 set pastetoggle=<f9>
+
+
+" set laststatus=2: always show laststatus
+" 在vim-airline中用到
+set laststatus=2
 
 
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source

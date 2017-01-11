@@ -133,7 +133,18 @@ nnoremap <Leader>p :bp<CR>
 " 当tagbar检测到自身是唯一打开窗口时, 会退出gvim, 悲哀啊!
 nnoremap <Leader>d :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
-"7-2下面是vim 相关tab映射
+nnoremap <leader>1      :b 1<CR>
+nnoremap <leader>2      :b 2<CR>
+nnoremap <leader>3      :b 3<CR>
+nnoremap <leader>4      :b 4<CR>
+nnoremap <leader>5      :b 5<CR>
+nnoremap <leader>6      :b 6<CR>
+nnoremap <leader>7      :b 7<CR>
+nnoremap <leader>8      :b 8<CR>
+nnoremap <leader>9      :b 9<CR>
+
+
+"7-2: tab 下面是vim 相关tab映射
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
 nnoremap tn      :tabnew<CR>
@@ -572,6 +583,7 @@ nnoremap  >a[   >a{
 " 和上述功能相同
 nnoremap  <a]   <a{
 nnoremap  >a]   >a{
+
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
