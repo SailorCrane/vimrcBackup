@@ -508,9 +508,13 @@ nnoremap  <Leader>wn  :%s///gn<CR>
 nnoremap  <Leader>wc  :%s///gn<CR>
 
 
-" 35 跳转到/*, 或者跳转到 */
+" 35 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
 nnoremap  </  [/
 nnoremap  >/  ]/
+
+nnoremap  <*  [/
+nnoremap  >*  ]/
+
 nnoremap  <#  [#
 nnoremap  >#  ]#
 

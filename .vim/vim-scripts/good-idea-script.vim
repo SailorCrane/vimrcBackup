@@ -71,3 +71,6 @@ fun! MaxCurrentWindow()
     vertical resize " equal to <C-w>|
     call ShowBufName()
 endfun
+
+" 6: copy global// to register
+:g/TODO/yank A
