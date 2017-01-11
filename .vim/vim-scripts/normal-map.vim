@@ -338,6 +338,14 @@ nnoremap  <leader>a<space>  a<space><esc>l
 nnoremap  <leader>i&        i&<esc>l
 nnoremap  <leader>a&        a&<esc>l
 
+nnoremap  <leader>i:        i:<esc>l
+nnoremap  <leader>a:        a:<esc>l
+
+" c 代表 colon ":", 因为":"不太好按,还要使用shift键,
+" 并且<leader>i;也被使用了. 所以不能使用; 代替 :
+nnoremap  <leader>ic        i:<esc>l
+nnoremap  <leader>ac        a:<esc>l
+
 
 " 21-3 在当前行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
 " lc 表示 line comment, 因为'c' 比 '*' 更好按
