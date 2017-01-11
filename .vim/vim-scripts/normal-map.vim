@@ -77,6 +77,7 @@ nnoremap  <Leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<CR>
 nnoremap  <Leader>ed  :e  $CRANE_DOT_VIM/doc/<CR>
 
 " 编辑good-idea-script.vim, 记录最新学习情况
+" I表示Idea
 nnoremap  <Leader>eI  :e  $CRANE_DOT_VIM/vim-scripts/good-idea-script.vim<CR>
 
 " Prompt to open file with same name, different extension
@@ -165,6 +166,9 @@ nnoremap  <Leader>k  <C-w>k
 " a 表示 all screen: 即最大化屏幕
 nnoremap  <C-w>a  <C-w>_<C-w>\|
 
+" e stand for equal
+nnoremap <C-w>e  <C-w>=
+
 " 因为水平最大化用的多, 所以和_切换
 nnoremap  <C-w>-  <C-w>_
 nnoremap  <C-w>_  <C-w>-
@@ -173,11 +177,50 @@ nnoremap  <C-w>_  <C-w>-
 " 因为| 在"Ex"模式中用来分割命令, :h :bar, 而nnoremap 刚好是Ex命令其中之一
 nnoremap  <C-w>\  <C-w>\|
 
-" e stand for equal
-nnoremap <C-w>e  <C-w>=
-
 " x 表示减, 和normal模式下<C-x> 对于数字减1对应起来
 nnoremap <C-w>x  <C-w>-
+
+" 移动到四个角, 并最大化窗口: 目前习惯是开启四个窗口:
+" 下面的映射在四个窗口基础上工作:刚好 q,t,z,b 键盘布局位于四个角上: 太棒了
+" 因为最大化当前窗口用的很多, 所以后期可能做成函数, 或者命令,
+" 如果vim有现成的命令, 直接使用: 但是很遗憾, 并没有
+" 并且跳转过去时, 可以输出缓冲区文件名
+" q  t
+" z  b
+"
+
+" 显示当前文件名
+fun! ShowBufName()
+    echo expand("%:p")
+endfun
+
+" 最大化当前窗口, 并显示文件名
+fun! MaxCurrentWindow()
+    "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
+    "h :Ctrl-w__
+    "h :Ctrl-w_|
+
+    ":res[ize] [N]
+    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
+    "CTRL-W _	Set current window height to N (default: highest possible).
+
+    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
+    "CTRL-W |	Set current window width to N (default: widest possible).
+
+    resize          " equal <C-w>_, set windows to hightest
+    vertical resize " equal to <C-w>|
+    call ShowBufName()
+endfun
+
+" 左上角
+"nnoremap <C-w>q  <C-w>t<C-w>\|<C-w>_
+nnoremap <C-w>q  <C-w>t:call MaxCurrentWindow()<CR>
+" 右上角
+nnoremap <C-w>t  <C-w>b<C-w>k:call MaxCurrentWindow()<CR>
+" 左下角
+nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
+" 右下角
+nnoremap <C-w>b  <C-w>b:call MaxCurrentWindow()<CR>
 
 
 "9 quick line switch:快速交换两行
@@ -482,10 +525,33 @@ nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>
 " k移动到上一行, J join 两行, 完成插入
 " trick: 这里的两个read单词, 是根据Tabularize对齐的,
 " :Tabularize可以根据单词对齐, 而不仅仅是字符. 非常强大
-nnoremap  <Leader>ld  :.   read !date -u<CR>kJ
+" 这里不适用date -u, 而使用date, 因为-u 是格林威治绝对时间, 不是本地时间
+"nnoremap  <Leader>ld  :.   read !date -u<CR>kJ
+nnoremap  <Leader>ld  :.   read !date <CR>kJ
 
+"nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 
+
+" 38 快速缩进{  } 中的代码块, 尤其是使用ySS 添加{}, 后, 需要向左缩进时
+" 使用条件: 光标处理{} 中间
+" 很好: 并且这个动作可重复: 因为使用了文本对象
+
+" 缩进{} 内部
+nnoremap  <i[   <i{
+nnoremap  >i[   >i{
+
+" 和上述功能相同
+nnoremap  <i]   <i{
+nnoremap  >i]   >i{
+
+" 连带{}一起缩进
+nnoremap  <a[   <a{
+nnoremap  >a[   >a{
+
+" 和上述功能相同
+nnoremap  <a]   <a{
+nnoremap  >a]   >a{
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替

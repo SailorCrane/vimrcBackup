@@ -26,4 +26,48 @@
     :sil    g/{/  .+1, /}/-1  >
 
 
-" 3:
+" 3: 最大化当前窗口函数
+http://www.tuicool.com/articles/r2iEVnU
+
+function! Zoom ()
+    " check if is the zoomed state (tabnumber > 1 && window == 1)
+    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
+        let l:cur_winview = winsaveview()
+        let l:cur_bufname = bufname('')
+        tabclose
+
+        " restore the view
+        if l:cur_bufname == bufname('')
+            call winrestview(cur_winview)
+        endif
+    else
+        tab split
+    endif
+endfunction
+
+nmap <leader>z :call Zoom()<CR>
+
+
+" 4: 自己写的最大化当前窗口, 并显示当前文件名
+" 显示当前文件名
+fun! ShowBufName()
+    echo expand("%:p")
+endfun
+
+" 5: 最大化当前窗口, 并显示文件名
+fun! MaxCurrentWindow()
+    "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
+    "h :Ctrl-w__
+    "h :Ctrl-w_|
+
+    ":res[ize] [N]
+    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
+    "CTRL-W _	Set current window height to N (default: highest possible).
+
+    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
+    "CTRL-W |	Set current window width to N (default: widest possible).
+
+    resize          " equal <C-w>_, set windows to hightest
+    vertical resize " equal to <C-w>|
+    call ShowBufName()
+endfun
