@@ -474,6 +474,17 @@ nnoremap  >#  ]#
 nnoremap  <leader>ss  :%s<space>///g<left><left><left>
 
 
+" 37 quick insert date at current line: ld 插在行尾, id insert到行首
+" ld 表示 line date
+" :. read !date -u<CR>, 在当前行的之下(下一行)插入当前时间日期, 并且插入后, 光标自动跳到下一行
+" k移动到上一行, J join 两行, 完成插入
+" trick: 这里的两个read单词, 是根据Tabularize对齐的,
+" :Tabularize可以根据单词对齐, 而不仅仅是字符. 非常强大
+nnoremap  <leader>ld  :.   read !date -u<CR>kJ
+
+nnoremap  <leader>id  :.-1 read !date -u<CR>J
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<c-p> 被 <leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
