@@ -332,19 +332,22 @@ nnoremap  <leader>i{    o{<cr><cr>}<up>
 nnoremap  <leader>l{    $a {  }<left><left>
 "nnoremap  <leader>d{    <down>f{d%
 
-"21-2 在当前字符前， 后添加 <space>/&
+"21-2 在当前字符前， 后添加 <space>, "&", ":"
 nnoremap  <leader>i<space>  i<space><esc>l
-nnoremap  <leader>a<space>  a<space><esc>l
-nnoremap  <leader>i&        i&<esc>l
-nnoremap  <leader>a&        a&<esc>l
+nnoremap  <leader>a<space>  a<space><esc>h
 
+" 主要用于C/Cpp 添加去地址符号, 获得指针
+nnoremap  <leader>i&        i&<esc>l
+nnoremap  <leader>a&        a&<esc>h
+
+" 写注释文档时: 可能在当前字符后添加:
 nnoremap  <leader>i:        i:<esc>l
-nnoremap  <leader>a:        a:<esc>l
+nnoremap  <leader>a:        a:<esc>h
 
 " c 代表 colon ":", 因为":"不太好按,还要使用shift键,
 " 并且<leader>i;也被使用了. 所以不能使用; 代替 :
 nnoremap  <leader>ic        i:<esc>l
-nnoremap  <leader>ac        a:<esc>l
+nnoremap  <leader>ac        a:<esc>h
 
 
 " 21-3 在当前行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
