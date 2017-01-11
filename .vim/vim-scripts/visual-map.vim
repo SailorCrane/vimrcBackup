@@ -2,23 +2,23 @@
 
 "1 to command line
 vnoremap  ;    :
-vnoremap  <cr> ;
+vnoremap  <CR> ;
 
 
-"2 <leader>f, <leader>b to  page down up
-vnoremap  <leader>f   5<c-e>
-vnoremap  <leader>b   5<c-y>
+"2 <Leader>f, <Leader>b to  page down up
+vnoremap  <Leader>f   5<C-e>
+vnoremap  <Leader>b   5<C-y>
 
 
 "3: visual copy, 因为j按的最顺手,并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
-vnoremap  <c-j>  "+y
+vnoremap  <C-j>  "+y
 
 
 "4: visual 模式下粘贴"+ 系统寄存器中内容, 和normal模式下统一起来
-vnoremap  <leader><leader>p  "+p
-vnoremap  <leader><leader>P  "+P
+vnoremap  <Leader><Leader>p  "+p
+vnoremap  <Leader><Leader>P  "+P
 
 
 "5: blocl visual 模式下, 在列最前面添加空格
-vnoremap  <leader>i<space>   I<space><esc>
-"vnoremap  <leader>a<space>   I<space><esc>
+vnoremap  <Leader>i<Space>   I<Space><ESC>
+"vnoremap  <Leader>a<Space>   I<Space><ESC>
