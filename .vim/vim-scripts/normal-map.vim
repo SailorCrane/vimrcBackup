@@ -155,6 +155,32 @@ nnoremap  <Leader>j  <C-w>j
 nnoremap  <Leader>k  <C-w>k
 
 " 8-2
+
+" ==========================================================
+" 显示当前文件名
+fun! ShowBufName()
+    echo expand("%:p")
+endfun
+
+" 最大化当前窗口, 并显示文件名
+fun! MaxCurrentWindow()
+    "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
+    "h :Ctrl-w__
+    "h :Ctrl-w_|
+
+    ":res[ize] [N]
+    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
+    "CTRL-W _	Set current window height to N (default: highest possible).
+
+    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
+    "CTRL-W |	Set current window width to N (default: widest possible).
+
+    resize          " equal <C-w>_, set windows to hightest
+    vertical resize " equal to <C-w>|
+    call ShowBufName()
+endfun
+" ==========================================================
+
 " 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
 " 使用:nmap <C-w>a 命令查看映射, 只能看到<C-w>_<C-w>
 " 并且在命令行执行映射: nnoremap <C-w>a  <C-w>|<C-w>_命令: 会出现 E488
@@ -164,7 +190,10 @@ nnoremap  <Leader>k  <C-w>k
 " 补充:关于"|", 是用来在vim Ex模式分割命令的, 参见:h :bar, :h :\bar
 
 " a 表示 all screen: 即最大化屏幕
-nnoremap  <C-w>a  <C-w>_<C-w>\|
+"nnoremap  <C-w>a  <C-w>_<C-w>\|
+" 最大化窗口时, 还会显示当前buffer文件名, 可以当做<leader>lp使用了, 哈哈
+" 那么配置的<leader>lp 在多窗口, 并且不想组大化窗口时显示当前窗口文件名,  还是很有用的
+nnoremap  <C-w>a  :call MaxCurrentWindow()<CR>
 
 " e stand for equal
 nnoremap <C-w>e  <C-w>=
@@ -189,38 +218,19 @@ nnoremap <C-w>x  <C-w>-
 " z  b
 "
 
-" 显示当前文件名
-fun! ShowBufName()
-    echo expand("%:p")
-endfun
-
-" 最大化当前窗口, 并显示文件名
-fun! MaxCurrentWindow()
-    "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
-    "h :Ctrl-w__
-    "h :Ctrl-w_|
-
-    ":res[ize] [N]
-    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
-    "CTRL-W _	Set current window height to N (default: highest possible).
-
-    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
-    "CTRL-W |	Set current window width to N (default: widest possible).
-
-    resize          " equal <C-w>_, set windows to hightest
-    vertical resize " equal to <C-w>|
-    call ShowBufName()
-endfun
-
-" 左上角
+" 左上角: 所有窗口先<C-w>=, 然后再设置跳转, 这样可以保证光标到指定窗口
 "nnoremap <C-w>q  <C-w>t<C-w>\|<C-w>_
-nnoremap <C-w>q  <C-w>t:call MaxCurrentWindow()<CR>
+nnoremap <C-w>q  <C-w>=<C-w>t:call MaxCurrentWindow()<CR>
 " 右上角
-nnoremap <C-w>t  <C-w>b<C-w>k:call MaxCurrentWindow()<CR>
+"nnoremap <C-w>t  <C-w>b<C-w>k:call MaxCurrentWindow()<CR>
+" 不知为何, 窗口上面这种切换方式, 在左上角最大化时, 无法切换到右上角
+" 和切分方式和顺序有关吗? 如果后续还不行, 可能要先<C-w>=使窗口都显示出来,然后再切换了
+nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>
 " 左下角
-nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
+"nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
+nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>
 " 右下角
-nnoremap <C-w>b  <C-w>b:call MaxCurrentWindow()<CR>
+nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>
 
 
 "9 quick line switch:快速交换两行
