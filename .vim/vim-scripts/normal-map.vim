@@ -76,6 +76,9 @@ nnoremap  <leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<cr>
 
 nnoremap  <leader>ed  :e  $CRANE_DOT_VIM/doc/<cr>
 
+" 编辑good-idea-script.vim, 记录最新学习情况
+nnoremap  <leader>eI  :e  $CRANE_DOT_VIM/vim-scripts/good-idea-script.vim<CR>
+
 " Prompt to open file with same name, different extension
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
 " <CR>用来完成 <C-r>=
@@ -312,6 +315,8 @@ nnoremap  <leader>l\    A<space>\<esc>
 nnoremap  <leader>lx    A<BS><esc>:write<cr>
 
 " 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
+" 如果当前行是空行, 直接"yp", 就可以复制一行空行, 更快.
+" 当前行不是空行时, 再使用这个映射:<leader>lo, 或者<leader>lO
 nnoremap  <leader>lo    o<esc>k
 nnoremap  <leader>lO    O<esc>j
 nnoremap  <leader>go    o<esc>
