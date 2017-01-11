@@ -61,11 +61,11 @@ fun! MaxCurrentWindow()
     "h :Ctrl-w_|
 
     ":res[ize] [N]
-    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
-    "CTRL-W _	Set current window height to N (default: highest possible).
+    "CTRL-W CTRL-_                  *CTRL-W_CTRL-_* *CTRL-W__*
+    "CTRL-W _   Set current window height to N (default: highest possible).
 
-    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
-    "CTRL-W |	Set current window width to N (default: widest possible).
+    ":vertical res[ize] [N]         *:vertical-resize* *CTRL-W_bar*
+    "CTRL-W |   Set current window width to N (default: widest possible).
 
     resize          " equal <C-w>_, set windows to hightest
     vertical resize " equal to <C-w>|
@@ -81,3 +81,6 @@ winpos 命令显示当前窗口坐标
 winsize  1000  1000
 echo  winheight(0)
 echo  winwidth(0)
+
+" 8 match tab not beigin with a line
+match  ErrorMsg /\v[^\t]\t+/
