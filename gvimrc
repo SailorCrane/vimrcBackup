@@ -14,3 +14,6 @@ set guifont=Monospace\ 16
 "3
 set guioptions+=b   "启动下方滚动条
 
+
+"4 启动gvim时, 最大化窗口. 但是当source时, 也会执行这里最大化
+winsize  1000 1000

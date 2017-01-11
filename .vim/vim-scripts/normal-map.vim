@@ -232,6 +232,12 @@ nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>
 " 右下角
 nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>
 
+" 8-3 显示窗口大小和坐标: 关于窗口设置的说明
+"     winsize 设置窗口 width 和 height. 可以用来在gvimrc中设置1000, 1000.
+" 因为如果winsize很大, 窗口也会相应变大. 这样gvim 启动时, 可以自动最大化
+" winpos 左上角打印X 和 Y坐标
+" winwidth(0) 和 winheight(0) 函数显示窗口宽度和高度
+
 
 "9 quick line switch:快速交换两行
 " 将当前行'-'下移 或者'_'上移, 支持连续移动

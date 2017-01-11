@@ -74,3 +74,10 @@ endfun
 
 " 6: copy global// to register
 :g/TODO/yank A
+
+
+" 7 使用函数获取当前窗口高度和宽度: 0 表示当前窗口
+winpos 命令显示当前窗口坐标
+winsize  1000  1000
+echo  winheight(0)
+echo  winwidth(0)
