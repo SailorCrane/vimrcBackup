@@ -85,30 +85,36 @@ cnoreabbrev cd4   cd ../../../../
 
 
 "10
-" <c-k>, <c-j>
-" 因为cmdlinecomplete 将cmd mode下的<c-n> <c-p>占用了
-" 所以使用<c-k>, <c-j>作为重复上一条命令,下一条命令
-"cnoremap  <c-k>  <c-p>
-" 虽然<c-p> 和 <up>一样,都可以进行命令回溯,但是<c-p>不能进行命令过滤
-" 本应将<c-p>映射到<up>, 但是因为<c-p>已经用来作为cmdcomplete了
-" 类似于insert模式中的<c-p>所以就算了,这里使用<c-k>来代替
-cnoremap  <c-k>  <up>
-"cnoremap  <c-j>  <c-n>
-cnoremap  <c-j>  <down>
+" <C-k>, <C-j>
+" 因为cmdlinecomplete 将cmd mode下的<C-n> <C-p>占用了
+" 所以使用<C-k>, <C-j>作为重复上一条命令,下一条命令
+"cnoremap  <C-k>  <C-p>
+" 虽然<C-p> 和 <up>一样,都可以进行命令回溯,但是<C-p>不能进行命令过滤
+" 本应将<C-p>映射到<up>, 但是因为<C-p>已经用来作为cmdcomplete了
+" 类似于insert模式中的<C-p>所以就算了,这里使用<C-k>来代替
+" <Up> 和 <Down> 会对命令进行过滤,
+" 反而成为一种困扰.有时仅仅是想继续上翻一条命令,
+" 但是因为当前Ex行已经上翻导致存在内容, 所以过滤后, 无法找出上一条命令:只能找到上一条过滤后的命令
+" 所以这里依然使用<C-p> 和 <C-n>
+" 有需求时, 再使用<Up> 和 <Down>
+cnoremap  <C-k>  <C-p>
+"cnoremap  <C-k>  <up>
+cnoremap  <C-j>  <C-n>
+"cnoremap  <C-j>  <down>
 
 
 "11
-cnoremap  <c-h>  <left>
-cnoremap  <c-l>  <right>
+cnoremap  <C-h>  <left>
+cnoremap  <C-l>  <right>
 
 
 "12 :快速键入当前光标下单词, 第二次可以不用键入ctrl
-" <c-r>a 和 <c-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD
-cnoremap  <c-r>w  <c-r><c-w>
-cnoremap  <c-r>a  <c-r><c-a>
-cnoremap  <c-r>W  <c-r><c-a>
-cnoremap  <c-r>f  <c-r><c-f>
-cnoremap  <c-r>p  <c-r><c-p>
+" <C-r>a 和 <C-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD
+cnoremap  <C-r>w  <C-r><C-w>
+cnoremap  <C-r>a  <C-r><C-a>
+cnoremap  <C-r>W  <C-r><C-a>
+cnoremap  <C-r>f  <C-r><C-f>
+cnoremap  <C-r>p  <C-r><C-p>
 
 
 "13 清屏: 清除bash屏幕, 这样make时不会混淆视听

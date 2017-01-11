@@ -26,7 +26,7 @@ set nocompatible
 
 "4  command line height ":"
 set cmdheight=2
-" if set cmdheight=2, then :set nu? rnu?<cr>  will now show the hit-enter
+" if set cmdheight=2, then :set nu? rnu?<CR>  will now show the hit-enter
 
 
 "5 tab to space: 1 tab -----> 4 space
@@ -70,9 +70,9 @@ set incsearch         " /搜索时, 一遍输入,一遍已经开始实时搜索
 "set hlsearch incsearch
 
 
-"11  <leader> , note: global setting
+"11  <Leader> , note: global setting
 let mapleader   = ","       "
-let g:mapleader = ","       " global <leader>
+let g:mapleader = ","       " global <Leader>
 
 
 ""12 module scripts
@@ -89,7 +89,7 @@ let g:mapleader = ","       " global <leader>
 "source ~/.vim/vim-scripts/autocmd.vim
 
 " in the end of vimrc, source myBundle.vim
-" because now, <leader> is ready, everything is OK, then to active plugin
+" because now, <Leader> is ready, everything is OK, then to active plugin
 " manged by Bundle
 "source ~/.vim/vim-scripts/myBundle.vim
 
@@ -141,8 +141,8 @@ set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildme
 
 
 "20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
-" 也可以使用<leader>K 去查看光标下的关键字: 通过Man
-" 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<leader>K
+" 也可以使用<Leader>K 去查看光标下的关键字: 通过Man
+" 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<Leader>K
 runtime   ftplugin/man.vim
 runtime   macros/matchit.vim    "激活vim自带的matchit.vim, 这样就不用这个matchit.vim插件了
 
@@ -191,7 +191,7 @@ set pastetoggle=<f9>
 " 而normal-map 中有一个根据这个,对于<s-k>,即K的映射
 " My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
 " source ~/.vim/vim-scripts/myBundle.vim
-" 注意这里如果要编辑, 只能使用<leader>e 前缀编辑, 无法通过gf跳转.
+" 注意这里如果要编辑, 只能使用<Leader>e 前缀编辑, 无法通过gf跳转.
 source  $CRANE_DOT_VIM/vim-scripts/myBundle.vim
 source  $CRANE_DOT_VIM/vim-scripts/normal-map.vim
 source  $CRANE_DOT_VIM/vim-scripts/insert-map.vim
