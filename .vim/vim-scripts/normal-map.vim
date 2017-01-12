@@ -154,19 +154,6 @@ nnoremap d<tab>  :tabclose<CR>
 
 
 "8 Window  motion and manager: 快速窗口移动和管理
-nnoremap  <Leader>h  <C-w>h
-" 因为有了很多以<Leader>l开头的映射,
-"用来对行前行后,行尾等操作.
-"<Leader>l的速度就慢了下来,所以添加<Leader>ll
-nnoremap  <Leader>l  <C-w>l
-" 因为<Leader>l前缀太多:对于行结尾的操作, 所以这里添加<Leader>ll
-" 其实还不如vim自带的<C-w>l 方便, 但为了和其它映射一致, 还是添加上吧
-nnoremap  <Leader>ll <C-w>l
-nnoremap  <Leader>j  <C-w>j
-nnoremap  <Leader>k  <C-w>k
-
-" 8-2
-
 " ==========================================================
 " 显示当前文件名
 fun! ShowBufName()
@@ -191,6 +178,25 @@ fun! MaxCurrentWindow()
     call ShowBufName()
 endfun
 " ==========================================================
+
+nnoremap  <Leader>h  <C-w>h
+" 因为有了很多以<Leader>l开头的映射,
+"用来对行前行后,行尾等操作.
+"<Leader>l的速度就慢了下来,所以添加<Leader>ll
+nnoremap  <Leader>l  <C-w>l
+" 因为<Leader>l前缀太多:对于行结尾的操作, 所以这里添加<Leader>ll
+" 其实还不如vim自带的<C-w>l 方便, 但为了和其它映射一致, 还是添加上吧
+nnoremap  <Leader>ll <C-w>l
+nnoremap  <Leader>j  <C-w>j
+nnoremap  <Leader>k  <C-w>k
+
+nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
+nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
+nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
+nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
+
+" 8-2 最大化窗口等相关设置
+
 
 " 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
 " 使用:nmap <C-w>a 命令查看映射, 只能看到<C-w>_<C-w>
