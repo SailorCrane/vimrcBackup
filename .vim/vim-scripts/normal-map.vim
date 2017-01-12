@@ -594,6 +594,22 @@ nnoremap  <a]   <a{
 nnoremap  >a]   >a{
 
 
+" 39 menu and toolbar Toggle
+"regexp matches      =~      =~#     =~?
+" h  =~#
+" 使用正则检测guioptions中是否有'T' toolbar标志, 如果没有, 就显示. 有就隐藏
+" 注意: 第一个正则检测是'T' 是字符串, 有单引号标志,
+" 后面的 set guioptions-=T, 则没有单引号: 这个是在命令行手动敲入,
+" 才检测出来的.刚开始写错了, 一直不能工作
+nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
+                                 \set guioptions-=T<Bar>
+                                 \set guioptions-=m<Bar>
+                            \else <Bar>
+                                 \set guioptions+=T <Bar>
+                                 \set guioptions+=m <Bar>
+                            \endif<CR>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
