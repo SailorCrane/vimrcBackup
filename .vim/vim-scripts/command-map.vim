@@ -132,3 +132,6 @@ cnoreabbrev  co   cclose
 "15 quick :%s
 cnoreabbrev  ss  :%s///g<left><left><left>
 
+
+"16 colorscheme  molokai
+cnoreabbrev  coma  :colorscheme  molokai

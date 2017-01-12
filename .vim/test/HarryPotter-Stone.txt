@@ -1,14 +1,17 @@
+fanmiao
+xiaoh he he fanmiao
+    xiaofanmiao
 TODO: ex
 TODO: ec
 :g/TODO/yank A
 :g/TODO/yank Q
 html {
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        margin: 0;
-        padding: 0;
-        vertical-align: baseline;
+        Crane    border           : 0        ;
+        Crane    font-size        : 100%     ;
+        Crane    font             : inherit  ;
+        Crane    margin           : 0        ;
+        Crane    padding          : 0        ;
+        Crane    vertical-align   : baseline ;
 }
 body {
         background: white;
@@ -41,7 +44,7 @@ http://www.baidu.com/s?
 1 )                             HarryPotter-Stone.txt
 2 )eol:¬
 3 )¬
-4 )is is star
+4 )Is Is STAR
 5 )is is +
 6 )
 7 )　亚瑟士 　Potter Harry Harry the Sorcerer's Stone 　亚瑟士 　CHAPTER O亚瑟士NE
