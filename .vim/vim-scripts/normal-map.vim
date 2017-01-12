@@ -110,6 +110,9 @@ nnoremap  <Leader>w  :update<CR>
 " 这里<Leader>ww 和上述<Leader>情况相似
 nnoremap  <Leader>ww :update<CR>
 
+" save as : gvim可用, console下<C-s>会导致终端不可回显
+nnoremap  <C-s>      :browse confirm  saveas<CR>
+
 
 "6  word  operation: 感觉很鸡肋
 " 不如yiw, diw, diW更有思考连贯性, 虽然似乎少了一个按键还是注释掉吧
@@ -129,10 +132,15 @@ nnoremap  <Leader>ww :update<CR>
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>p :bp<CR>
 
+" 切换"＃"buf时,显示文件名
+nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
+
 " 因为如果不先关掉 TabBar窗口就 delete buffer,
 " 当tagbar检测到自身是唯一打开窗口时, 会退出gvim, 悲哀啊!
 nnoremap <Leader>d :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
+" 文件很多时, 不太有用. 并且只有在知道buff num情况下, 才有用
+" 所以结合air-line使用会更好
 nnoremap <leader>1      :b 1<CR>
 nnoremap <leader>2      :b 2<CR>
 nnoremap <leader>3      :b 3<CR>
@@ -625,5 +633,4 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 " 因为有了 text-obj entire 和 vnoremap  <C-j> "+y,
 " 还是继续让<C-a>去对行内数字做加法吧
 "nnoremap  <C-a>  <ESC>ggVG"+y<C-o>
-
 

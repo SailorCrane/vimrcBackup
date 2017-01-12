@@ -95,3 +95,10 @@ return 'Cursor is at line/column: ' . v:beval_lnum .
 endfunction
 set balloonexpr=SimpleBalloon()
 set ballooneval
+
+
+" browse confirm  e<CR>
+:browse  confirm  e<CR>
+" save as
+:browse  confirm  saveas<CR>
+
