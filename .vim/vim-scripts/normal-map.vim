@@ -212,6 +212,8 @@ fun! MaxCurrentWindow()
     call ShowBufName()
 endfun
 
+" 注意: 当存在TagBar窗口, 或者其它类似窗口时, 可能角落窗口就不是自己以为的窗口
+" 映射自然也不能正常工作
 " 左上角
 "nnoremap <C-w>q  <C-w>t<C-w>\|<C-w>_
 nnoremap <C-w>q  <C-w>t:call MaxCurrentWindow()<CR>
