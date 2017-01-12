@@ -134,4 +134,4 @@ cnoreabbrev  ss  :%s///g<left><left><left>
 
 
 "16 colorscheme  molokai
-cnoreabbrev  coma  :colorscheme  molokai
+cnoreabbrev  csm  :colorscheme  molokai
