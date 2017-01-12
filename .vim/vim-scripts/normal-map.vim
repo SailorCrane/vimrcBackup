@@ -248,17 +248,20 @@ nnoremap <C-w>x  <C-w>-
 
 " 左上角: 所有窗口先<C-w>=, 然后再设置跳转, 这样可以保证光标到指定窗口
 "nnoremap <C-w>q  <C-w>t<C-w>\|<C-w>_
-nnoremap <C-w>q  <C-w>=<C-w>t:call MaxCurrentWindow()<CR>
+nnoremap <C-w>q  <C-w>=<C-w>t:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
+
+" 左下角
+"nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
+nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
+
 " 右上角
 "nnoremap <C-w>t  <C-w>b<C-w>k:call MaxCurrentWindow()<CR>
 " 不知为何, 窗口上面这种切换方式, 在左上角最大化时, 无法切换到右上角
 " 和切分方式和顺序有关吗? 如果后续还不行, 可能要先<C-w>=使窗口都显示出来,然后再切换了
-nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>
-" 左下角
-"nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
-nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>
+nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
+
 " 右下角
-nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>
+nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
 
 " 8-3 显示窗口大小和坐标: 关于窗口设置的说明
 "     winsize 设置窗口 width 和 height. 可以用来在gvimrc中设置1000, 1000.
