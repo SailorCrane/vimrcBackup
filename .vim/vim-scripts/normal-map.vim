@@ -664,6 +664,12 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 nnoremap  <Leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
 nnoremap  <Leader>ms  :mksession! $SESSION/four-square.vim<CR>
 
+
+"41 这样'可以定位到具体column
+nnoremap  '  `
+nnoremap  `  '
+nnoremap <C-6> <C-6>`"
+
 " 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
 "nnoremap  <Leader>sl  :vsplit<CR>
 

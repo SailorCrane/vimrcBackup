@@ -101,7 +101,7 @@ set autoread
 
 
 "14 scrolloff
-set  scrolloff=7
+set  scrolloff=3
 set  sidescroll=5
 
 set  ruler      "显示当先位置
