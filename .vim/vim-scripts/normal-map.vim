@@ -656,8 +656,8 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 "        那么空白buff加载后, 依旧是4个窗格
 " 注意5: 根据注意2, 添加了mksession!, 重新mksession! 保存
 "        但是注意加!, 覆盖保存
-"nnoremap  <leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
-"nnoremap  <leader>ms  :mksession! $SESSION/four-square.vim<CR>
+nnoremap  <leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
+nnoremap  <leader>ms  :mksession! $SESSION/four-square.vim<CR>
 
 " 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
 "nnoremap  <leader>sl  :vsplit<CR>
