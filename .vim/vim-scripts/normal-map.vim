@@ -187,6 +187,15 @@ fun! MaxCurrentWindow()
 endfun
 " ==========================================================
 
+" 用<C-> 切换窗口, 比<Leader>快多了
+nnoremap  <C-h>  <C-w>h
+nnoremap  <C-l>  <C-w>l
+" <C-j> 在c/cpp文件中, 被c-support映射为进入插入模式到空格附近
+" 把c-support中的<C-j> 映射为了c<C-j>, 寻找时搜索c<C-j>即可
+nnoremap  <C-j>  <C-w>j
+nnoremap  <C-k>  <C-w>k
+
+" 用<Leader>切换窗口
 nnoremap  <Leader>h  <C-w>h
 " 因为有了很多以<Leader>l开头的映射,
 "用来对行前行后,行尾等操作.
@@ -305,10 +314,21 @@ nnoremap  gC  gul
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
 " 这组映射用的很多, 因为ctrl 和 caplock交换后, 很方便按
-nnoremap  <C-k>  gg
-nnoremap  <C-j>  G
-nnoremap  <C-h>  ^
-nnoremap  <C-l>  $
+
+" 这几个映射C-k, C-j没什么用
+"nnoremap  <C-k>  gg
+"nnoremap  <C-j>  G
+
+" 因为<C-h>, <C-l> 转给窗口切换了, 所以使用gh, gl代替原来
+"nnoremap  <C-h>  ^
+"nnoremap  <C-l>  $
+
+" 这样上下左右, 都和g有关了, 非常棒
+" gh本来是进入select模式, 比较鸡肋, 不需要
+nnoremap gh  ^
+nnoremap gl  $
+
+" 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
 nnoremap  H  ^
 nnoremap  L  $
 
@@ -625,7 +645,22 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 " session 的加载需要启动时 vim -S, 或者启动后source session.vim
 " sl 是sesson load的意思, 当然s也可以理解为source
 " 这样<leader>sl 和 <leader>sv 都对应起来了
-nnoremap  <leader>sl  :source $SESSION/four-square.vim<CR>
+" 注意1: 因为load session之后, pwd就变为了session中保存的目录, 所以要用cd -
+"        切换为原来的目录
+"        但是这样就修改了所有的pwd, 原来lcd自己维护的目录也被覆盖了
+" 注意2: four-square.vim是用mksession保存的, 所以之前的映射都保存在里面
+"        如果更新了映射, 加载four-square.vim还是会用老版本的映射
+" 注意3: 原先4个窗格, mksession保存后, 在空文件中加载session, 只剩下3个窗格.
+"        但是如果vim中有文件, 加载session后, 依旧是4个窗格
+" 注意4: 在注意3基础上, 如果保存5个窗格, 左3, 右4
+"        那么空白buff加载后, 依旧是4个窗格
+" 注意5: 根据注意2, 添加了mksession!, 重新mksession! 保存
+"        但是注意加!, 覆盖保存
+"nnoremap  <leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
+"nnoremap  <leader>ms  :mksession! $SESSION/four-square.vim<CR>
+
+" 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
+"nnoremap  <leader>sl  :vsplit<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
