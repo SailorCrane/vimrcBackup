@@ -98,6 +98,11 @@ endif
 "5 quick  operation
 " Quit the current window : the buffers underlying the window will be quited
 nnoremap  <Leader>q  :q<CR>
+
+" 本来一直想映射为<Leader>qa, 但是这样和<Leader>q有相同前缀,
+" 会影响<Leader>q速度. 现在映射未<Leader>aq, 太棒了.
+" 因为有很多<Leader>a 前缀的映射, 所以不会影响
+nnoremap  <Leader>aq :qa<CR>
 " Quit all windows
 nnoremap  <Leader>r  :qa<CR>
 " Refresh file, or restore file from file name
@@ -141,15 +146,15 @@ nnoremap <Leader>d :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
 " 文件很多时, 不太有用. 并且只有在知道buff num情况下, 才有用
 " 所以结合air-line使用会更好
-nnoremap <leader>1      :b 1<CR>
-nnoremap <leader>2      :b 2<CR>
-nnoremap <leader>3      :b 3<CR>
-nnoremap <leader>4      :b 4<CR>
-nnoremap <leader>5      :b 5<CR>
-nnoremap <leader>6      :b 6<CR>
-nnoremap <leader>7      :b 7<CR>
-nnoremap <leader>8      :b 8<CR>
-nnoremap <leader>9      :b 9<CR>
+nnoremap <Leader>1      :b 1<CR>
+nnoremap <Leader>2      :b 2<CR>
+nnoremap <Leader>3      :b 3<CR>
+nnoremap <Leader>4      :b 4<CR>
+nnoremap <Leader>5      :b 5<CR>
+nnoremap <Leader>6      :b 6<CR>
+nnoremap <Leader>7      :b 7<CR>
+nnoremap <Leader>8      :b 8<CR>
+nnoremap <Leader>9      :b 9<CR>
 
 
 "7-2: tab 下面是vim 相关tab映射
@@ -225,8 +230,8 @@ nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
 
 " a 表示 all screen: 即最大化屏幕
 "nnoremap  <C-w>a  <C-w>_<C-w>\|
-" 最大化窗口时, 还会显示当前buffer文件名, 可以当做<leader>lp使用了, 哈哈
-" 那么配置的<leader>lp 在多窗口, 并且不想组大化窗口时显示当前窗口文件名,  还是很有用的
+" 最大化窗口时, 还会显示当前buffer文件名, 可以当做<Leader>lp使用了, 哈哈
+" 那么配置的<Leader>lp 在多窗口, 并且不想组大化窗口时显示当前窗口文件名,  还是很有用的
 nnoremap  <C-w>a  :call MaxCurrentWindow()<CR>
 
 " e stand for equal
@@ -644,7 +649,7 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 " 40 加载最常用的"四格"布局
 " session 的加载需要启动时 vim -S, 或者启动后source session.vim
 " sl 是sesson load的意思, 当然s也可以理解为source
-" 这样<leader>sl 和 <leader>sv 都对应起来了
+" 这样<Leader>sl 和 <Leader>sv 都对应起来了
 " 注意1: 因为load session之后, pwd就变为了session中保存的目录, 所以要用cd -
 "        切换为原来的目录
 "        但是这样就修改了所有的pwd, 原来lcd自己维护的目录也被覆盖了
@@ -656,11 +661,11 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 "        那么空白buff加载后, 依旧是4个窗格
 " 注意5: 根据注意2, 添加了mksession!, 重新mksession! 保存
 "        但是注意加!, 覆盖保存
-nnoremap  <leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
-nnoremap  <leader>ms  :mksession! $SESSION/four-square.vim<CR>
+nnoremap  <Leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
+nnoremap  <Leader>ms  :mksession! $SESSION/four-square.vim<CR>
 
 " 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
-"nnoremap  <leader>sl  :vsplit<CR>
+"nnoremap  <Leader>sl  :vsplit<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
