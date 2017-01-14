@@ -334,8 +334,9 @@ nnoremap gh  ^
 nnoremap gl  $
 
 " 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
-nnoremap  H  ^
-nnoremap  L  $
+" 还是让他们恢复自己本来的功能吧
+"nnoremap  H  ^
+"nnoremap  L  $
 
 
 "12-1 屏幕顶部,中央,下端
@@ -661,17 +662,48 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 "        那么空白buff加载后, 依旧是4个窗格
 " 注意5: 根据注意2, 添加了mksession!, 重新mksession! 保存
 "        但是注意加!, 覆盖保存
-nnoremap  <Leader>sl  :source     $SESSION/four-square.vim<CR>:cd -<CR><C-w>=
-nnoremap  <Leader>ms  :mksession! $SESSION/four-square.vim<CR>
+
+" 保存sessionoption的值
+fun!  Ssop_backup()
+    let g:ssop_back = &sessionoptions
+endfun
+
+" 恢复sessionoption的值
+fun!  SSop_restore()
+    let &sessionoptions = g:ssop_back
+endfun
+
+" 创建仅包含空窗口布局的session
+fun!  Mk_four_square()
+    " 保存ssop选项
+    call Ssop_backup()
+
+    " ssop 只保存blank窗口
+    " 这样可以不保存其它映射, 文件内容等信息
+    " 这里文件名是four-square.vim, 后期可能会搞成函数参数
+    set        sessionoptions=blank
+    mksession! $SESSION/four-square.vim
+
+    " 恢复原先ssop选项的值
+    call SSop_restore()
+endfun
+
+" 因为有可能给启动后, 就先加载布局, 这时候还没有 - OLD dir,这时候可能会出错
+" 所以先<C-w>=将所有窗口同等大小, 再cd -
+" 否则如果cd - 出错, <C-w>=就执行不了了
+nnoremap  <Leader>sl  :source     $SESSION/four-square.vim<CR><C-w>=:cd -<CR>
+"nnoremap  <Leader>ms  :mksession! $SESSION/four-square.vim<CR>
+nnoremap  <Leader>ms  :call Mk_four_square()<CR>
+
+" 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
+"nnoremap  <Leader>sl  :vsplit<CR>
 
 
 "41 这样'可以定位到具体column
 nnoremap  '  `
 nnoremap  `  '
 nnoremap <C-6> <C-6>`"
-
-" 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
-"nnoremap  <Leader>sl  :vsplit<CR>
+nnoremap <C-g> 2<C-g>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
