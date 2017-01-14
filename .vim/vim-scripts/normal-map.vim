@@ -621,6 +621,13 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
                             \endif<CR>
 
 
+" 40 加载最常用的"四格"布局
+" session 的加载需要启动时 vim -S, 或者启动后source session.vim
+" sl 是sesson load的意思, 当然s也可以理解为source
+" 这样<leader>sl 和 <leader>sv 都对应起来了
+nnoremap  <leader>sl  :source $SESSION/four-square.vim<CR>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
