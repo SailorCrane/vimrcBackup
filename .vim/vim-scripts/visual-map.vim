@@ -21,4 +21,5 @@ vnoremap  <Leader><Leader>P  "+P
 
 "5: blocl visual 模式下, 在列最前面添加空格
 vnoremap  <Leader>i<Space>   I<Space><ESC>
+vnoremap  <Leader>a<Space>   A<Space><ESC>
 "vnoremap  <Leader>a<Space>   I<Space><ESC>

@@ -173,6 +173,9 @@ fun! ShowBufName()
     echo expand("%:p")
 endfun
 
+" 定义一个自定义命令
+command!  ShowBufName  call ShowBufName()
+
 " 最大化当前窗口, 并显示文件名
 fun! MaxCurrentWindow()
     "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
@@ -192,15 +195,16 @@ fun! MaxCurrentWindow()
 endfun
 " ==========================================================
 
+" 上下左右切换窗口: 并显示文件名
 " 用<C-> 切换窗口, 比<Leader>快多了
-nnoremap  <C-h>  <C-w>h
-nnoremap  <C-l>  <C-w>l
+nnoremap  <C-h>  <C-w>h:ShowBufName<CR>
+nnoremap  <C-l>  <C-w>l:ShowBufName<CR>
 " <C-j> 在c/cpp文件中, 被c-support映射为进入插入模式到空格附近
 " 把c-support中的<C-j> 映射为了c<C-j>, 寻找时搜索c<C-j>即可
-nnoremap  <C-j>  <C-w>j
-nnoremap  <C-k>  <C-w>k
+nnoremap  <C-j>  <C-w>j:ShowBufName<CR>
+nnoremap  <C-k>  <C-w>k:ShowBufName<CR>
 
-" 用<Leader>切换窗口
+" 用<Leader>切换窗口: 几乎是鸡肋了. 虽然现在还在用.但也仅仅是因为习惯的问题
 nnoremap  <Leader>h  <C-w>h
 " 因为有了很多以<Leader>l开头的映射,
 "用来对行前行后,行尾等操作.
@@ -212,13 +216,13 @@ nnoremap  <Leader>ll <C-w>l
 nnoremap  <Leader>j  <C-w>j
 nnoremap  <Leader>k  <C-w>k
 
+" 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
 nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
 
 " 8-2 最大化窗口等相关设置
-
 
 " 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
 " 使用:nmap <C-w>a 命令查看映射, 只能看到<C-w>_<C-w>
