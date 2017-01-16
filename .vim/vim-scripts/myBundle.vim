@@ -168,7 +168,7 @@ let g:airline_theme="luna"
 let g:airline_powerline_fonts = 1
 
 " 开启tabline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 " 显示buff编号
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
