@@ -44,7 +44,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " ~/file  edit
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
-nnoremap  <Leader>eA  :e ~/myAlias.sh<CR>
+nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 
 " ./file  edit
 nnoremap  <Leader>em  :e ./makefile<CR>
