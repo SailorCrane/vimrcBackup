@@ -106,7 +106,9 @@ nnoremap  <Leader>aq :qa<CR>
 " Quit all windows
 nnoremap  <Leader>r  :qa<CR>
 " Refresh file, or restore file from file name
-nnoremap  <Leader>e  :e!<CR>
+
+" 用的不多, 还老是误按, 所以注释掉, 使用<Leader>ee就够了
+"nnoremap  <Leader>e  :e!<CR>
 
 " 因为<Leader>e 前缀的edit很多, 所以这里添加 <Leader>ee,
 " 这是我的命名风格, 如果有相同前缀, 那么就重复字母

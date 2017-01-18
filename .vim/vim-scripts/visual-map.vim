@@ -23,3 +23,24 @@ vnoremap  <Leader><Leader>P  "+P
 vnoremap  <Leader>i<Space>   I<Space><ESC>
 vnoremap  <Leader>a<Space>   A<Space><ESC>
 "vnoremap  <Leader>a<Space>   I<Space><ESC>
+
+
+"6: visual align use Tabularize
+"vnoremap  <Leader>h=   :'<,'>Tabularize  /=<CR>
+" 这里不要再添加'<,'> 了, 如果visual模式按下":"
+" vim会自动添加'<, '>
+vnoremap  <Leader>h=   :Tabularize   /=<CR>
+
+vnoremap  <Leader>h;   :Tabularize   /;<CR>
+
+vnoremap  <Leader>h{   :Tabularize   /{<CR>
+vnoremap  <Leader>h}   :Tabularize   /}<CR>
+
+vnoremap  <Leader>h<   :Tabularize   /<<CR>
+vnoremap  <Leader>h>   :Tabularize   /><CR>
+
+vnoremap  <Leader>h,   :Tabularize   /,<CR>
+
+" 注意这里的转义, 或者使用/\V.
+vnoremap  <Leader>h.   :Tabularize  /\.<CR>
+vnoremap  <Leader>h*   :Tabularize  /\*<CR>
