@@ -32,6 +32,7 @@ vnoremap  <Leader>a<Space>   A<Space><ESC>
 vnoremap  <Leader>h=   :Tabularize   /=<CR>
 
 vnoremap  <Leader>h;   :Tabularize   /;<CR>
+vnoremap  <Leader>h:   :Tabularize   /:<CR>
 
 vnoremap  <Leader>h{   :Tabularize   /{<CR>
 vnoremap  <Leader>h}   :Tabularize   /}<CR>

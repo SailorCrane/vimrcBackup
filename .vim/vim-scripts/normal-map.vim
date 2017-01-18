@@ -457,8 +457,16 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>d{    <down>f{d%
 
 "21-2 在当前字符前， 后添加 <Space>, "&", ":"
-nnoremap  <Leader>i<Space>  i<Space><ESC>l
-nnoremap  <Leader>a<Space>  a<Space><ESC>h
+nnoremap  <Leader>i<Space>   i<Space><ESC>l
+nnoremap  <Leader>a<Space>   a<Space><ESC>h
+
+" 在前一个单词(或者当前单词: 如果处于单词中间)开头, 插入一个空格
+nnoremap  <Leader>b<Space>  bi<Space><ESC>h
+nnoremap  <Leader>B<Space>  Bi<Space><ESC>h
+
+" 在下一个单词的开头处: 插入一个空格
+nnoremap  <Leader>w<Space>  wi<Space><ESC>h
+nnoremap  <Leader>W<Space>  Wi<Space><ESC>h
 
 " 主要用于C/Cpp 添加去地址符号, 获得指针
 nnoremap  <Leader>i&        i&<ESC>l
