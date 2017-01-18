@@ -207,7 +207,7 @@ Bundle "WolfgangMehner/c-support"
 
 "12-2: a.vim :switch between header and source file
 Bundle "a.vim"
-
+cnoreabbrev  a  A
 
 "13:  minibufexplorer
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
