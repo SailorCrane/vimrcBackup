@@ -38,6 +38,7 @@ vnoremap  <Leader>h{   :Tabularize   /{<CR>
 vnoremap  <Leader>h}   :Tabularize   /}<CR>
 
 vnoremap  <Leader>h<   :Tabularize   /<<CR>
+vnoremap  <Leader>h2<  :Tabularize   /<<<CR>
 vnoremap  <Leader>h>   :Tabularize   /><CR>
 
 vnoremap  <Leader>h,   :Tabularize   /,<CR>
@@ -45,3 +46,5 @@ vnoremap  <Leader>h,   :Tabularize   /,<CR>
 " 注意这里的转义, 或者使用/\V.
 vnoremap  <Leader>h.   :Tabularize  /\.<CR>
 vnoremap  <Leader>h*   :Tabularize  /\*<CR>
+
+vnoremap  <Leader>h\   :Tabularize  /\<CR>
