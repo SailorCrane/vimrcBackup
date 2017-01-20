@@ -204,6 +204,7 @@ set wrapscan
 " source ~/.vim/vim-scripts/myBundle.vim
 " 注意这里如果要编辑, 只能使用<Leader>e 前缀编辑, 无法通过gf跳转.
 source  $CRANE_DOT_VIM/vim-scripts/myBundle.vim
+source  $CRANE_DOT_VIM/vim-scripts/function.vim
 source  $CRANE_DOT_VIM/vim-scripts/normal-map.vim
 source  $CRANE_DOT_VIM/vim-scripts/insert-map.vim
 

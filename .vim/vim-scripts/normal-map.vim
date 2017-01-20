@@ -47,7 +47,9 @@ nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
 nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 
 " ./file  edit
-nnoremap  <Leader>em  :e ./makefile<CR>
+"nnoremap  <Leader>em  :e ./makefile<CR>
+" <leader>em 编辑当前目录下的Makefile/makefile, 如果不存在, 编辑Makefile
+nnoremap  <Leader>em  :call EditMakefile()<CR>
 nnoremap  <Leader>eq  :e ./question-thunder.txt<CR>
 
 " local  ./.vimrc  and  ./.gvimrc edit
@@ -60,6 +62,7 @@ nnoremap  <Leader>eg  :e  $CRANE_VIM_HOME/.gvimrc<CR>
 
 " vim script edit
 nnoremap  <Leader>eV  :e  $CRANE_DOT_VIM/vim-scripts/visual-map.vim<CR>
+nnoremap  <Leader>eF  :e  $CRANE_DOT_VIM/vim-scripts/function.vim<CR>
 nnoremap  <Leader>en  :e  $CRANE_DOT_VIM/vim-scripts/normal-map.vim<CR>
 nnoremap  <Leader>ei  :e  $CRANE_DOT_VIM/vim-scripts/insert-map.vim<CR>
 nnoremap  <Leader>ec  :e  $CRANE_DOT_VIM/vim-scripts/command-map.vim<CR>
