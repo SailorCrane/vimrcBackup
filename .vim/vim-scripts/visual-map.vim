@@ -30,6 +30,8 @@ vnoremap  <Leader>a<Space>   A<Space><ESC>
 " 这里不要再添加'<,'> 了, 如果visual模式按下":"
 " vim会自动添加'<, '>
 vnoremap  <Leader>h=   :Tabularize   /=<CR>
+vnoremap  <Leader>h-   :Tabularize   /-<CR>
+vnoremap  <Leader>h_   :Tabularize   /_<CR>
 
 vnoremap  <Leader>h;   :Tabularize   /;<CR>
 vnoremap  <Leader>h:   :Tabularize   /:<CR>

@@ -442,6 +442,9 @@ nnoremap  <Leader>lx    A<BS><ESC>:write<CR>
 " 清空当前行: 并返回normal模式
 nnoremap  <Leader>dl    S<ESC>
 
+" 删除空行: 包括仅有空格的行
+"'<,'>g/^\s*$/ d
+
 " 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
 " 如果当前行是空行, 直接"yp", 就可以复制一行空行, 更快.
 " 当前行不是空行时, 再使用这个映射:<Leader>lo, 或者<Leader>lO
@@ -741,4 +744,3 @@ nnoremap <C-g> 2<C-g>
 " 因为有了 text-obj entire 和 vnoremap  <C-j> "+y,
 " 还是继续让<C-a>去对行内数字做加法吧
 "nnoremap  <C-a>  <ESC>ggVG"+y<C-o>
-
