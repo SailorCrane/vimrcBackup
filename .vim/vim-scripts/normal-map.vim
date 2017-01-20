@@ -144,7 +144,10 @@ nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
 
 " 因为如果不先关掉 TabBar窗口就 delete buffer,
 " 当tagbar检测到自身是唯一打开窗口时, 会退出gvim, 悲哀啊!
-nnoremap <Leader>d :TagbarClose<CR>:bd<CR>:syntax on<CR>
+" 因为现在有了<Leader>dl, 用来清空当前行, 所以删除<Leader>d, 添加<Leader>dd
+" 这样也更安全一些: 不会因为误按<Leader>d导致清除当前缓存
+"nnoremap <Leader>d  :TagbarClose<CR>:bd<CR>:syntax on<CR>
+nnoremap <Leader>dd :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
 " 文件很多时, 不太有用. 并且只有在知道buff num情况下, 才有用
 " 所以结合air-line使用会更好
@@ -435,6 +438,9 @@ nnoremap  <Leader>l\    A<Space>\<ESC>
 
 " 删除当前行最后一个字符,因为使用了A一下子进入插入模式,然后才删除的字符,所以这是一个可repeat的修改,very nice
 nnoremap  <Leader>lx    A<BS><ESC>:write<CR>
+
+" 清空当前行: 并返回normal模式
+nnoremap  <Leader>dl    S<ESC>
 
 " 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
 " 如果当前行是空行, 直接"yp", 就可以复制一行空行, 更快.
