@@ -205,6 +205,9 @@ let g:airline_symbols.whitespace = 'Ξ'
 "12:  c-support用来支持c或者cpp的快捷键
 Bundle "WolfgangMehner/c-support"
 
+"12-1: 不知道怎么用, 先下载下来, 慢慢挖掘
+Bundle "c.vim"
+
 "12-2: a.vim :switch between header and source file
 Bundle "a.vim"
 cnoreabbrev  a  A
