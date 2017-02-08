@@ -57,11 +57,17 @@ cabbrev  mk   make
 cabbrev  mkb  make -B
 
 cabbrev  mka  make all
+cabbrev  mkb  make -B
 cabbrev  mkab make all -B
 
 cabbrev  mkn  make -n
 cabbrev  mkna make all -n
+cabbrev  mkan make all -n
+" -n  -B : 即使目标文件时间戳已经是最新了, 依旧-n 模拟
+" -n  -B 不冲突
+cabbrev  mknb make -n  -B
 
+cabbrev  mkc  make clean
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
