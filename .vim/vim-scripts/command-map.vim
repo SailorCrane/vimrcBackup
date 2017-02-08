@@ -55,8 +55,12 @@ cnoremap  ;  !
 "8 cabbv mk to make
 cabbrev  mk   make
 cabbrev  mkb  make -B
+
 cabbrev  mka  make all
 cabbrev  mkab make all -B
+
+cabbrev  mkn  make -n
+cabbrev  mkna make all -n
 
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.

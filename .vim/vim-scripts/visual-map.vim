@@ -36,6 +36,9 @@ vnoremap  <Leader>h_   :Tabularize   /_<CR>
 vnoremap  <Leader>h;   :Tabularize   /;<CR>
 vnoremap  <Leader>h:   :Tabularize   /:<CR>
 
+vnoremap  <Leader>h(   :Tabularize   /(<CR>
+vnoremap  <Leader>h)   :Tabularize   /)<CR>
+
 vnoremap  <Leader>h{   :Tabularize   /{<CR>
 vnoremap  <Leader>h}   :Tabularize   /}<CR>
 
