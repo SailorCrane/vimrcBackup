@@ -5,6 +5,12 @@ fun! MakeInput()
 endfun
 
 fun! EditMakefile()
+
+    " 为什么使用$类型变量的解释:
+    " 只有$变量, 才可以和vim 命令一起使用,并作为vim命令的对象
+    " 普通变量, 不可以和vim命令一起使用
+    " let a = "./makefile"; edit a 就不行
+    " 但是可以: let  $a = "./makefile", edit $a
     let $Umake = './Makefile'
     let $umake = './makefile'
 
