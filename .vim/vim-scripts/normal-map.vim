@@ -732,6 +732,13 @@ nnoremap <C-6> <C-6>`"
 nnoremap <C-g> 2<C-g>
 
 
+"42  insert "{{{" and  "}}}" for fold marker
+" 但是这样就占用了两个mark 的标记
+" 回头要好好想想这里
+nnoremap  ms  a{{{<ESC>
+nnoremap  me  a}}}<ESC>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
