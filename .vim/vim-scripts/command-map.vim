@@ -153,3 +153,8 @@ cnoreabbrev  csm  colorscheme  molokai
 "17  set fdm=manual
 cnoreabbrev  manu    set  foldmethod=manual
 cnoreabbrev  manual  set  foldmethod=manual
+
+" 查看当前fdm,之所以不用fdm, 而使用fd,
+"是因为如果fdm作为abbr, 那么set fdm=indent之类的时, fdm也会扩展
+cnoreabbrev  fd         set  fdm?
+"cnoreabbrev  foldmethod  set  fdm?
