@@ -150,3 +150,6 @@ cnoreabbrev  ss  :%s///g<left><left><left>
 cnoreabbrev  csm  colorscheme  molokai
 
 
+"17  set fdm=manual
+cnoreabbrev  manu    set  foldmethod=manual
+cnoreabbrev  manual  set  foldmethod=manual
