@@ -43,6 +43,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 
 " ~/file  edit
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
+nnoremap  <Leader>eF  :e ~/.subdir/myFunction.sh<CR>
 nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
 nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 
@@ -62,7 +63,7 @@ nnoremap  <Leader>eg  :e  $CRANE_VIM_HOME/.gvimrc<CR>
 
 " vim script edit
 nnoremap  <Leader>eV  :e  $CRANE_DOT_VIM/vim-scripts/visual-map.vim<CR>
-nnoremap  <Leader>eF  :e  $CRANE_DOT_VIM/vim-scripts/function.vim<CR>
+nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/function.vim<CR>
 nnoremap  <Leader>en  :e  $CRANE_DOT_VIM/vim-scripts/normal-map.vim<CR>
 nnoremap  <Leader>ei  :e  $CRANE_DOT_VIM/vim-scripts/insert-map.vim<CR>
 nnoremap  <Leader>ec  :e  $CRANE_DOT_VIM/vim-scripts/command-map.vim<CR>
@@ -72,7 +73,8 @@ nnoremap  <Leader>et  :e  $CRANE_DOT_VIM/test/HarryPotter-Stone.txt<CR>
 nnoremap  <Leader>eT  :e  $CRANE_DOT_VIM/vim-scripts/tmp-test.vim<CR>
 
 nnoremap  <Leader>ep  :e  $CRANE_DOT_VIM/vim-scripts/myBundle.vim<CR>
-nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
+"nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
+nnoremap  <Leader>eC  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
 
 nnoremap  <Leader>ee  :e  $CRANE_DOT_VIM/vim-scripts/example/vimrc_example.vim<CR>
 nnoremap  <Leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<CR>
