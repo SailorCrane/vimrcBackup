@@ -222,6 +222,7 @@ endfun
 
 " 上下左右切换窗口: 并显示文件名
 " 用<C-> 切换窗口, 比<Leader>快多了
+" {{{
 nnoremap  <C-h>  <C-w>h:ShowBufName<CR>
 nnoremap  <C-l>  <C-w>l:ShowBufName<CR>
 " <C-j> 在c/cpp文件中, 被c-support映射为进入插入模式到空格附近
@@ -246,9 +247,10 @@ nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
+" }}}
 
 " 8-2 最大化窗口等相关设置
-
+" {{{
 " 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
 " 使用:nmap <C-w>a 命令查看映射, 只能看到<C-w>_<C-w>
 " 并且在命令行执行映射: nnoremap <C-w>a  <C-w>|<C-w>_命令: 会出现 E488
@@ -305,18 +307,23 @@ nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>:let g:tagbar_le
 
 " 右下角
 nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
+" }}}
 
 " 8-3 显示窗口大小和坐标: 关于窗口设置的说明
+" {{{
 "     winsize 设置窗口 width 和 height. 可以用来在gvimrc中设置1000, 1000.
 " 因为如果winsize很大, 窗口也会相应变大. 这样gvim 启动时, 可以自动最大化
 " winpos 左上角打印X 和 Y坐标
 " winwidth(0) 和 winheight(0) 函数显示窗口宽度和高度
+" }}}
 
 
 "9 quick line switch:快速交换两行
 " 将当前行'-'下移 或者'_'上移, 支持连续移动
+" {{{
 nnoremap  -  ddp
 nnoremap  _  kddpk
+" }}}
 
 
 "10 quick  up case : 感觉这里的映射, 也很鸡肋
@@ -326,6 +333,7 @@ nnoremap  _  kddpk
 " 因为将当前字母更改为大写用的更多,所以将gc功能作为修改当前字母为大写
 " 并且讲gC设置为修改当前字母为大写.
 " This is the test Sentence
+" {{{
 nnoremap  gw  wgul
 nnoremap  gW  wgUl
 
@@ -334,17 +342,21 @@ nnoremap  gB  BgUl
 
 nnoremap  ge  egul
 nnoremap  gE  egUl
+" }}}
 
 
 "10-2 因为gt经常使用, 所以单独列出来: 这样如果回头注释上面, 这里可以防止被注释
 " gt: g toggle: 因为'~'会向右移动一位,所以这里使用visual模式,使其作用于光标下的文字而不在移动
 " gt 用的比较多
+" {{{
 nnoremap  gt  v~
 nnoremap  gc  gUl
 nnoremap  gC  gul
+" }}}
 
 
 "11 快速在文件内部跳转:第一行,最后一行,当前行最左,最右
+" {{{
 " H to line begin: but H to screen top can not use
 " L to lien end  : but L to screen bottom can not use
 " 这组映射用的很多, 因为ctrl 和 caplock交换后, 很方便按
@@ -366,12 +378,15 @@ nnoremap gl  $
 " 还是让他们恢复自己本来的功能吧
 "nnoremap  H  ^
 "nnoremap  L  $
+" }}}
 
 
 "12-1 屏幕顶部,中央,下端
 " "'" is used for mark, there to top, bottom, middle
+" {{{
 noremap   't H
 noremap   'b L
+" }}}
 "noremap   'm M
 
 
@@ -381,8 +396,10 @@ noremap   'b L
 " 这里的up指翻页时,可以看到上方更多的字,同理down可以看到下方更多的字
 "nnoremap  <Leader>b   5<C-y>
 " 因为还是<Leader>f比较好键入
+" {{{
 nnoremap  <Leader>u   5<C-y>
 nnoremap  <Leader>f   5<C-e>
+" }}}
 "nnoremap  <Leader>d   5<C-e>
 
 
@@ -394,8 +411,10 @@ nnoremap  <Leader>f   5<C-e>
 " seg line, then go to end of origin line
 " g_ go to end of no space character
 " i:insert a:append
+" {{{
 nnoremap <Leader>si   i<CR><ESC><up>g_
 nnoremap <Leader>sa   a<CR><ESC><up>g_
+" }}}
 
 
 "16  map Q to gq: format line
@@ -428,9 +447,11 @@ nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR>
 " CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<C-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
 " 这样<C-p> 就可以用在Yankring中了
 " s stand for "search"
+" {{{
 nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
 nnoremap  <Leader>sf  :<C-u>FufFile<CR>
 nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
+" }}}
 
 
 "20 释放<C-n>在multiple cursor中功能,由<C-m>去完成
@@ -443,6 +464,7 @@ nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
 " 这是一个比较多的映射组,因为在行尾和行上下行添加的东西可能会比较多,每种都需要一个映射
 
 " 在类的结尾"}"后面添加分号.
+" {{{
 nnoremap  <Leader>i;    ][a;<ESC>:write<CR><C-o>
 
 "nnoremap  <Leader>a;    a;<ESC>:write<CR>
@@ -461,6 +483,7 @@ nnoremap  <Leader>lx    A<BS><ESC>:write<CR>
 
 " 清空当前行: 并返回normal模式
 nnoremap  <Leader>dl    S<ESC>
+" }}}
 
 " 删除空行: 包括仅有空格的行
 "'<,'>g/^\s*$/ d
@@ -469,6 +492,7 @@ nnoremap  <Leader>dl    S<ESC>
 " 如果当前行是空行, 直接"yp", 就可以复制一行空行, 更快.
 " 当前行不是空行时, 再使用这个映射:<Leader>lo, 或者<Leader>lO
 " 按<空格><回车> 就可以生成一行空白行
+" {{{
 nnoremap  <Space><CR>   o<ESC>k
 nnoremap  <Leader>lo    o<ESC>k
 nnoremap  <Leader>lO    O<ESC>j
@@ -509,11 +533,13 @@ nnoremap  <Leader>a:        a:<ESC>h
 " 并且<Leader>i;也被使用了. 所以不能使用; 代替 :
 nnoremap  <Leader>ic        i:<ESC>l
 nnoremap  <Leader>ac        a:<ESC>h
+" }}}
 
 
 " 21-3 在当前行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
 " lc 表示 line comment, 因为'c' 比 '*' 更好按
 " 没有用过, 但是很好用: 自己真聪明
+" {{{
 nnoremap  <Leader>l*     I/*<Space><ESC>A<Space>*/<ESC>
 nnoremap  <Leader>lC     I/*<Space><ESC>A<Space>*/<ESC>
 " 复制并使用/* */注释
@@ -525,24 +551,29 @@ nnoremap  <Leader>lY     yyI/*<Space><ESC>A<Space>*/<ESC>
 nnoremap  <Leader>lc     I//<ESC>
 " 复制并使用//注释
 nnoremap  <Leader>ly     yyI//<ESC>
+" }}}
 
 
 "22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
 " :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
+" {{{
 if  exists(":Man")
     nmap  K  <Leader>K
     "注意,因为<Leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
     "只有当最终映射目标为vim直接输入后的功能时:比如vim自带功能,或者命令行输入...才能使用nnoremap
     "nmap <Leader>K 可以查看到 映射的最终函数
 endif
+" }}}
 
 
 "23 quick fix 快速切换
+" {{{
 nnoremap cn  :cnext<CR>
 nnoremap cp  :cprevious<CR>
 nnoremap co  :cclose<CR>
 nnoremap coo :cclose<CR>
+" }}}
 
 
 "24 输出当前缓冲区文件的绝对路径
@@ -550,22 +581,28 @@ nnoremap  <Leader>lp  :echo  expand("%:p")<CR>
 
 
 "25  将<up> 和 <down> 映射为屏幕行上下, 这个是在vim reference中学到的建议
+" {{{
 nnoremap  <up>   gk
 nnoremap  <down> gj
+" }}}
 
 
 "26 本想用ctrl + P(大写P) 映射, 无奈映射在<C->这种同时按下的模式中,不区分大小写
 " 但在连续按下的情况下,还是区分大小写的,这点要注意
 " inoremap 中也有类似的映射, 见 insert-map.vim
+" {{{
 nnoremap  <Leader><Leader>p  "+p
 nnoremap  <Leader><Leader>P  "+P
+" }}}
 
 
 "27 yp 复制并粘贴
 " 光标位于粘贴新行
+" {{{
 nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
+" }}}
 
 
 " 28 cscope setting
@@ -614,17 +651,22 @@ nnoremap  Y  y$
 
 
 " 32 关于cursor line 和 cursor column 显示与隐藏
+" {{{
 nnoremap  <Leader>ch  :set  cursorline!    cursorline?<CR>
 nnoremap  <Leader>cv  :set  cursorcolumn!  cursorcolumn?<CR>
+" }}}
 
 
 " 34 统计模式/出现次数: word count/number
 " 因为wc不是很好按, 所以用<Leader>wn
+" {{{
 nnoremap  <Leader>wn  :%s///gn<CR>
 nnoremap  <Leader>wc  :%s///gn<CR>
+" }}}
 
 
 " 35 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
+" {{{
 nnoremap  </  [/
 nnoremap  >/  ]/
 
@@ -633,6 +675,7 @@ nnoremap  >*  ]/
 
 nnoremap  <#  [#
 nnoremap  >#  ]#
+" }}}
 
 
 " 36 quick :s
@@ -685,6 +728,7 @@ nnoremap  >a]   >a{
 " 注意: 第一个正则检测是'T' 是字符串, 有单引号标志,
 " 后面的 set guioptions-=T, 则没有单引号: 这个是在命令行手动敲入,
 " 才检测出来的.刚开始写错了, 一直不能工作
+" {{{
 nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
                                  \set guioptions-=T<Bar>
                                  \set guioptions-=m<Bar>
@@ -692,6 +736,7 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
                                  \set guioptions+=T <Bar>
                                  \set guioptions+=m <Bar>
                             \endif<CR>
+" }}}
 
 
 " 40 加载最常用的"四格"布局
@@ -711,6 +756,7 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 "        但是注意加!, 覆盖保存
 
 " 保存sessionoption的值
+" {{{
 fun!  Ssop_backup()
     let g:ssop_back = &sessionoptions
 endfun
@@ -744,6 +790,7 @@ nnoremap  <Leader>ms  :call Mk_four_square()<CR>
 
 " 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
 "nnoremap  <Leader>sl  :vsplit<CR>
+" }}}
 
 
 "41 这样'可以定位到具体column
