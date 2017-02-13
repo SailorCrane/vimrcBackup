@@ -1,3 +1,5 @@
+" vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
+"  foldlevel=2, 这样vim打开文件时, 不会自动折叠, 不至于使不会折叠的人止步不前
 
 "0 说明
 " 一般映射, 如果有对于选项的toggle!, 就会有? show
@@ -11,11 +13,13 @@
 " 而在qf(QuickFix)文件类型中的<CR>,选择光标所在行的搜索结果,
 " 所以在quickfix文件类型中(即quickfix窗口中)可以使用autocmd  FileType  qx中针对filetype项,设置自动命令,将<CR>重新映射回<CR>
 " 详情见<Leader>ef
+" {{{
 nnoremap  ;  :
 "nnoremap  :  <nop>
 nnoremap <CR> ;
 " 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
 nnoremap <Leader><CR>  <CR>
+" }}}
 
 
 "1-2
@@ -23,11 +27,11 @@ nnoremap  q;  q:
 
 
 "2 Toggle  something
-
 "  Toggle  number line/relative number line/Toggle  highlight / sensitive case
 nnoremap  <Leader>o   :set nu!  rnu!    nu? rnu? <CR>
 
 " 使用n 和 N搜索前, 先激活hlsearch选项
+" {{{
 nnoremap  n           :set hlsearch<CR>n
 nnoremap  N           :set hlsearch<CR>N
 nnoremap  <Leader>/   :set hlsearch!    hlsearch?<CR>
@@ -35,6 +39,7 @@ nnoremap  <Leader>/   :set hlsearch!    hlsearch?<CR>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
 
 nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
+" }}}
 
 
 "3  quick edit
@@ -42,6 +47,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " edit  ~/.bashrc
 
 " ~/file  edit
+" {{{
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>eF  :e ~/.subdir/myFunction.sh<CR>
 nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
@@ -89,19 +95,23 @@ nnoremap  <Leader>eI  :e  $CRANE_DOT_VIM/vim-scripts/good-idea-script.vim<CR>
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
 " <CR>用来完成 <C-r>=
 noremap  <Leader>er   :e <C-R>=expand("%:r")."."<CR>
+" }}}
 
 
 "4 source .vimrc  and  source  .gvimrc
 " <Leader>sv source .vimrc or .gvimrc
+" {{{
 if has("gui_running")
     nnoremap  <Leader>sv  :source $MYVIMRC<CR>:source $MYGVIMRC<CR>
 else
     nnoremap  <Leader>sv  :source $MYVIMRC<CR>
 endif
+" }}}
 
 
 "5 quick  operation
 " Quit the current window : the buffers underlying the window will be quited
+" {{{
 nnoremap  <Leader>q  :q<CR>
 
 " 本来一直想映射为<Leader>qa, 但是这样和<Leader>q有相同前缀,
@@ -124,14 +134,15 @@ nnoremap  <Leader>ww :update<CR>
 
 " save as : gvim可用, console下<C-s>会导致终端不可回显
 nnoremap  <C-s>      :browse confirm  saveas<CR>
+" }}}
 
 
 "6  word  operation: 感觉很鸡肋
 " 不如yiw, diw, diW更有思考连贯性, 虽然似乎少了一个按键还是注释掉吧
 
 " 快速删除一个词：word 或者Word
-" 因为<Leader>d被用来作为down翻页，所以这里将其disable,毕竟diw也就多了一个字母而已
-" 但是删除一个Word：长词，是一个非常好的特性
+" 因为<Leader>d被用来作为down翻页,所以这里将其disable,毕竟diw也就多了一个字母而已
+" 但是删除一个Word：长词,是一个非常好的特性
 "nnoremap  <Leader>d  diw
 "nnoremap  <Leader>D  diW
 
@@ -141,6 +152,7 @@ nnoremap  <C-s>      :browse confirm  saveas<CR>
 
 "7 buffer:next/previous/delete
 " buf and tab
+" {{{
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>p :bp<CR>
 
@@ -165,15 +177,18 @@ nnoremap <Leader>6      :b 6<CR>
 nnoremap <Leader>7      :b 7<CR>
 nnoremap <Leader>8      :b 8<CR>
 nnoremap <Leader>9      :b 9<CR>
+" }}}
 
 
 "7-2: tab 下面是vim 相关tab映射
+" {{{
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
 nnoremap tn      :tabnew<CR>
 nnoremap tc      :tabclose<CR>
 nnoremap c<tab>  :tabnew<CR>
 nnoremap d<tab>  :tabclose<CR>
+" }}}
 
 
 "8 Window  motion and manager: 快速窗口移动和管理
@@ -308,7 +323,7 @@ nnoremap  _  kddpk
 " 仅仅是按键少了, 但是思考方式和vim完全不同了. 后期估计会注释掉
 " g motion and operation on word
 " w:word, b:back, c:current character, e:end of word
-" 因为将当前字母更改为大写用的更多，所以将gc功能作为修改当前字母为大写
+" 因为将当前字母更改为大写用的更多,所以将gc功能作为修改当前字母为大写
 " 并且讲gC设置为修改当前字母为大写.
 " This is the test Sentence
 nnoremap  gw  wgul
@@ -363,7 +378,7 @@ noremap   'b L
 "12-2 很常用
 " <Leader>f,b to  page down up
 " u:up , d:down
-" 这里的up指翻页时，可以看到上方更多的字，同理down可以看到下方更多的字
+" 这里的up指翻页时,可以看到上方更多的字,同理down可以看到下方更多的字
 "nnoremap  <Leader>b   5<C-y>
 " 因为还是<Leader>f比较好键入
 nnoremap  <Leader>u   5<C-y>
@@ -470,7 +485,7 @@ nnoremap  <Leader>i{    o{<CR><CR>}<up>
 nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>d{    <down>f{d%
 
-"21-2 在当前字符前， 后添加 <Space>, "&", ":"
+"21-2 在当前字符前, 后添加 <Space>, "&", ":"
 nnoremap  <Leader>i<Space>   i<Space><ESC>l
 nnoremap  <Leader>a<Space>   a<Space><ESC>h
 
@@ -632,10 +647,12 @@ nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>
 " :Tabularize可以根据单词对齐, 而不仅仅是字符. 非常强大
 " 这里不适用date -u, 而使用date, 因为-u 是格林威治绝对时间, 不是本地时间
 "nnoremap  <Leader>ld  :.   read !date -u<CR>kJ
+" {{{
 nnoremap  <Leader>ld  :.   read !date <CR>kJ
 
 "nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 nnoremap  <Leader>id  :.-1 read !date -u<CR>J
+" }}}  2017年 02月 13日 星期一 21:04:17 CST
 
 
 " 38 快速缩进{  } 中的代码块, 尤其是使用ySS 添加{}, 后, 需要向左缩进时
@@ -643,6 +660,7 @@ nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 " 很好: 并且这个动作可重复: 因为使用了文本对象
 
 " 缩进{} 内部
+" {{{
 nnoremap  <i[   <i{
 nnoremap  >i[   >i{
 
@@ -657,6 +675,7 @@ nnoremap  >a[   >a{
 " 和上述功能相同
 nnoremap  <a]   <a{
 nnoremap  >a]   >a{
+" }}}
 
 
 " 39 menu and toolbar Toggle
@@ -728,17 +747,21 @@ nnoremap  <Leader>ms  :call Mk_four_square()<CR>
 
 
 "41 这样'可以定位到具体column
+" {{{
 nnoremap  '  `
 nnoremap  `  '
 nnoremap <C-6> <C-6>`"
 nnoremap <C-g> 2<C-g>
+" }}}
 
 
 "42  insert "{{{" and  "}}}" for fold marker
 " 但是这样就占用了两个mark 的标记
 " 回头要好好想想这里
+" {{{
 nnoremap  ms  a{{{<ESC>
 nnoremap  me  a}}}<ESC>
+" }}}
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
