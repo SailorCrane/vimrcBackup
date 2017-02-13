@@ -1,5 +1,6 @@
 " vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
 "  foldlevel=2, 这样vim打开文件时, 不会自动折叠, 不至于使不会折叠的人止步不前
+"  zM 折叠所有， zR 展开所有 (通过 foldlevel设置)
 
 "0 说明
 " 一般映射, 如果有对于选项的toggle!, 就会有? show
