@@ -4,6 +4,7 @@
 " if you really want to input "jk", please input <C-v>jk
 " map <ESC> to <nop> is to force me use "jk"
 inoremap  jk <ESC>
+inoremap  kj <ESC>
 "inoremap <ESC> <nop>
 
 
