@@ -679,8 +679,13 @@ nnoremap  >#  ]#
 " }}}
 
 
-" 36 quick :s
+" 36 quick :substitute
+" {{{
 nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>
+
+"这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
+nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
+" }}}
 
 
 " 37 quick insert date at current line: ld 插在行尾, id insert到行首
