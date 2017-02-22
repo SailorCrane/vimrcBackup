@@ -385,8 +385,8 @@ nnoremap gl  $
 "12-1 屏幕顶部,中央,下端
 " "'" is used for mark, there to top, bottom, middle
 " {{{
-noremap   't H
-noremap   'b L
+"noremap   't H
+"noremap   'b L
 " }}}
 "noremap   'm M
 
