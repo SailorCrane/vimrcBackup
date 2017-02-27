@@ -472,6 +472,7 @@ nnoremap  <Leader>i;    ][a;<ESC>:write<CR><C-o>
 "在行末尾添加分号, 覆盖了上面 <Leader>a;功能
 "nnoremap  <Leader>l;    $a;<ESC>:write<CR>
 nnoremap  <Leader>l;    A;<ESC>:write<CR>
+nnoremap  <Leader>l:    A:<ESC>:write<CR>
 nnoremap  <Leader>l,    A,<ESC>:write<CR>
 nnoremap  <Leader>l.    A.<ESC>:write<CR>
 nnoremap  <Leader>l!    A!<ESC>:write<CR>
