@@ -508,6 +508,7 @@ nnoremap  <Leader>gO    O<ESC>
 
 "nnoremap  <Leader>l{    $a{  }<left><left><ESC>:write<CR>
 nnoremap  <Leader>i{    o{<CR><CR>}<up>
+nnoremap  <Leader>if    $xo{<CR><CR>}<up>
 nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>d{    <down>f{d%
 
