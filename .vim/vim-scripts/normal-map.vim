@@ -508,7 +508,9 @@ nnoremap  <Leader>gO    O<ESC>
 
 "nnoremap  <Leader>l{    $a{  }<left><left><ESC>:write<CR>
 nnoremap  <Leader>i{    o{<CR><CR>}<up>
-nnoremap  <Leader>if    $xo{<CR><CR>}<up>
+
+" <Leader>if  :使用A, 构造可重复操作. A之后一直处于插入模式中.
+nnoremap  <Leader>if    A<BS><CR>{<CR><CR>}<up>
 nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>d{    <down>f{d%
 
