@@ -530,6 +530,9 @@ nnoremap  <Leader>W<Space>  Wi<Space><ESC>h
 nnoremap  <Leader>i&        i&<ESC>l
 nnoremap  <Leader>a&        a&<ESC>h
 
+nnoremap  <Leader>in        i1234567890<ESC>l
+nnoremap  <Leader>an        a1234567890<ESC>l
+
 " 写注释文档时: 可能在当前字符后添加:
 nnoremap  <Leader>i:        i:<ESC>l
 nnoremap  <Leader>a:        a:<ESC>h
