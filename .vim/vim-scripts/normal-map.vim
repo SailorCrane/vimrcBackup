@@ -58,7 +58,11 @@ nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 "nnoremap  <Leader>em  :e ./makefile<CR>
 " <leader>em 编辑当前目录下的Makefile/makefile, 如果不存在, 编辑Makefile
 nnoremap  <Leader>em  :call EditMakefile()<CR>
+
+" 记录问题
 nnoremap  <Leader>eq  :e ./question-thunder.txt<CR>
+" 记录工作Iterms
+nnoremap  <Leader>ew  :e ./work-record.txt<CR>
 
 " local  ./.vimrc  and  ./.gvimrc edit
 nnoremap  <Leader>elv :e $MYVIMRC<CR>
