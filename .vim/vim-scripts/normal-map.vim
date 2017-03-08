@@ -231,17 +231,18 @@ nnoremap  <C-l>  <C-w>l:ShowBufName<CR>
 nnoremap  <C-j>  <C-w>j:ShowBufName<CR>
 nnoremap  <C-k>  <C-w>k:ShowBufName<CR>
 
-" 用<Leader>切换窗口: 几乎是鸡肋了. 虽然现在还在用.但也仅仅是因为习惯的问题
-nnoremap  <Leader>h  <C-w>h
+" 用<Leader>切换窗口: 几乎是鸡肋了. 因为现在设置为了<C-h>, <C-L>, <C-j>, <C-k>跳转窗口
+" 虽然现在还在用.但也仅仅是因为习惯的问题
+"nnoremap  <Leader>h  <C-w>h
 " 因为有了很多以<Leader>l开头的映射,
 "用来对行前行后,行尾等操作.
 "<Leader>l的速度就慢了下来,所以添加<Leader>ll
-nnoremap  <Leader>l  <C-w>l
+"nnoremap  <Leader>l  <C-w>l
 " 因为<Leader>l前缀太多:对于行结尾的操作, 所以这里添加<Leader>ll
 " 其实还不如vim自带的<C-w>l 方便, 但为了和其它映射一致, 还是添加上吧
-nnoremap  <Leader>ll <C-w>l
-nnoremap  <Leader>j  <C-w>j
-nnoremap  <Leader>k  <C-w>k
+"nnoremap  <Leader>ll <C-w>l
+"nnoremap  <Leader>j  <C-w>j
+"nnoremap  <Leader>k  <C-w>k
 
 " 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
 nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
