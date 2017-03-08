@@ -8,7 +8,7 @@
 
 注意这里的软链接使用绝对路径，而不要使用相对路径.
 1: ln  -s  `pwd`/vimrc   ~/.vimrc
-2: ln  -s  `pwd`/gvimrc  ~/.gvimrv
+2: ln  -s  `pwd`/gvimrc  ~/.gvimrc
 3: ln  -s  `pwd`/.vim    ~/.vim
 
 4: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
