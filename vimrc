@@ -218,7 +218,8 @@ source  $CRANE_DOT_VIM/vim-scripts/autocmd.vim
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate
-colorscheme  marklar   "from Colour-Sampler-Pack
+"colorscheme  marklar   "from Colour-Sampler-Pack
+colorscheme  molokai
 
 
 syntax on
