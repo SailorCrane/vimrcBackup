@@ -25,10 +25,16 @@ vimrc通过souce这些脚本产生作用.
          这时候自己定义的一些指令, 基本已经可以用了.
          可以使用vimc启动了.
     2-4: 这时候myBundle.vim 不能使用.: <Leader>ep 修改 ~/myBundle.vim
-         set  rtp+=$CRANE_DOT_VIM/bundle/vundle/
-         set  rtp+=$CRANE_DOT_VIM/bundle/ack.vim/
+
+         " 先定义 CRANE_VIM_BUNDLE 变量, 相对于CRANE_DOT_VIM 路径变量定义.
+         let  $CRANE_VIM_BUNDLE= $CRANE_DOT_VIM . '/bundle'
+
+         set  rtp+=$CRANE_VIM_BUNDLE/vundle/
+         set  rtp+=$CRANE_VIM_BUNDLE/ack.vim/
+         set  rtp+=$CRANE_VIM_BUNDLE/easymotion/
+         set  rtp+=$CRANE_VIM_BUNDLE/easymotion/
          ...
-         ...
+
     2-5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
          然后vimc 就完全可以使用了.
 
