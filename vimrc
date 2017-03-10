@@ -2,12 +2,14 @@
 "0 一些变量的设置: 主要是.vimrc 和 .vim脚本位置
 " 这样以后如果想配置在其它服务器上, 那么改变这里的变量即可
 " edit 和 source 文件路径, 由变量作为路径前缀, 而不使用具体路径
+" 路径最后不要跟"/"
 " ====================================================================
 let  $CRANE_VIM_HOME = '~'
 
 " 下面的 "." 是vim的字符串连接运算符, 相当于其它编程语言中的string() + string()
 " 下面的赋值语句, 相当于一个字符串 加法
 " 一般情况下是 ~/.vim, 注意最后没有/结尾
+" 路径最后不要跟"/"
 let  $CRANE_DOT_VIM  = $CRANE_VIM_HOME . "/.vim"
 let  $VIEW = $CRANE_DOT_VIM . "/view"
 let  $SESSION = $CRANE_DOT_VIM . "/session"
