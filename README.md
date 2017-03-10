@@ -6,9 +6,9 @@ vimrc通过souce这些脚本产生作用.
 
 
 1: 配置方式1: 执行下列操作即可.(配置方式1: 影响vim命令)
- ln  -s  `pwd`/vimrc   ~/.vimrc
- ln  -s  `pwd`/gvimrc  ~/.gvimrc
- ln  -s  `pwd`/.vim    ~/.vim
+ ln  -s  `pwd`/.vimrc   ~/.vimrc
+ ln  -s  `pwd`/.gvimrc  ~/.gvimrc
+ ln  -s  `pwd`/.vim     ~/.vim
 
 
 2: 配置方式2: 不影响别人的vim使用, 即使是同一个用户.(非常经典, 借助vim -u命令): 一般用于在服务器执行.
@@ -40,8 +40,9 @@ vimrc通过souce这些脚本产生作用.
 
 3: 关于目录层级:
     在vimrcBackup项目中:
-        这样.vimrc ------> vimrc  软链接
-        这样.gvimrc -----> gvimrc  软链接
+        .vimrc, .gvimrc, .vim/ 是实体文件
+        vimrc,   gvimrc,  vim/ 是实体文件的软链接.
+
         这样项目的.vimrc, .gvimrc, .vim/ 在同一个vimrcBackup项目层级目录下
 
     Linux系统中:
