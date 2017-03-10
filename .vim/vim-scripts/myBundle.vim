@@ -6,7 +6,9 @@ filetype off     " required
 " 注意 '+=' 两边不能有空格
 " 所有vim内置的set命令, 等号两边都不能有空格
 " $CRANE_DOT_VIM 在 本项目自带的vimrc中配置
-set  rtp+=$CRANE_DOT_VIM/bundle/vundle/
+" 路径变量不要以 "/" 结尾
+let  $CRANE_VIM_BUNDLE = $CRANE_DOT_VIM . '/bundle'
+set  rtp+=$CRANE_VIM_BUNDLE/vundle/
 
 call vundle#rc() " let Vundle manage Vundle,  required!
 
