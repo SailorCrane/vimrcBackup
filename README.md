@@ -38,7 +38,18 @@ vimrc通过souce这些脚本产生作用.
     2-5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
          然后vimc 就完全可以使用了.
 
+3: 关于目录层级:
+    在vimrcBackup项目中:
+        这样.vimrc ------> vimrc  软链接
+        这样.gvimrc -----> gvimrc  软链接
+        这样项目的.vimrc, .gvimrc, .vim/ 在同一个vimrcBackup项目层级目录下
 
+    Linux系统中:
+        而系统的~/.vimrc, ~/.gvimrc, ~/.vim/ 则都在"~"下
+
+    项目和Linux本机目录结构达到了统一:
+        这样无论 vimrc中的 $CRANE_VIM_HOME 指向项目目录, 还是~/本地目录.
+        所有的<Leader>ev, <Leader>eg 都可以打开 .vimrc 和 .gvimrc
 
 
 4: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
