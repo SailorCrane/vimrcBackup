@@ -1,7 +1,7 @@
 
 fun! MakeInput()
     " 这里的输入回车之后, 会自动输入一个tab, 因为makefile新行, 会自动添加tab, 所以不必再手动输入
-    normal!  imain : main.cppg++ -o $@ $< -g -std=c++11./main
+    normal!  imain : main.cppg++ -o $@ $< -g -std=c++11
 endfun
 
 fun! EditMakefile()
