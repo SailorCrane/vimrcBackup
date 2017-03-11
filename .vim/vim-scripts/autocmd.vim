@@ -91,8 +91,11 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 
 
 "10:   c, cpp type
-autocmd   FileType  cpp   inoreabbrev sct  std::cout
-autocmd   FileType  cpp   inoreabbrev scr  std::cerr
+autocmd   FileType  cpp   inoreabbrev sct  std::cout <<
+autocmd   FileType  cpp   inoreabbrev scr  std::cerr <<
+
+" sel 缩写为"std::endl;" 的话, 后面的";"没有用. 因为缩写,
+" 必须再输入非单词符号结束.那每次必须手动输入分好使得sel缩写确认.
 autocmd   FileType  cpp   inoreabbrev sel  std::endl
 "autocmd   FileType  c,cpp   inoreabbrev inm  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
 autocmd   FileType  c,cpp   inoreabbrev imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
