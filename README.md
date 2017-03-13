@@ -38,7 +38,19 @@ vimrc通过souce这些脚本产生作用.
     2-5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
          然后vimc 就完全可以使用了.
 
-3: 关于目录层级:
+3: 如何在git日志编辑中, 使用自己的vimc, 需要将vimc做成脚本, 放置在/usr/bin/vimc的位置.
+    vimc脚本内容如下.
+    # ============================================
+    #!/bin/sh
+
+    # 将这个脚本放在/usr/bin/vimc
+    # 在git中就可以设置 core.editor=vimc , 这样git就可以使用符合自己习惯的 vimc了
+    # 注意后面的 $*, 这是传给bash脚本, 或者bash函数的参数
+    # 所以执行 vimc  myfile...  ==  vim  -u  '/home/galaxyeye/CraneVim/.vimrc' myfile...
+    vim  -u  '/home/galaxyeye/CraneVim/.vimrc'  $*
+    # ============================================
+
+4: 关于目录层级:
     在vimrcBackup项目中:
         .vimrc, .gvimrc, .vim/ 是实体文件
         vimrc,   gvimrc,  vim/ 是实体文件的软链接.
@@ -53,9 +65,9 @@ vimrc通过souce这些脚本产生作用.
         所有的<Leader>ev, <Leader>eg 都可以打开 .vimrc 和 .gvimrc
 
 
-4: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
+5: 在vim中执行 :BundleInstall,下载MyBundle中的插件,因为插件本身由git管理,还不会将使用submodule将其作为子项目。
 
-5: 修改插件中的配置,或者快捷键冲突
+6: 修改插件中的配置,或者快捷键冲突
     a: c-support 中的Template文件中的AUTHOR,Email, Company做配置
     b: 注释c-support中对于inoremap <C-j> 的映射
        注意:因为c-support中的代码自动折叠,所以使用zR递归展开所有vimL代码后,再搜索下面代码,并且注释即可.
