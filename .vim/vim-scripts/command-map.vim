@@ -68,6 +68,7 @@ cabbrev  mkan make all -n
 cabbrev  mknb make -n  -B
 
 cabbrev  mkc  make clean
+cabbrev  mkr  make run
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
