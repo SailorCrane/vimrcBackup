@@ -438,7 +438,9 @@ nnoremap  Q  gq
 " 还是给出错误提示吧,这样就可以知道自己到底是否替换了空行
 " 这里要结合ShowTrailingWhiteSpace 插件使用, 因为只有插件可以显示末尾空格时, 才会有用
 " 当然也可以不使用ShowTrailingWhiteSpace插件, 通过设置listchar, 然后 set list!显示末尾空白
-nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>        # x whitespace: 因为vim 的 x也表示删除
+
+" x whitespace: 因为vim 的 x也表示删除
+nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
 
 
 "18  !ctags -R . , 后期加上对于cscope支持
