@@ -625,18 +625,21 @@ nnoremap  yP  yyP
 " 这个是设定是否使用 quickfix 窗口来显示 cscope 结果, 用法在后面会说到。
 " 如果每次查找都要输入一长串命令的话还真是件讨人厌的事情, Cscope的帮助手册中推荐了一些快捷键的用法,
 " 下面是其中一组,也是我用的, 将下面的内容添加到~/.vimrc中, 并重启vim:
-"nmap <C-_>s :cs find s<C-R>=expand("<cword>")<CR><CR>
-"nmap <C-_>g :cs find g<C-R>=expand("<cword>")<CR><CR>
-"nmap <C-_>c :cs find c<C-R>=expand("<cword>")<CR><CR>
-"nmap <C-_>t :cs find t<C-R>=expand("<cword>")<CR><CR>
-"nmap <C-_>e :cs find e<C-R>=expand("<cword>")<CR><CR>
-"nmap <C-_>f :cs find f<C-R>=expand("<cfile>")<CR><CR>
-"nmap <C-_>i :cs find i^<C-R>=expand("<cfile>")<CR>$<CR>
-"nmap <C-_>d :cs find d<C-R>=expand("<cword>")<CR><CR>
+
+"注意标志s, g, c ,t 和后面的 <C-R> 之间是有空格的, 因为分别是不同的参数, 这个很好理解.
+"nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 " 下面映射的两个<CR>, 一个为执行expand("<cword>"), 另一个执行cs命令
 nmap <Leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
 
 
 "29 切换是否显示空白标志:
