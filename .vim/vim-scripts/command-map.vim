@@ -60,6 +60,9 @@ cabbrev  mka  make all
 cabbrev  mkb  make -B
 cabbrev  mkab make all -B
 
+cabbrev  mkd  make default
+cabbrev  mki  make install
+
 cabbrev  mkn  make -n
 cabbrev  mkna make all -n
 cabbrev  mkan make all -n
