@@ -199,7 +199,7 @@ nnoremap d<tab>  :tabclose<CR>
 
 "8 Window  motion and manager: 快速窗口移动和管理
 " ==========================================================
-" 显示当前文件名
+" 显示当前文件名, 绝对路径
 fun! ShowBufName()
     echo expand("%:p")
 endfun
@@ -836,6 +836,14 @@ nnoremap <C-g> 2<C-g>
 nnoremap  ms  a{{{<ESC>
 nnoremap  me  a}}}<ESC>
 " }}}
+
+
+"43 get full path of file
+"nnoremap  <Leader>cf  :let @+=expand("%:p")<CR>
+
+" 将文件绝对路径获取到终端剪贴板,可以在终端<shift + insert> 粘贴
+" 注意@* 才是终端剪贴板
+nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
