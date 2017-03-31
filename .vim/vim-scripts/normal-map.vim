@@ -844,6 +844,8 @@ nnoremap  me  a}}}<ESC>
 " 将文件绝对路径获取到终端剪贴板,可以在终端<shift + insert> 粘贴
 " 注意@* 才是终端剪贴板
 " gdb 支持源文件绝对路径下断点:  b /a/b/c.cpp : 120
+" 如果以后<Leader>cf被占用了, 那么使用<Leader>gf
+" cf stand for "copy file name"
 nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 
 
