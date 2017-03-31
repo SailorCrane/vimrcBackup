@@ -32,5 +32,11 @@ fun! EditMakefile()
 
     " 生成Makefile之后, 会自动添加一行新内容
     call MakeInput()
+endfun
 
+
+" 编辑CMakeLists.txt
+fun! EditCMakeLists()
+    let $CMake = './CMakeLists.txt'
+    edit $CMake
 endfun

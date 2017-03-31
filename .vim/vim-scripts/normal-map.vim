@@ -59,6 +59,7 @@ nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 "nnoremap  <Leader>em  :e ./makefile<CR>
 " <leader>em 编辑当前目录下的Makefile/makefile, 如果不存在, 编辑Makefile
 nnoremap  <Leader>em  :call EditMakefile()<CR>
+nnoremap  <Leader>eM  :call EditCMakeLists()<CR>
 
 " 记录问题
 nnoremap  <Leader>eq  :e ./question-thunder.txt<CR>
