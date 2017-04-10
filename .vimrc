@@ -156,7 +156,7 @@ set fileformats=unix,dos,mac
 
 
 "22  cscope setting
-if has("cscope")
+if has("cscope")        " has(): 编译vim时如果有这个选项, has就为true
     set cscopetag   "优先使用cscopetag文件, 针对 ctrl-] 动作
 endif
 

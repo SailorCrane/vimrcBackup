@@ -13,7 +13,7 @@ vimrc通过souce这些脚本产生作用.
 
 2: 配置方式2: 不影响别人的vim使用, 即使是同一个用户.(非常经典, 借助vim -u命令): 一般用于在服务器执行.
     2-1: 将项目clone到特定目录.
-         但是如果可以copy的化, 就copy, 这样插件就不用再连接github下载了(需要很长时间).
+         但是如果可以copy的话, 就copy, 这样插件就不用再连接github下载了(需要很长时间).
 
          mkdir ~/CraneVim/ && cd  ~/CraneVim/ &&  git clone https://git.oschina.net/CraneAgain/vimrcBackup
     2-2: 在~/.bashrc 中定义 alias
