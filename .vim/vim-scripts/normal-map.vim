@@ -851,6 +851,9 @@ nnoremap  me  a}}}<ESC>
 " cf stand for "copy file name"
 nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 
+"44 使当前编辑文件/脚本具有可执行权限
+nnoremap  <Leader>ex  :call ChmodExec()<CR>
+
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替

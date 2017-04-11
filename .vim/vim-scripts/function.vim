@@ -40,3 +40,9 @@ fun! EditCMakeLists()
     let $CMake = './CMakeLists.txt'
     edit $CMake
 endfun
+
+
+fun! ChmodExec()
+    let $currentFile = expand("%:p")
+    !chmod +x $currentFile
+endfun
