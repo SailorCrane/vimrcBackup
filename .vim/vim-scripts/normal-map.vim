@@ -29,7 +29,9 @@ nnoremap  q;  q:
 
 "2 Toggle  something
 "  Toggle  number line/relative number line/Toggle  highlight / sensitive case
-nnoremap  <Leader>o   :set nu!  rnu!    nu? rnu? <CR>
+"nnoremap  <Leader>o   :set nu!  rnu!    nu? rnu? <CR>
+" toggle line number: ln stand for line number
+nnoremap  <Leader>ln   :set nu!  rnu!    nu? rnu? <CR>
 
 " 使用n 和 N搜索前, 先激活hlsearch选项
 " {{{
@@ -505,8 +507,8 @@ nnoremap  <Leader>dl    S<ESC>
 " 按<空格><回车> 就可以生成一行空白行
 " {{{
 nnoremap  <Space><CR>   o<ESC>k
-nnoremap  <Leader>lo    o<ESC>k
-nnoremap  <Leader>lO    O<ESC>j
+nnoremap  <Leader>o     o<ESC>k
+nnoremap  <Leader>O     O<ESC>j
 nnoremap  <Leader>go    o<ESC>
 nnoremap  <Leader>gO    O<ESC>
 

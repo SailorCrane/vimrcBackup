@@ -98,7 +98,7 @@ cnoreabbrev cd2   cd ../../
 cnoreabbrev cd3   cd ../../../
 cnoreabbrev cd4   cd ../../../../
 
-command!  Cdmyt    cd ~/test!
+"command!  Cdmyt    cd ~/test!
 
 
 "10

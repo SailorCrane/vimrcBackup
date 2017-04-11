@@ -59,8 +59,8 @@ let g:syntastic_cpp_check_header = 1
 "set the options of g++ to suport c++11. :
 
 "let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++' "这里加了之后, 语法检测就用不了了, 悲哀.
+"let g:syntastic_cpp_compiler = 'gcc'
+"let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++' "这里加了之后, 语法检测就用不了了, 悲哀.
 
 " 使语法检测, 支持c++11语法, 比如 auto iter = nodes.begin()
 "let g:syntastic_cpp_compiler = 'g++'  "change the compiler to g++ to support c++11.
