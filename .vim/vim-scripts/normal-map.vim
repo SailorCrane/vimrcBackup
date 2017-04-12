@@ -507,6 +507,10 @@ nnoremap  <Leader>dl    S<ESC>
 " 按<空格><回车> 就可以生成一行空白行
 " {{{
 nnoremap  <Space><CR>   o<ESC>k
+
+nnoremap  <Leader>lo    <NOP>
+nnoremap  <Leader>lO    <NOP>
+
 nnoremap  <Leader>o     o<ESC>k
 nnoremap  <Leader>O     O<ESC>j
 nnoremap  <Leader>go    o<ESC>
