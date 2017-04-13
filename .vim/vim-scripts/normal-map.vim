@@ -668,9 +668,15 @@ nnoremap  g<C-o>  <C-i>
 " 使用示例: dhd == "_dd,  dhiw == "_diw,
 " 使用基本和d相同,只不过不影响匿名寄存器
 nnoremap  dh  "_d
+" forward删除到括号
 nnoremap  dc  dt)
+" backward删除到括号
 nnoremap  dC  dT(
 
+" forward复制到括号
+nnoremap  yc  yt)
+" backward复制到括号
+nnoremap  yC  yT(
 
 
 " 31-2
