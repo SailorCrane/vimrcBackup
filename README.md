@@ -6,9 +6,9 @@ vimrc通过souce这些脚本产生作用.
 
 
 1: 配置方式1: 执行下列操作即可.(配置方式1: 影响vim命令)
- ln  -s  `pwd`/.vimrc   ~/.vimrc
- ln  -s  `pwd`/.gvimrc  ~/.gvimrc
- ln  -s  `pwd`/.vim     ~/.vim
+ ln  -s  $(pwd)/.vimrc   ~/.vimrc
+ ln  -s  $(pwd)/.gvimrc  ~/.gvimrc
+ ln  -s  $(pwd)/.vim     ~/.vim
 
 
 2: 配置方式2: 不影响别人的vim使用, 即使是同一个用户.(非常经典, 借助vim -u命令): 一般用于在服务器执行.
