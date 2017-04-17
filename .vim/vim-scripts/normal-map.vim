@@ -855,6 +855,11 @@ nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 nnoremap  <Leader>ex  :call ChmodExec()<CR>
 
 
+"45 将下一行和当前行合并为一行, 下一行在前.
+" rj stand for: reverse  Join
+nnoremap  <Leader>rj  ddpkJ
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
