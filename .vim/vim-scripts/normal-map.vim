@@ -128,7 +128,7 @@ nnoremap  <Leader>q  :q<CR>
 " 因为有很多<Leader>a 前缀的映射, 所以不会影响
 nnoremap  <Leader>aq :qa<CR>
 " Quit all windows
-nnoremap  <Leader>r  :qa<CR>
+"nnoremap  <Leader>r  :qa<CR>
 " Refresh file, or restore file from file name
 
 " 用的不多, 还老是误按, 所以注释掉, 使用<Leader>ee就够了
