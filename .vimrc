@@ -127,7 +127,7 @@ set backspace=indent,eol,start
 "set endofline      "vim 默认在最后添加空行
 
 
-"18 autowrite :切换buffer时, 文件会自动写入
+"18 autowrite :切换buffer时, 文件会自动写入/自动保存到磁盘
 set autowrite
 set autowriteall
 

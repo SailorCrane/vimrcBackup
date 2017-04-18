@@ -54,6 +54,8 @@ vnoremap  <Leader>h*   :Tabularize  /\*<CR>
 
 vnoremap  <Leader>h\   :Tabularize  /\<CR>
 
+vnoremap  <Leader>h&   :Tabularize  /&<CR>
+
 
 "7: 对于已经含有/* */ 注释的行, 的注释.
 " 主要用来进行多行注释, 在ctrl-v: block visual模式下
