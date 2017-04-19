@@ -871,6 +871,11 @@ nnoremap  <Leader>ex  :call ChmodExec()<CR>
 nnoremap  <Leader>rj  ddpkJ
 
 
+"45 跳到main函数: C/C++
+" 通过正则匹配 int  main( .*)
+nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
+
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
