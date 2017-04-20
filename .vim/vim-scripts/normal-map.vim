@@ -53,10 +53,14 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " {{{
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>eP  :e ~/.profile<CR>
+
+nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 nnoremap  <Leader>eF  :e ~/.subdir/myFunctions.sh<CR>
 nnoremap  <Leader>eN  :e ~/.subdir/net-operation.sh<CR>
+
+" eD stand for:  edit  Debug.
+nnoremap  <Leader>eD  :e ~/.gdbinit<CR>
 nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
-nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 
 " ./file  edit
 "nnoremap  <Leader>em  :e ./makefile<CR>
