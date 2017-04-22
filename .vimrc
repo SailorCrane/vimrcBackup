@@ -199,6 +199,10 @@ set laststatus=2
 set wrapscan
 
 
+" 26
+"set shell=/bin/bash    " default shell is bash
+"set shell=/bin/zsh     " set :shell to run zsh
+
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
 " 比如上面的 runtime  ftplugin/man.vim
 " 而normal-map 中有一个根据这个,对于<s-k>,即K的映射
