@@ -52,6 +52,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " ~/file  edit
 " {{{
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
+nnoremap  <Leader>ez  :e ~/.zshrc<CR>
 nnoremap  <Leader>eP  :e ~/.profile<CR>
 
 nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
