@@ -560,6 +560,11 @@ Bundle "nathanaelkane/vim-indent-guides"
 " 63
 Bundle "thinca/vim-quickrun"
 
+" 64 tmux-vim:
+" 添加tmux filetype, 这样编辑~/.tmux.conf时, 可以有彩色.
+" 识别出文件类型后也可以快速添加注释了.
+Bundle "tmux-plugins/vim-tmux"
+
 
 "100
 " required
