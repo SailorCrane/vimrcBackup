@@ -62,6 +62,7 @@ nnoremap  <Leader>eN  :e ~/.subdir/net-operation.sh<CR>
 " eD stand for:  edit  Debug.
 nnoremap  <Leader>eD  :e ~/.gdbinit<CR>
 nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
+nnoremap  <Leader>eT  :e ~/.tmux.conf<CR>
 
 " ./file  edit
 "nnoremap  <Leader>em  :e ./makefile<CR>
@@ -90,8 +91,8 @@ nnoremap  <Leader>ei  :e  $CRANE_DOT_VIM/vim-scripts/insert-map.vim<CR>
 nnoremap  <Leader>ec  :e  $CRANE_DOT_VIM/vim-scripts/command-map.vim<CR>
 
 nnoremap  <Leader>ea  :e  $CRANE_DOT_VIM/vim-scripts/abbrev-map.vim<CR>
+
 nnoremap  <Leader>et  :e  $CRANE_DOT_VIM/test/HarryPotter-Stone.txt<CR>
-nnoremap  <Leader>eT  :e  $CRANE_DOT_VIM/vim-scripts/tmp-test.vim<CR>
 
 nnoremap  <Leader>ep  :e  $CRANE_DOT_VIM/vim-scripts/myBundle.vim<CR>
 "nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
