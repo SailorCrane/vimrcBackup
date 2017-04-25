@@ -1,3 +1,45 @@
+     new-session [-AdDEP] [-c start-directory] [-F format] [-n
+	     window-name] [-s session-name] [-t target-session] [-x width]
+	     [-y height] [shell-command]
+		   (alias: new)
+	     Create a new session with name session-name.
+
+	     The new session is attached to the current terminal unless -d
+	     is given.	window-name and shell-command are the name of and
+	     shell command to execute in the initial window.  If -d is
+	     used, -x and -y specify the size of the initial window (80 by
+	     24 if not given).
+
+	     If run from a terminal, any termios(3) special characters are
+	     saved and used for new windows in the new session.
+
+	     The -A flag makes new-session behave like attach-session if
+	     session-name already exists; in this case, -D behaves like -d
+	     to attach-session.
+
+	     If -t is given, the new session is grouped with
+	     target-session.  This means they share the same set of win‐
+	     dows - all windows from target-session are linked to the new
+	     session and any subsequent new windows or windows being
+	     closed are applied to both sessions.  The current and previ‐
+	     ous window and any session options remain independent and
+	     either session may be killed without affecting the other.
+	     Giving -n or shell-command are invalid if -t is used.
+
+	     The -P option prints information about the new session after
+	     it has been created.  By default, it uses the format
+	     ‘#{session_name}:’ but a different format may be specified
+	     with -F.
+
+	     If -E is used, update-environment option will not be applied.
+	     update-environment.
+
+     refresh-client [-S] [-t target-client]
+		   (alias: refresh)
+	     Refresh the current client if bound to a key, or a single
+	     client if one is given with -t.  If -S is specified, only
+	     update the client's status bar.
+
 fanmiao
 xiaoh he he fanmiao
     xiaofanmiao
