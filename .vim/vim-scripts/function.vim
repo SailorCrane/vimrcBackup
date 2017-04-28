@@ -2,7 +2,7 @@
 fun! MakeInput()
     " 这里的输入回车之后, 会自动输入一个tab, 因为makefile新行, 会自动添加tab, 所以不必再手动输入
     " 这里后期可能修改为单个函数: 追加一行文本等等, 添加回车等等
-    normal!  imain : main.cppg++ -o $@  \ $< \-g -std=c++11 \-Wallrun:./main
+    normal!  iCC = gccCFLAGS = -gmain : main.cpp$(CC) $(CFLAGS) \-o $@  \ $< \ -std=c++11 \-Wallrun:./main
 endfun
 
 fun! EditMakefile()
