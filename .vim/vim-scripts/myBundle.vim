@@ -566,6 +566,9 @@ Bundle "thinca/vim-quickrun"
 Bundle "tmux-plugins/vim-tmux"
 
 
+" 64 auto-fold: zf add marker, zd delete marker
+Bundle "AutoFold.vim"
+
 "100
 " required
 filetype plugin indent on
