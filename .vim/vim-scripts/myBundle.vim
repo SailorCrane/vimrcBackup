@@ -567,7 +567,7 @@ Bundle "tmux-plugins/vim-tmux"
 
 
 " 64 auto-fold: zf add marker, zd delete marker
-Bundle "AutoFold.vim"
+"Bundle "AutoFold.vim"      " 比较烂, 自动添加marker 不太好. 而且有了这个插件, 每次写入文件, 就跳行...
 
 "100
 " required
