@@ -884,6 +884,11 @@ nnoremap  <Leader>rj  ddpkJ
 nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 
 
+" 46 append  ------> : ar stand for arrow
+" 支持前面加次数:
+" 这个应该是vim内置对于映射次数的支持。vim内置对于映射次数的支持.  5,ar  插入箭头5次.
+nnoremap  <Leader>ar  a------><ESC>
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
