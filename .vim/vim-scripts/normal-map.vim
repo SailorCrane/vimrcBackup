@@ -503,6 +503,10 @@ nnoremap  <Leader>lx    A<BS><ESC>:write<CR>
 
 " 清空当前行: 并返回normal模式
 nnoremap  <Leader>dl    S<ESC>
+
+" 删除类似于  MyClass::Method()  中的 "MyClass::"
+" "d;" stand for "d:"
+nnoremap  <Leader>d;    vf:;d
 " }}}
 
 " 删除空行: 包括仅有空格的行
