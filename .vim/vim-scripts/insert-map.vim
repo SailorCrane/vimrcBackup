@@ -84,10 +84,34 @@ inoremap  <Leader><Leader>s     <C-r>*
 inoremap  <Leader><Leader>*     <C-r>*
 
 " 快速粘贴文件名
-inoremap  <Leader><Leader>f     <C-r>%
+"inoremap  <Leader><Leader>f     <C-r>%  ",,f to search
 inoremap  <Leader><Leader>%     <C-r>%
 
 " toggle buffer
 inoremap  <Leader><Leader>t     <C-r>#
 inoremap  <Leader><Leader>#     <C-r>#
 
+
+" 7 search
+" 这里需要使用imap, 而不是inoremap. 因为后面有连续映射.
+imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
+" 这里必须使用map/nmap, 而不可以使用nnoremap, 因为使用了连续映射如下所示
+" <Leader><Leader>             <Plug>(easymotion-prefix)
+" <Plug>(easymotion-prefix)N   <Plug>(easymotion-N)
+" <Plug>(easymotion-prefix)n   <Plug>(easymotion-n)
+" <Plug>(easymotion-prefix)k   <Plug>(easymotion-k)
+" <Plug>(easymotion-prefix)j   <Plug>(easymotion-j)
+" <Plug>(easymotion-prefix)gE  <Plug>(easymotion-gE)
+" <Plug>(easymotion-prefix)ge  <Plug>(easymotion-ge)
+" <Plug>(easymotion-prefix)E   <Plug>(easymotion-E)
+" <Plug>(easymotion-prefix)e   <Plug>(easymotion-e)
+" <Plug>(easymotion-prefix)B   <Plug>(easymotion-B)
+" <Plug>(easymotion-prefix)b   <Plug>(easymotion-b)
+" <Plug>(easymotion-prefix)W   <Plug>(easymotion-W)
+" <Plug>(easymotion-prefix)w   <Plug>(easymotion-w)
+" <Plug>(easymotion-prefix)T   <Plug>(easymotion-T)
+" <Plug>(easymotion-prefix)t   <Plug>(easymotion-t)
+" <Plug>(easymotion-prefix)s   <Plug>(easymotion-s)
+" <Plug>(easymotion-prefix)F   <Plug>(easymotion-F)
+" <Plug>(easymotion-prefix)f   <Plug>(easymotion-f)
+" <Plug>(easymotion-f)         :<C-U>call EasyMotion#S(1,0,0)<CR>
