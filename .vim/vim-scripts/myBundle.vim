@@ -593,6 +593,10 @@ Bundle "tmux-plugins/vim-tmux"
 " 65 drawit: 使用vim draw文本图.
 Bundle 'hrj/vim-DrawIt'
 
+" 66 file-template
+Bundle 'aperezdc/vim-template.git'
+
+
 "100
 " required
 filetype plugin indent on
