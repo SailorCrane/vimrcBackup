@@ -1,0 +1,29 @@
+#
+# Makefile
+# crane, 2017-05-09 10:13
+#
+CC = gcc
+CXX = g++
+
+CPPFLAGS = -g  -Wall    # C/C++ 通用选项
+CFLAGS =
+CXXFLAGS = -std=c++11	# C++ 选项
+
+.PHONY: all default clean run
+
+all : main
+
+default : main
+
+run:
+	./main
+
+clean:
+
+
+Srcs := $(wildcard *.c *.cpp)
+
+#Objs := $(patsubst %.cpp, %.o, $(Srcs))
+Objs := $(Srcs: %.cpp=%.o)
+
+# vim:ft=make

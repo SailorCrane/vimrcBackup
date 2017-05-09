@@ -595,6 +595,7 @@ Bundle 'hrj/vim-DrawIt'
 
 " 66 file-template
 Bundle 'aperezdc/vim-template.git'
+let g:templates_directory = $CRANE_DOT_VIM . "/templates"
 
 
 "100

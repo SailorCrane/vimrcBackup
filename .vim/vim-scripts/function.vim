@@ -1,4 +1,5 @@
 
+" 因为已经使用了模板文件, 所以这个MakeInput函数已经没用了.
 fun! MakeInput()
     " 这里的输入回车之后, 会自动输入一个tab, 因为makefile新行, 会自动添加tab, 所以不必再手动输入
     " 这里后期可能修改为单个函数: 追加一行文本等等, 添加回车等等
@@ -31,7 +32,7 @@ fun! EditMakefile()
     edit $Umake
 
     " 生成Makefile之后, 会自动添加一行新内容
-    call MakeInput()
+    "call MakeInput()
 endfun
 
 
