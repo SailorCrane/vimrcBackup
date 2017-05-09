@@ -4,6 +4,7 @@
 #
 CC = gcc
 CXX = g++
+CPP = 				# 预编译器, 默认为 $(CC) -E
 
 CPPFLAGS = -g  -Wall    # C/C++ 预编译选项. -D
 CFLAGS =				# C编译选项
