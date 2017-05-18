@@ -468,8 +468,12 @@ nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR>
 " s stand for "search"
 " {{{
 nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
+
+" CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FunFile, 可以搜索所有路径.
 nnoremap  <Leader>sf  :<C-u>FufFile<CR>
-nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
+
+"nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
+nnoremap  <Leader>sb  :<C-u>CtrlPBuffer<CR>
 " }}}
 
 
