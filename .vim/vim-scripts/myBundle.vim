@@ -601,8 +601,9 @@ let g:templates_directory = $CRANE_DOT_VIM . "/templates"
 Bundle  'Tuxdude/mark.vim'
 
 
-" 68 速写 html/css/js(javascript) : 官方插件
-Bundle  'ZenCoding.vim'
+" 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
+"Bundle  'ZenCoding.vim'
+Bundle  'Emmet.vim'
 
 "100
 " required
