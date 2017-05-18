@@ -597,6 +597,12 @@ Bundle 'hrj/vim-DrawIt'
 Bundle 'aperezdc/vim-template.git'
 let g:templates_directory = $CRANE_DOT_VIM . "/templates"
 
+" 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
+Bundle  'Tuxdude/mark.vim'
+
+
+" 68 速写 html/css/js(javascript) : 官方插件
+Bundle  'ZenCoding.vim'
 
 "100
 " required
