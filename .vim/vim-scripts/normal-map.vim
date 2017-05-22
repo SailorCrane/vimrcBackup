@@ -55,6 +55,8 @@ nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>ez  :e ~/.zshrc<CR>
 nnoremap  <Leader>eP  :e ~/.profile<CR>
 
+nnoremap  <Leader>ej  :e https://code.jquery.com/jquery-3.2.1.js<CR>
+
 nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
 nnoremap  <Leader>eF  :e ~/.subdir/myFunctions.sh<CR>
 nnoremap  <Leader>eN  :e ~/.subdir/net-operation.sh<CR>
@@ -888,6 +890,10 @@ nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 
 "44 使当前编辑文件/脚本具有可执行权限
 nnoremap  <Leader>ex  :call ChmodExec()<CR>
+
+" 使用gnome-open 选择合适的程序, 打开当前文件.
+" 主要用于html, 最后一个<CR>用来输入后, 结束程序等待输入状态.
+nnoremap  <Leader>so  :!gnome-open %<CR><CR>
 
 
 "45 将下一行和当前行合并为一行, 下一行在前.
