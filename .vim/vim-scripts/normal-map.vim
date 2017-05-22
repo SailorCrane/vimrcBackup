@@ -19,7 +19,10 @@ nnoremap  ;  :
 "nnoremap  :  <nop>
 nnoremap <CR> ;
 " 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
-nnoremap <Leader><CR>  <CR>
+nnoremap <Leader><CR>    <CR>
+
+" <Space><Space>  替换当前元素为空格.
+nnoremap <Space><Space>  r<Space>l
 " }}}
 
 
@@ -891,9 +894,10 @@ nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 "44 使当前编辑文件/脚本具有可执行权限
 nnoremap  <Leader>ex  :call ChmodExec()<CR>
 
+" eo stand for "execute open"
 " 使用gnome-open 选择合适的程序, 打开当前文件.
 " 主要用于html, 最后一个<CR>用来输入后, 结束程序等待输入状态.
-nnoremap  <Leader>so  :!gnome-open %<CR><CR>
+nnoremap  <Leader>eo  :!gnome-open %<CR><CR>
 
 
 "45 将下一行和当前行合并为一行, 下一行在前.
