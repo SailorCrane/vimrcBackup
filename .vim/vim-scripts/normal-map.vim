@@ -665,7 +665,7 @@ nnoremap  yP  yyP
 " 这个是设定是否使用 quickfix 窗口来显示 cscope 结果, 用法在后面会说到。
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
-nmap <Leader>sr :cs reset<CR>
+nmap <Leader>sr :cs reset<CR>:cs add .<CR>
 nmap <Leader>sa :cs add .<CR>
 
 " 下面映射的两个<CR>, 一个为执行expand("<cword>"), 另一个执行cs命令
