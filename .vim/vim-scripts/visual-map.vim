@@ -63,3 +63,7 @@ vnoremap  <Leader>hr   :Tabularize  /\*\/<CR>
 "7: 对于已经含有/* */ 注释的行, 的注释.
 " 主要用来进行多行注释, 在ctrl-v: block visual模式下
 vnoremap  <Leader>lc   I//<ESC>
+
+
+"8: 对选中的行, 插入顺序数字: "in" stand for "insert number"
+vnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
