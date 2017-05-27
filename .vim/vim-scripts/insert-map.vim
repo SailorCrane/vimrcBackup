@@ -115,3 +115,7 @@ imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
 " <Plug>(easymotion-prefix)F   <Plug>(easymotion-F)
 " <Plug>(easymotion-prefix)f   <Plug>(easymotion-f)
 " <Plug>(easymotion-f)         :<C-U>call EasyMotion#S(1,0,0)<CR>
+
+
+" 8 画箭头
+inoremap  <Leader>ar  ------>

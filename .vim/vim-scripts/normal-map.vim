@@ -591,7 +591,7 @@ nnoremap  <Leader>lY     yyI/*<Space><ESC>A<Space>*/<ESC>
 " 插入 // 注释 C/Cpp, 因为 如果语句中含有 /* */
 " 那么NerdCommenter  ,ci 注释,会替换掉/* */, 这样下次,cu 或者,ci 去掉注释后,
 " 代码不能正常工作, 所以这时候使用自己的 <Leader>lc
-nnoremap  <Leader>lc     I//<ESC>
+nnoremap  <Leader>lc     I//<Space><ESC>
 " 复制并使用//注释
 nnoremap  <Leader>ly     yyI//<ESC>
 " }}}
@@ -913,7 +913,9 @@ nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 " 46 append  ------> : ar stand for arrow
 " 支持前面加次数:
 " 这个应该是vim内置对于映射次数的支持。vim内置对于映射次数的支持.  5,ar  插入箭头5次.
-nnoremap  <Leader>ar  a------><ESC>
+"nnoremap  <Leader>ar  a------><ESC>
+" 插入后, 直接进入插入模式, 不再返回normal mode
+nnoremap  <Leader>ar  a------>
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
