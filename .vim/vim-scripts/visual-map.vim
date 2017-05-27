@@ -66,4 +66,11 @@ vnoremap  <Leader>lc   I//<ESC>
 
 
 "8: 对选中的行, 插入顺序数字: "in" stand for "insert number"
-vnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
+"fun!  InsertNum()
+    "let i = 1
+    "'<,'>g/^/ s//\=i . " "/
+    "let i += 2
+"endfun
+
+"vnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
+"vnoremap  <Leader>in  :call InsertNum()<CR>
