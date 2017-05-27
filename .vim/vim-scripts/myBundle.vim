@@ -605,6 +605,13 @@ let g:templates_directory = $CRANE_DOT_VIM . "/templates"
 "Bundle  'ZenCoding.vim'
 Bundle  'Emmet.vim'
 
+
+" 69 ultisnips +  vim-snippets
+"    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
+Bundle "SirVer/ultisnips"
+Bundle "honza/vim-snippets"
+
+
 "100
 " required
 filetype plugin indent on
