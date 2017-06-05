@@ -645,6 +645,9 @@ nnoremap  <Leader><Leader>P  "+P
 nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
+
+nnoremap  dp  ddp
+nnoremap  dP  ddP
 " }}}
 
 
