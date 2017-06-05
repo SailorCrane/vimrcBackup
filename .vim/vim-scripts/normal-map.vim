@@ -553,6 +553,9 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 nnoremap  <Leader>i<Space>   i<Space><ESC>l
 nnoremap  <Leader>a<Space>   a<Space><ESC>h
 
+" 在字符左右都添加空格.
+nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
+
 " 在前一个单词(或者当前单词: 如果处于单词中间)开头, 插入一个空格
 nnoremap  <Leader>b<Space>  bi<Space><ESC>h
 nnoremap  <Leader>B<Space>  Bi<Space><ESC>h
