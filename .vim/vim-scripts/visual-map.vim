@@ -72,5 +72,9 @@ vnoremap  <Leader>lc   I//<ESC>
     "let i += 2
 "endfun
 
+
+"9: visual map dot
+vnoremap  .   :normal .<CR>
+
 "vnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
 "vnoremap  <Leader>in  :call InsertNum()<CR>
