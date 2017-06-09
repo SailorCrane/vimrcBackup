@@ -70,7 +70,7 @@ Bundle 'taglist.vim'
 
 
 "6: YouCompleteMe
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 " 自动补全配置
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif	 "离开插入模式后自动关闭预览窗口
@@ -81,6 +81,11 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+
+"不使用 ycm 的语法提示.
+let  g:ycm_register_as_syntastic_checker = 0
+
 
 "youcompleteme  默认tab  s-tab 和自动补全冲突
 "let g:ycm_key_list_select_completion=['<c-n>']
@@ -225,7 +230,9 @@ Bundle "c.vim"
 
 "12-2: a.vim :switch between header and source file
 Bundle "a.vim"
-cnoreabbrev  a  A
+"cnoreabbrev  a  A
+" i stand for  include
+nnoremap <C-t>  :A<CR>
 
 "13:  minibufexplorer
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
