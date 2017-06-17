@@ -232,7 +232,7 @@ Bundle "c.vim"
 Bundle "a.vim"
 "cnoreabbrev  a  A
 " i stand for  include
-nnoremap <C-t>  :A<CR>
+nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 "13:  minibufexplorer
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
