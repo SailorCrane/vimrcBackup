@@ -628,9 +628,17 @@ Bundle  'Emmet.vim'
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
+" 70 markdown preview plugin( need nodejs + npm )
+Bundle "suan/vim-instant-markdown"
+let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且设置了这里的非自动preview
+                                            " 才会有InstantMarkdownPreview
+                                            " 命令可以使用
+
 
 "100
 " required
 filetype plugin indent on
 filetype on
+
+
 
