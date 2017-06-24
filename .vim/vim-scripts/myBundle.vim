@@ -42,7 +42,7 @@ Bundle 'scrooloose/nerdcommenter'
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
 " 这里只能使用nmap, 不能使用nnoremap
 " 命令行模式下nmap  <cmd>,  带"*" 号的是nnoremap, 非"*" 是 nmap
-nmap <C-_>  <Plug>NERDCommenterInvert
+"nmap <C-_>  <Plug>NERDCommenterInvert
 
 
 "4: syntastic in scrooloose
@@ -629,6 +629,10 @@ Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
 " 70 markdown preview plugin( need nodejs + npm )
+"sudo npm -g install instant-markdown-d
+"sudo apt-get install xdg-utils
+"sudo apt-get install curl
+"sudo apt-get install nodejs-legacy        # (for Debian-based systems)
 Bundle "suan/vim-instant-markdown"
 let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且设置了这里的非自动preview
                                             " 才会有InstantMarkdownPreview
