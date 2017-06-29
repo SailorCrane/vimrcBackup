@@ -100,5 +100,8 @@ autocmd   FileType  cpp   inoreabbrev sel  std::endl
 "autocmd   FileType  c,cpp   inoreabbrev inm  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
 autocmd   FileType  c,cpp   inoreabbrev imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
 
+" read  Stu.hpp
+autocmd   FileType  c,cpp   inoreabbrev istu <ESC>:read $TEMPLATE_CPP/Stu.hpp<CR>
+
 autocmd   FileType  c,cpp,python,vim match  ErrorMsg  /"　"/
 
