@@ -1,6 +1,9 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <list>
+
 #include <memory>
 
 class Person
@@ -41,3 +44,6 @@ public:
 private:
     string name_;
 };
+
+typedef  std::vector<Stu>   VStu;
+typedef  std::list<Stu>     LStu;
