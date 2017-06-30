@@ -33,12 +33,17 @@ public:
         std::cout << "copy Stu() by  name " << name_ << std::endl;
     }
 
-    void show() {
-        std::cout << name_ << std::endl;
-    }
-
     ~Stu() {
         std::cout << "~Stu() ..." << std::endl;
+    }
+
+
+    void show() const {
+        std::cout << "name: " << name_ << std::endl;
+    }
+
+    void SetName(string name) {
+        name_ = name;
     }
 
 private:
