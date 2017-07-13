@@ -6,6 +6,38 @@
 
 #include <memory>
 
+template <class T>
+class BaseCnt
+{
+public:
+    BaseCnt() {
+        mCreatedCnt++;
+        mAliveCnt++;
+
+        ShowCnt();
+    }
+
+    // NOTE: static method
+    static void ShowCnt() {
+        std::cout << "now are creating " << mCreatedCnt << " object" << std::endl;
+        std::cout << "now exist "        << mAliveCnt   << " object" << std::endl;
+    }
+
+    ~BaseCnt() {
+        mAliveCnt--;
+    }
+
+private:
+    static  int  mCreatedCnt;
+    static  int  mAliveCnt;
+};
+
+template <typename T>
+int BaseCnt<T>::mCreatedCnt  = 0;
+
+template <typename T>
+int BaseCnt<T>::mAliveCnt  = 0;
+
 class Person
 {
 public:
