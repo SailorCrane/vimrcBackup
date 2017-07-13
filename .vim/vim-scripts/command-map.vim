@@ -73,6 +73,9 @@ cabbrev  mknb make -n  -B
 cabbrev  mkc  make clean
 cabbrev  mkr  make run
 
+cabbrev  mkbj  make -j -B
+cabbrev  mkj  make -j
+
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
 cnoreabbrev cdv    cd ~/.vim
