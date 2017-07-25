@@ -119,3 +119,4 @@ imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
 
 " 8 画箭头
 inoremap  <Leader>ar  ------>
+inoremap  <Leader>ra  <------
