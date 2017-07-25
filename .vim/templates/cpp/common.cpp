@@ -1,15 +1,18 @@
 #include <iostream>
 #include <vector>
+#include <list>
 
 // 获取数组长度
 #define  ArraySize(array)       ( sizeof(array) / sizeof( array[0] ) )
 
 typedef  std::vector<int>  VInt;
+typedef  std::list<int>    LInt;
 
-void showVector(const  VInt & ins)
+template<class Containor>
+void showContain(const  Containor & ins)
 {
     for( auto ele : ins )
-        std::cout << ele << std::endl;
+        std::cout << ele  << " ";
     std::cout << std::endl;
 }
 
