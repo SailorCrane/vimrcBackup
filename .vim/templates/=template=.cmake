@@ -20,6 +20,10 @@ link_directories(
 set(TARGET main)
 add_executable(${TARGET}  ${TARGET}.cpp)
 
+#target_link_libraries(${TARGET}
+                            #)
+
+
 #add_library(${TARGET}  SHARED ${TARGET}.cpp)
 
 #set_target_properties (target PROPERTIES COMPILE_FLAGS "-fPIC")    # need -fPIC!!!
