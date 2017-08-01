@@ -18,6 +18,7 @@ void showContain(const  Containor & ins)
 
 int main(int argc, char **argv)
 {
+    std::cout << std::boolalpha;
     std::cout << "running..." << std::endl;
 
 
