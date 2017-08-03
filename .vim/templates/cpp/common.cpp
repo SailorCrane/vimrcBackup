@@ -2,6 +2,9 @@
 #include <vector>
 #include <list>
 
+#include <numeric>
+#include <algorithm>
+
 // 获取数组长度
 #define  ArraySize(array)       ( sizeof(array) / sizeof( array[0] ) )
 
