@@ -903,7 +903,10 @@ nnoremap  <Leader>ex  :call ChmodExec()<CR>
 " eo stand for "execute open"
 " 使用gnome-open 选择合适的程序, 打开当前文件.
 " 主要用于html, 最后一个<CR>用来输入后, 结束程序等待输入状态.
-nnoremap  <Leader>eo  :!gnome-open %<CR><CR>
+"nnoremap  <Leader>eo  :!gnome-open %<CR><CR>
+" 如果是普通文件: 使用gnome-open 打开
+" 如果是.md文件, 使用markdown插件的 :InstantMarkdownPreview命令打开
+nnoremap  <Leader>eo  :call OpenFile()<CR>
 
 
 "45 将下一行和当前行合并为一行, 下一行在前.
