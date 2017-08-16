@@ -665,7 +665,6 @@ nnoremap  dP  ddP
 "nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-"nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 "nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " 这个是设定是否使用 quickfix 窗口来显示 cscope 结果, 用法在后面会说到。
@@ -680,6 +679,7 @@ nmap <Leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
 
 " 查看谁调用了函数: :cnext, 或者cn 跳向下一个, cp 跳向前一个.
 nmap <Leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
 
 
